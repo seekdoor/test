@@ -75,7 +75,7 @@
                     var b = {
                         name: a.name,
                         message: a.message,
-                        lineNumber: a.lineNumber,
+                        lineNumber: a.lineNumber - 3,
                         columnNumber: a.columnNumber
                     }
                     a = `${b.name}: ${b.message}.  line:col ${b.lineNumber}:${b.columnNumber}`;
@@ -95,7 +95,7 @@
                 try{
                     $('#result').val('');
 
-                    Function('"use strict";' + code )();
+                    Function('"use strict";\n' + code )();
                 }catch(e){
 
                     log(e)
