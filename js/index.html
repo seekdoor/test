@@ -28,10 +28,6 @@
                 font-family: inherit;
             }
 
-            #code{
-                height: 90%;
-            }
-
             #code-outter {
                 min-height: 50%;
             }
@@ -50,7 +46,7 @@
         <label for="code">write your js code here(use log() to output):</label>
         <textarea id='code' placeholder="log(3+2)"></textarea>
     </div>
-    <div id='command'><button id='run'>RUN</button></div>
+    <div id='command'><button id='run' type='button'>RUN</button></div>
     <div>
         <label for="code">output:</label>
         <textarea id='result' placeholder="5"></textarea>
@@ -84,7 +80,12 @@
                     }
                     a = `${b.name}: ${b.message}.  line:col ${b.lineNumber}:${b.columnNumber}`;
                 }
-                $('#result').val( $('#result').val() + JSON.stringify(a) + '\n');
+
+                var j_result = $('#result');
+                j_result.val( j_result.val() + JSON.stringify(a) + '\n');
+
+                j_result.height(1);
+                j_result.height( 25 + j_result[0].scrollHeight );
             }
 
             $('#run').click(function(a){
