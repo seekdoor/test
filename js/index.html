@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta content="RUN JS online" name="description">
+        <title>RUN JS</title>
+        <style type="text/css">  
+
+            html, body {
+                border: 0 none;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            body{
+                padding: 5px;
+            }
+
+            textarea {
+                border-width: 1px;
+                padding: 10px;
+                margin: 0;
+                resize: none;
+            }
+
+            #code{
+                height: 90%;
+            }
+
+            #code-outter {
+                min-height: 50%;
+            }
+
+            #command{
+                margin:10px 0;
+            }
+
+            #run {
+                padding: 8px 20px;
+            }
+        </style>
+</head>
+<body>
+    <div id='code-outter'>
+        <label for="code">write your js code here(use log() to output):</label>
+        <textarea id='code' placeholder="log(3+2)"></textarea>
+    </div>
+    <div id='command'><button id='run'>RUN</button></div>
+    <div>
+        <label for="code">output:</label>
+        <textarea id='result' placeholder="5"></textarea>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js'></script>
+
+    <script>
+        $(function(){
+
+            $(window).resize(function(){
+
+                $('body').width($('html').width() - 10);
+                $('textarea').width($('#code-outter').width() - 22);
+               
+            })
+
+            $(window).resize();
+
+            
+            
+
+            window.log = function(a){
+                //console.log(a)
+                if(a instanceof Error){
+                    var b = {
+                        name: a.name,
+                        message: a.message,
+                        lineNumber: a.lineNumber,
+                        columnNumber: a.columnNumber
+                    }
+                    a = `${b.name}: ${b.message}.  line:col ${b.lineNumber}:${b.columnNumber}`;
+                }
+                $('#result').val( $('#result').val() + JSON.stringify(a) + '\n');
+            }
+
+            $('#run').click(function(a){
+                var code = $('#code').val();
+                //console.log(code)
+                //eval(code);
+                try{
+                    $('#result').val('');
+
+                    Function('"use strict";' + code )();
+                }catch(e){
+
+                    log(e)
+                }
+            })
+
+            var hash = location.hash.substring(1),
+                code  = decodeURIComponent(hash);
+
+            if(code){
+                $('#code').val(code);
+                $('#run').click();
+            }
+
+            $('#code').keyup(function(){
+                //log($('#code').val());
+                location.hash = encodeURIComponent($('#code').val());
+
+                $(this).height(1);
+                $(this).height(25+this.scrollHeight);
+            })
+            $('#code').keyup(); 
+
+        })
+        
+    </script>
+</body>
+</html>
