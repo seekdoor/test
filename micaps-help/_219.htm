@@ -1,0 +1,186 @@
+<html>
+
+<head>
+  <title> A1.7 第七类数据格式 : 台风路径数据 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.7 第七类数据格式 : 台风路径数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 7&nbsp; </span><span style='font-family:
+宋体'>数据说明 台风名称<span lang=EN-US>&nbsp; </span>台风编号 发报中心（均为字符串） 总项数（整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>年<span
+lang=EN-US>&nbsp; </span>月<span lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp;
+</span>时次<span lang=EN-US>&nbsp; </span>时效（均为整数）<span lang=EN-US>&nbsp; </span>中心经度<span
+lang=EN-US>&nbsp; </span>中心纬度<span lang=EN-US>&nbsp; </span>最大风速<span
+lang=EN-US>&nbsp; </span>中心最低气压七级风圈半径<span lang=EN-US>&nbsp; </span>十级风圈半径<span
+lang=EN-US>&nbsp; </span>移向<span lang=EN-US>&nbsp; </span>移速（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 7 9714</span><span style='font-family:宋体'>号台风路径<span
+lang=EN-US>(</span>主观预报<span lang=EN-US>)</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>999999 9714 bcsh&nbsp;&nbsp;&nbsp; 3</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>97 08 29 08&nbsp;&nbsp; 0&nbsp; 120.8&nbsp;&nbsp;
+24.1&nbsp;&nbsp; 35&nbsp; 970&nbsp; 400&nbsp; 100 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>97 08 29 08&nbsp; 24&nbsp; 118.1&nbsp;&nbsp;
+26.6&nbsp;&nbsp; 25&nbsp; 985 9999 9999 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>97 08 29 08&nbsp; 48&nbsp; 115.8&nbsp;&nbsp;
+29.8&nbsp;&nbsp; 15 1000 9999 9999 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据格式的扩展：在<span
+lang=EN-US>MICAPS</span>第三版中对该类数据格式进行了扩展，可以将多个台风路径数据写入到一个文件。台风之间使用数字<span
+lang=EN-US>0</span>作为一行，隔开不同台风路径数据（避免出现行数数字与实际数据不同）。该格式与原来数据格式兼容，使用<span
+lang=EN-US>MICAPS</span>第<span lang=EN-US>1</span>、<span lang=EN-US>2</span>版可以显示第一个台风路径。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;diamond 7 2006</span><span style='font-family:
+宋体'>年第<span lang=EN-US>15</span>台风路径（中国）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; NAMELESS&nbsp;&nbsp;&nbsp; 0615&nbsp;&nbsp;
+28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 24&nbsp; 08&nbsp; 00&nbsp;
+111.3&nbsp;&nbsp; 15.9&nbsp;&nbsp; 995&nbsp; 18&nbsp; 100.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 292.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 24&nbsp; 08&nbsp; 24&nbsp;
+107.4&nbsp;&nbsp; 17.3&nbsp; 985 23 &nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 24&nbsp; 08&nbsp; 48&nbsp;
+102.9&nbsp;&nbsp; 17.9&nbsp;&nbsp; 998&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; XANGSANE&nbsp;&nbsp;&nbsp; 0616&nbsp;&nbsp;
+53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 26&nbsp; 08&nbsp; 00&nbsp;
+127.3&nbsp;&nbsp; 11.8&nbsp;&nbsp; 996&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp;&nbsp; 200.0&nbsp;&nbsp; 0.0&nbsp;&nbsp;
+292.5&nbsp;&nbsp;&nbsp; 5.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 26&nbsp; 08&nbsp; 24&nbsp;
+126.4&nbsp;&nbsp; 13.0&nbsp;&nbsp; 990&nbsp;&nbsp;&nbsp;
+23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 26&nbsp; 08&nbsp; 48&nbsp;
+124.4&nbsp;&nbsp; 14.1&nbsp;&nbsp; 980&nbsp;&nbsp;&nbsp;
+30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 26&nbsp; 08&nbsp; 72&nbsp;
+122.3&nbsp;&nbsp; 15.8&nbsp;&nbsp; 996&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 26&nbsp; 14&nbsp; 00&nbsp;
+127.2&nbsp;&nbsp; 12.0&nbsp;&nbsp; 995&nbsp;&nbsp;&nbsp;
+20&nbsp;&nbsp;&nbsp;&nbsp; 220.0&nbsp;&nbsp;&nbsp; 0.0&nbsp; 315.0&nbsp;&nbsp;
+5.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; SHANSHAN&nbsp;&nbsp;&nbsp; 0613&nbsp;&nbsp;
+80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 10&nbsp; 20&nbsp; 00&nbsp;
+134.9&nbsp;&nbsp; 16.7&nbsp;&nbsp; 998&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;
+150.0&nbsp;&nbsp; 0.0&nbsp; 315.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 10&nbsp; 20&nbsp; 24&nbsp;
+133.0&nbsp;&nbsp; 18.3&nbsp;&nbsp; 990&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;
+0.0&nbsp; 0.0&nbsp;&nbsp;&nbsp; 0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; 2006&nbsp; 09&nbsp; 10&nbsp; 20&nbsp; 48&nbsp;
+130.6&nbsp;&nbsp; 19.8&nbsp;&nbsp; 985&nbsp;&nbsp;&nbsp;
+28&nbsp;&nbsp;&nbsp;&nbsp; 0.0&nbsp; &nbsp;0.0&nbsp;&nbsp;&nbsp;
+0.0&nbsp;&nbsp;&nbsp; 0.0</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

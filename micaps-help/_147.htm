@@ -1,0 +1,127 @@
+<html>
+
+<head>
+  <title>5.3.1 综合图 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;5.3.1 综合图</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在</span><span
+lang=EN-US>MICAPS</span><span style='font-family:宋体'>中，综合图定义为一种特殊的文件格式</span><span
+lang=EN-US>:</span><span style='font-family:宋体'>第十类数据格式，该数据的详细格式介绍可在附录中进行查询参考。</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>将所有的综合图统一存放在</span><span
+lang=EN-US>zht</span><span style='font-family:宋体'>目录下，如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=263 height=232 id="图片 179" src="temp.files/image370.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:宋体'>图</span><span lang=EN-US>5.3.1-1 </span><span
+style='font-family:宋体'>综合图目录</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>对</span><span lang=EN-US>MICAPS3</span><span
+style='font-family:宋体'>定义的综合图进行了部分兼容：</span><span lang=EN-US>MICAPS3</span><span
+style='font-family:宋体'>中通过</span><span lang=EN-US>.ini</span><span
+style='font-family:宋体'>配置文件定义数据的显示方式将不再支持，转而使用“样式”文件进行设置，如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=357 height=63 src="temp.files/image371.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:宋体'>图</span><span lang=EN-US>5.3.1-2&nbsp; MICAPS4</span><span
+style='font-family:宋体'>综合图定义</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>上图定义了一个欧洲中心细网格数据的</span><span lang=EN-US>3</span><span
+style='font-family:宋体'>小时降水的综合图，使用的是</span><span lang=EN-US>mdfs</span><span
+style='font-family:宋体'>数据源，默认使用</span><span lang=EN-US>3</span><span
+style='font-family:宋体'>小时时效，使用的显示样式为</span><span lang=EN-US> RAIN</span><span
+style='font-family:宋体'>目录下的</span><span lang=EN-US>Grid_rain03.xml</span><span
+style='font-family:宋体'>文件。</span></p>
+
+<p class=MsoPlainText style='text-indent:21.0pt'>此外，<span lang=EN-US>MCIAPS4</span>综合图除了综合路径通配符<span
+lang=EN-US>(*.003</span>、<span lang=EN-US>*08.000</span>等<span lang=EN-US>)</span>规则外<span
+lang=EN-US>,</span>还支持用命名时间参数来描述文件名规则，而这种方式能提供更快速的匹配。</p>
+
+<p class=MsoPlainText style='text-indent:21.0pt'>命名参数是指在文件名中特定名字和格式的参数。在查找文件时，会使用特定的值来替换命名参数。来达到精确匹配。</p>
+
+<p class=MsoPlainText style='text-indent:21.0pt'>目前<span lang=EN-US>MICAPS4</span>综合图仅支持时间命名参数，其它命名参数会根据需要进行扩展。</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>命名参数格式如下：</span>
+</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp;&nbsp;&nbsp; {$</span>变量名<span
+lang=EN-US>:</span>变量格式<span lang=EN-US>}</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>用大括号表示这是一个命名参数，其中<span
+lang=EN-US>$</span>符号后面是变量名， ：后面是变量格式</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>目前综合图支持一种命名变量<span
+lang=EN-US>-</span>时间变量，变量名是<span lang=EN-US>time</span>， 变量定义如下：</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp;&nbsp;&nbsp; {$time:</span>时间格式<span
+lang=EN-US>}</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span>时间格式定义如下：</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; yyyy</span>：表示<span lang=EN-US>4</span>位的年</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; yy:</span>表示<span lang=EN-US>2</span>位的年</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; MM:</span>表示月</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; dd:</span>表示天</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; mm:</span>表示分钟</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; HH:</span>表示小时</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; ss:</span>表示秒</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span>举例说明：</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>比如一个<span lang=EN-US>8.3</span>格式的命名的产品<span
+lang=EN-US>, </span>文件名匹配样式可以定义如下：</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; {$time:yyMMddHH}.000</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>又如某<span lang=EN-US>6</span>小时降水预报产品，<span
+lang=EN-US>rrr022108.024</span>代表<span lang=EN-US>2</span>月<span lang=EN-US>21</span>日早<span
+lang=EN-US>8</span>点的<span lang=EN-US>24</span>小时逐<span lang=EN-US>6</span>小时降水预报，可以定义如下：</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; rrr{$time:MMddHH}.024</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>系统碰到这种样式的格式通配符，会直接使用当前时间去替换变量，直接得出文件名，比使用通配符查找速度快的多。</p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; </span>如果当前时间是<span lang=EN-US>2016/1/1
+08:00</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; {$time:yyMMddHH}.000</span>，得到的文件名为<span
+lang=EN-US>: 16010108:000</span></p>
+
+<p class=MsoPlainText><span lang=EN-US>&nbsp; rrr{$time:MMddHH}.024</span>，得到的文件名为<span
+lang=EN-US>:rrr010108.024</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

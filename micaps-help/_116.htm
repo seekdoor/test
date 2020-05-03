@@ -1,0 +1,157 @@
+<html>
+
+<head>
+  <title>4.3.1 模式曲线 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;4.3.1 模式曲线</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>“</span><span
+style='font-family:宋体'>模式资料曲线</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>模块主要用于显示模式资料某要素在任一点上随时间的变化情况，</span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>版本对原有的模式资料曲线功能进行了如下功能扩展：</span></p>
+
+<p class=MsoListParagraph><span style='font-family:宋体'>一、可以同时显示观测与模式数据的时间变化曲线；</span></p>
+
+<p class=MsoListParagraph><span style='font-family:宋体'>二、增加了对自定义配置文件的扩展支持</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>点击工具栏上的“模式资料曲线”按钮</span><span
+lang=EN-US><img width=28 height=27 src="temp.files/image303.jpg"></span><span
+style='font-family:宋体'>以弹出主窗口：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US style='font-size:12.0pt;font-family:宋体'><img width=557 height=442
+src="temp.files/image304.jpg"></span></p>
+
+<p class=MsoCaption><span style='font-family:黑体'>图</span><span lang=EN-US>
+4.3.1- </span><span
+lang=EN-US>1</span><span lang=EN-US> </span><span style='font-family:黑体'>模式资料曲线窗口</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>整个模式资料曲线界面分为数据显示区、时间选择区、基本工具区、资料选择区以及站点选择区</span><span
+lang=EN-US>5</span><span style='font-family:宋体'>个部分。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span style='font-family:宋体'>数据显示区：</span></b><span
+style='font-family:宋体'>显示指定要素与站点的时间变化趋势，横坐标为时间，纵坐标为要素的值范围。如果在时间选取范围中选择的预报时效不为</span><span
+lang=EN-US>0</span><span style='font-family:宋体'>，则数据显示区会有一个加粗红色纵向虚线（上图</span><span
+lang=EN-US>11</span><span style='font-family:宋体'>日</span><span lang=EN-US>08</span><span
+style='font-family:宋体'>时对应的虚线），用来标识实况与预报的分隔线，该线条左侧为实况或分析场（</span><span
+lang=EN-US>0</span><span style='font-family:宋体'>场）数据，右侧为预报数据。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据显示区的每一个观测</span><span
+lang=EN-US>/</span><span style='font-family:宋体'>预报时间点上均用原点标识了对应的值，鼠标移动到该点上时，会自动弹出提示对话框，描述该点的时间及值信息：</span><span
+lang=EN-US><img width=78 height=33 src="temp.files/image305.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>显示区右上角标识了线条图层对应的描述，该描述颜色与线条颜色一一对应，<b>左键单击</b>图层名称可以隐藏相应图层，<b>右键单击</b>图层名称则可以删除该图层。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span style='font-family:宋体'>时间选择区：</span></b><span
+style='font-family:宋体'>该区用来选择需要显示的时间范围，最左侧的两个时间选择框</span><span lang=EN-US><img
+width=235 height=19 src="temp.files/image306.jpg"></span><span
+style='font-family:宋体'>分别用来选择实况数据的起始、终止时间，如果同时叠加了模式数据，则在该时间范围内，模式数据显示其各起报时间上的<b>分析场</b>对应的值。其后的</span><span
+lang=EN-US><img width=78 height=18 src="temp.files/image307.jpg"></span><span
+style='font-family:宋体'>选择框分别代表数据显示的最小间隔以及最长预报时效。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span style='font-family:宋体'>资料选择区：</span></b><span
+style='font-family:宋体'>资料选择区逻辑上可分为</span><span lang=EN-US>”</span><b><span
+style='font-family:宋体'>节点</span></b><span lang=EN-US>“</span><span
+style='font-family:宋体'>、</span><span lang=EN-US>”</span><b><span
+style='font-family:宋体'>综合图</span></b><span lang=EN-US>“</span><span
+style='font-family:宋体'>以及</span><span lang=EN-US>”</span><b><span
+style='font-family:宋体'>数据项</span></b><span lang=EN-US>”</span><span
+style='font-family:宋体'>三级，其中，</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>节点</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>为综合图的上级节点，对综合图进行组织，多个综合图可以存储在同一节点下；“数据项</span><span
+lang=EN-US>”</span><span style='font-family:宋体'>为综合图的子节点，用于描述该综合图中的数据信息。在下图所示中：</span><span
+lang=EN-US>“</span><span style='font-family:宋体'>常用配置</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>为节点信息，下面包括</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>地面温度</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>综合图，该综合图包括了</span><span lang=EN-US>”EC“</span><span
+style='font-family:宋体'>以及</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>地面观测</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>两个数据。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>每一个</span><span
+lang=EN-US>“</span><span style='font-family:宋体'>综合图</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>均可由用户预先定义，包括需要显示的数据、要素、显示方式、颜色、数据路径等信息。如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=192 height=85 src="temp.files/image308.jpg"></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在<b>节点</b>上点击鼠标右键，会弹出右图所示对话框：</span><span
+lang=EN-US><img width=73 height=86 src="temp.files/image309.jpg"></span><span
+style='font-family:宋体'>，</span><span lang=EN-US>“</span><span style='font-family:
+宋体'>添加节点</span><span lang=EN-US>”</span><span style='font-family:宋体'>表示可以在同级增加一个节点，</span><span
+lang=EN-US>“</span><span style='font-family:宋体'>重命名</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>表示可以对当前节点重新命名，添加</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>综合图</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>表示可以在该<b>节点</b>下增加一个综合图信息，删除节点表示可以删除当前节点。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在<b>综合图</b>上点击鼠标右键，会弹出右图所示对话框：</span><span
+lang=EN-US><img width=81 height=95 src="temp.files/image310.jpg"></span><span
+style='font-family:宋体'>，“重命名</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>表示可对该综合图重新定义名称，“编辑综合图”表示对当前综合图进行编辑，“添加综合图”表示可以添加一个“同级”的综合图，“设为默认”表示可以将该综合图定义为默认综合图，当启动“模式资料曲线”时，自动显示该综合图信息，“删除节点”表示删除该综合图，当选择“编辑综合图”或“添加综合图”时，系统弹出如下对话框：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=449 height=282 src="temp.files/image311.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>用户可以在该编辑窗口中定义各个图层的显示，包括图层<b>描述名称</b>，图层对应的<b>数据路径</b>。当选择完数据路径后，需要选择要进行显示的<b>数据类型</b>，数据类型可以选择</span><span
+lang=EN-US><img width=61 height=73 src="temp.files/image312.jpg"></span><span
+style='font-family:宋体'>几类，分别代表：地面填图、高空填图、离散点填图、格点数据以及城市预报数据，如果选择的是地面、高空或城市预报数据，则还需要在<b>要素</b>项选择对应数据的要素，如</span><span
+lang=EN-US><img width=129 height=93 src="temp.files/image313.jpg"></span><span
+style='font-family:宋体'>。间隔为数据显示的时间间隔，随后是线形、线色。“</span><b><span lang=EN-US>+</span></b><b><span
+style='font-family:宋体'>”</span></b><span style='font-family:宋体'>代表在其后增加一个要素、“</span><b><span
+lang=EN-US>-</span></b><b><span style='font-family:宋体'>”</span></b><span
+style='font-family:宋体'>代表删除当前要素。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在<b>数据项</b>上点击鼠标右键，弹出如右图所示对话框：</span><span
+lang=EN-US><img width=72 height=85 src="temp.files/image314.jpg"></span><span
+style='font-family:宋体'>，</span><span lang=EN-US>“</span><span style='font-family:
+宋体'>重命名</span><span lang=EN-US>”</span><span style='font-family:宋体'>表示可以对当前节点重新命名，</span><span
+lang=EN-US>“</span><span style='font-family:宋体'>删除节点</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>表示可以删除当前数据项。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>资料选择区中的列表用户均可自定义设置，具体定义方式可<span
+style='color:red'>参考第五章</span>。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span style='font-family:宋体'>站点选择区：</span></b><span
+style='font-family:宋体'>打开</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>模式资料曲线</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>窗口后，可以在地图上点击鼠标左键交互选择站点，也可在站点选择区上选择站点。如果</span><span
+lang=EN-US><img width=59 height=24 src="temp.files/image315.jpg"></span><span
+style='font-family:宋体'>勾选上，则可以选择多个站点，如果未勾选，则同时只能选择一个站点。在选择完站点以后点击基本工具区上的</span><span
+lang=EN-US><img width=35 height=20 src="temp.files/image316.jpg"></span><span
+style='font-family:宋体'>按钮，完成数据显示刷新。</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>基本工具区：</span></b><span
+style='font-family:宋体'>当修改完“资料选择区</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>中的配置后，点击</span><span lang=EN-US><img width=31 height=20
+src="temp.files/image317.jpg"></span><span style='font-family:宋体'>按钮即可将当前的配置进行保存。</span><span
+lang=EN-US><img width=29 height=17 src="temp.files/image318.jpg"></span><span
+style='font-family:宋体'>则可以对当前数据区进行清除，</span><span lang=EN-US><img width=32
+height=19 src="temp.files/image319.jpg"></span><span style='font-family:宋体'>可将当前时序图进行保存。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

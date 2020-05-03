@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <title> A1.27 第四十二类数据格式：GPS数据 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.27 第四十二类数据格式：GPS数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:10.5pt;layout-grid-mode:char'><span
+style='font-family:宋体'>类型为</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>42</span><span
+style='font-family:宋体'>，每小时一个文件</span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;layout-grid-mode:char'><span
+style='font-family:宋体'>文件名：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>GPSG_</span><span style='font-family:
+宋体'>为前缀，后面为四位年，两位月，两位日，两位小时，两位分钟，扩展名为</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>000</span><span style='font-family:宋体'>，</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>如：</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>GPSG_200809162300.000</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>diamond 42&nbsp; </span><span
+style='font-family:宋体'>数据说明（字符串）</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>&nbsp; </span><span style='font-family:宋体'>年</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp; </span><span
+style='font-family:宋体'>月</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp;
+</span><span style='font-family:宋体'>日</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>&nbsp; </span><span style='font-family:宋体'>时</span><span
+style='font-family:"Tahoma","sans-serif"'> </span><span style='font-family:
+宋体'>分</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>单站填图要素的个数</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp; </span><span
+style='font-family:宋体'>总站点数（均为整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp; </span><span style='font-family:
+宋体'>注：</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>999999</span><span
+style='font-family:宋体'>代表数据缺失</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>站点代码（</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>4</span><span
+style='font-family:宋体'>位字符串）</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp;
+</span><span style='font-family:宋体'>区站号（长整数或字母数字组合）</span><span
+style='font-family:"Tahoma","sans-serif"'> </span><span style='font-family:
+宋体'>经度</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp; </span><span
+style='font-family:宋体'>纬度</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>&nbsp;
+</span><span style='font-family:宋体'>拔海高度</span><span style='font-family:"Tahoma","sans-serif"'>
+</span><span style='font-family:宋体'>天顶总延迟</span><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>(m) </span><span style='font-family:
+宋体'>本站气压</span><span style='font-family:"Tahoma","sans-serif"'> </span><span
+style='font-family:宋体'>温度</span><span style='font-family:"Tahoma","sans-serif"'>
+</span><span style='font-family:宋体'>湿度</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>&nbsp; </span><span style='font-family:宋体'>水汽总量</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>(mm)&nbsp; </span><span
+style='font-family:宋体'>电子浓度（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据格式：用</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>C</span><span
+style='font-family:宋体'>语言表示的格式为”</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>%4c&nbsp; %5c&nbsp; %7.3f&nbsp; %7.3f&nbsp; %7.1f&nbsp;
+%6.4f&nbsp; %6.1f&nbsp; %6.1f&nbsp; %6.1f&nbsp; %6.1f &nbsp;%6.1f\n</span><span
+style='font-family:宋体'>”</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>diamond 42 08</span><span
+style='font-family:宋体'>年</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>07</span><span
+style='font-family:宋体'>月</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>29</span><span
+style='font-family:宋体'>日</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>20</span><span
+style='font-family:宋体'>时</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>GPS/MET</span><span
+style='font-family:宋体'>数据</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>08 07 29 20 00</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>ahhs 58531&nbsp; 29.714
+118.284&nbsp;&nbsp; 142.3 2.6846&nbsp; 978.8&nbsp;&nbsp; 23.6&nbsp;&nbsp;
+97.0&nbsp;&nbsp; 72.7 999999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>ahma 58336&nbsp; 31.701
+118.516&nbsp;&nbsp;&nbsp; 22.8 2.6943&nbsp; 993.6&nbsp;&nbsp; 26.3&nbsp;&nbsp;
+92.0&nbsp;&nbsp; 69.4 999999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>bais 59211&nbsp; 23.903
+106.606&nbsp;&nbsp; 159.3 999999&nbsp; 980.6&nbsp;&nbsp; 25.1&nbsp;&nbsp; 84.0
+999999 999999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注意这类数据的文件名只能按照说明中的指定命名方式，否则无法显示。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

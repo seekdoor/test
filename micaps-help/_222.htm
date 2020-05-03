@@ -1,0 +1,262 @@
+<html>
+
+<head>
+  <title> A1.10 扩展第九类数据格式（地理信息） - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.10 扩展第九类数据格式（地理信息）</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>类型为</span><span
+lang=EN-US>March 9</span><span style='font-family:宋体'>，用于地理信息显示，基本数据格式如下：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>March 9 </span><span
+style='font-family:宋体'>中国国界</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;0&nbsp;
+0&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>7&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 0000&nbsp;&nbsp;&nbsp;
+0000&nbsp;&nbsp;&nbsp; 0000 &nbsp;&nbsp;0000&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>中华人民共和国</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;123.014&nbsp;&nbsp;
+24.684</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;122.966&nbsp;&nbsp;
+24.458</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>……</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据说明中第一个数字为线上的点数，第二个为数据类型（见下表），第三个数字表示该线条是否闭合，</span><span
+lang=EN-US>0</span><span style='font-family:宋体'>为不闭合，</span><span lang=EN-US>1</span><span
+style='font-family:宋体'>为闭合，绘制时，闭合线可以绘制闭合区域和线条，不闭合线条只能绘制为线条，最后字符串为线条说明，说明行后为数据区，为线上各点的经纬度。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>表</span>
+<span style='font-family:宋体'>线条类型代码</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:32.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>代码</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>类型</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>0</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>海岸线</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>国际国界</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>2</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国国界</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>3</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国省界</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>4</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国地区</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>5</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国县界</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>6</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国公路</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>7</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国铁路</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>8</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>中国湖泊</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>9</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>一级河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>10</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>二级河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>11</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>三级河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>12</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>四级河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>13</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>五级河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>14</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>五级以下河流</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>15</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>国外行政边界</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=99 valign=top style='width:74.2pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>16</span></p>
+  </td>
+  <td width=142 valign=top style='width:106.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>其它线条</span></p>
+  </td>
+ </tr>
+</table>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

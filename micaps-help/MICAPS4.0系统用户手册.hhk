@@ -1,0 +1,1011 @@
+<HTML>
+<HEAD>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="前言">
+		<param name="Local" value="_1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第一章 系统安装与初始化">
+		<param name="Local" value="_2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.1安装环境  ">
+		<param name="Local" value="_3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.2系统安装、升级及卸载">
+		<param name="Local" value="_4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.3安装目录及文件介绍">
+		<param name="Local" value="_5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.3.1 安装目录下文件介绍（按文件名顺序）：">
+		<param name="Local" value="_6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.3.2 安装目录下文件夹介绍（按文件名顺序）：">
+		<param name="Local" value="_7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4 、窗口布局介绍（窗口布局以及打开、关闭方式）  ">
+		<param name="Local" value="_8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.1 标题栏">
+		<param name="Local" value="_9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.2 菜单项">
+		<param name="Local" value="_10.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.3 工具栏">
+		<param name="Local" value="_11.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.4 交互工具箱">
+		<param name="Local" value="_12.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.5 图层管理窗口">
+		<param name="Local" value="_13.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.6 属性窗口">
+		<param name="Local" value="_14.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.4.7 主视图窗口">
+		<param name="Local" value="_15.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.5 、数据源（Samba  MDFS  SAV）">
+		<param name="Local" value="_16.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第二章 客户端基本操作">
+		<param name="Local" value="_17.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.1 地图及地理信息  ">
+		<param name="Local" value="_18.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.1.1 地图投影">
+		<param name="Local" value="_19.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.1.2 基础地理信息">
+		<param name="Local" value="_20.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.1.3 分屏及鼠标联动">
+		<param name="Local" value="_21.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.1.4 浮动地图">
+		<param name="Local" value="_22.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.2 图层管理  ">
+		<param name="Local" value="_23.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.2.1 图层管理工具">
+		<param name="Local" value="_24.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.3 数据翻页">
+		<param name="Local" value="_25.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.4 时间轴">
+		<param name="Local" value="_26.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.5 图片生成与保存  ">
+		<param name="Local" value="_27.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.5.1 当前工作区截图">
+		<param name="Local" value="_28.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.5.2 出图设置">
+		<param name="Local" value="_29.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.6 调色板使用 ">
+		<param name="Local" value="_30.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第三章 数据显示及属性设置">
+		<param name="Local" value="_31.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1 站点资料">
+		<param name="Local" value="_32.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1 地面观测">
+		<param name="Local" value="_33.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1.1 显示设置">
+		<param name="Local" value="_34.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1.2 分析">
+		<param name="Local" value="_35.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1.3 统计">
+		<param name="Local" value="_36.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1.4 监视过滤">
+		<param name="Local" value="_37.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.1.5 保存配置">
+		<param name="Local" value="_38.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2 自动站观测">
+		<param name="Local" value="_39.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2.1 显示设置">
+		<param name="Local" value="_40.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2.2 分析">
+		<param name="Local" value="_41.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2.3 统计">
+		<param name="Local" value="_42.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2.4 监视过滤">
+		<param name="Local" value="_43.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.2.5 保存配置">
+		<param name="Local" value="_44.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.3 高空观测">
+		<param name="Local" value="_45.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.3.1 显示设置">
+		<param name="Local" value="_46.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.3.2 分析">
+		<param name="Local" value="_47.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.4 离散点数据">
+		<param name="Local" value="_48.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.4.1 显示设置">
+		<param name="Local" value="_49.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.4.2 分析">
+		<param name="Local" value="_50.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.4.3 统计">
+		<param name="Local" value="_51.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.1.4.4 监视">
+		<param name="Local" value="_52.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2 格点资料">
+		<param name="Local" value="_53.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2.1 第四类格点（标量场数据）">
+		<param name="Local" value="_54.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2.1.1 显示设置">
+		<param name="Local" value="_55.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2.1.2 分析统计">
+		<param name="Local" value="_56.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2.2 流线数据(矢量格点)">
+		<param name="Local" value="_57.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.2.2.1 显示控制">
+		<param name="Local" value="_58.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3 TLOGP图">
+		<param name="Local" value="_59.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.1 T-lnP工具属性">
+		<param name="Local" value="_60.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2 主界面工具栏">
+		<param name="Local" value="_61.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.1 主显示区">
+		<param name="Local" value="_62.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.2 大气热力指数查询">
+		<param name="Local" value="_63.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.3 风矢端图(Hodograph)">
+		<param name="Local" value="_64.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.4 交互探空">
+		<param name="Local" value="_65.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.5 空间剖面图">
+		<param name="Local" value="_66.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.3.2.6 时间剖面图">
+		<param name="Local" value="_67.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4 卫星资料">
+		<param name="Local" value="_68.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.1 AWX卫星数据显示">
+		<param name="Local" value="_69.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.2 GPF格式云图显示">
+		<param name="Local" value="_70.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3 AWX格式卫星数值产品及云图说明">
+		<param name="Local" value="_71.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.1 黑体亮度温度（TBB）">
+		<param name="Local" value="_72.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.2 射出长波辐射（OLR）">
+		<param name="Local" value="_73.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.3 海温（SST）">
+		<param name="Local" value="_74.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.4 云区湿度廓线（HPF）">
+		<param name="Local" value="_75.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.5 晴空大气可降水（TPW）">
+		<param name="Local" value="_76.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.6 大气运动矢量（AMV）">
+		<param name="Local" value="_77.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.7 对流层上部相对湿度（UTH）">
+		<param name="Local" value="_78.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.8 降水估计产品（PRE）">
+		<param name="Local" value="_79.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.9 沙尘暴监测产品（DST）">
+		<param name="Local" value="_80.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.10 地面入射太阳辐射（SST）">
+		<param name="Local" value="_81.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.11 卫星总云量（CTA）">
+		<param name="Local" value="_82.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.12 云分类（CLC）">
+		<param name="Local" value="_83.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.13 标称投影数据集（NOM）">
+		<param name="Local" value="_84.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.14 大雾监测">
+		<param name="Local" value="_85.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.15 积雪覆盖">
+		<param name="Local" value="_86.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.16 海冰监测产品">
+		<param name="Local" value="_87.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.17 火情监测">
+		<param name="Local" value="_88.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.18 水情监测">
+		<param name="Local" value="_89.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.4.3.19 投影云图">
+		<param name="Local" value="_90.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.5 雷达基数据与预报产品">
+		<param name="Local" value="_91.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.5.1 设置窗口">
+		<param name="Local" value="_92.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.5.2 基数据">
+		<param name="Local" value="_93.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.5.3 PUP产品">
+		<param name="Local" value="_94.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.6 传真图">
+		<param name="Local" value="_95.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.7 AMDAR">
+		<param name="Local" value="_96.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.8 闪电定位">
+		<param name="Local" value="_97.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.9 GPS">
+		<param name="Local" value="_98.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.10 台风路径">
+		<param name="Local" value="_99.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.10.1 外观设置">
+		<param name="Local" value="_100.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.10.2 风圈设置">
+		<param name="Local" value="_101.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.11 城镇报">
+		<param name="Local" value="_102.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.11.1 属性设置">
+		<param name="Local" value="_103.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.11.2 修改工具">
+		<param name="Local" value="_104.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第四章 高级功能与交互操作">
+		<param name="Local" value="_105.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.1 站点资料分析">
+		<param name="Local" value="_106.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.1.1 单站表格">
+		<param name="Local" value="_107.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.1.1.1 界面样式">
+		<param name="Local" value="_108.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.1.1.2 查询操作">
+		<param name="Local" value="_109.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.1.2 单站一维图">
+		<param name="Local" value="_110.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.2 雨量累加">
+		<param name="Local" value="_111.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.2.1 界面样式">
+		<param name="Local" value="_112.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.2.2 模式降水">
+		<param name="Local" value="_113.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.2.3 自动站降水">
+		<param name="Local" value="_114.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3 格点资料分析">
+		<param name="Local" value="_115.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.1 模式曲线">
+		<param name="Local" value="_116.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.2 剖面图">
+		<param name="Local" value="_117.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.2.1 空间垂直剖面">
+		<param name="Local" value="_118.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.2.2 时间垂直剖面">
+		<param name="Local" value="_119.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.2.3 时间水平剖面">
+		<param name="Local" value="_120.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.3 模式探空">
+		<param name="Local" value="_121.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.3.1 界面样式">
+		<param name="Local" value="_122.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.3.2 资料选择">
+		<param name="Local" value="_123.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.3.3 时间选择与绘制位置">
+		<param name="Local" value="_124.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.3.4 绘制T-lnP图">
+		<param name="Local" value="_125.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.4 模式资料处理">
+		<param name="Local" value="_126.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.4.1 资料选择">
+		<param name="Local" value="_127.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.4.2 资料处理">
+		<param name="Local" value="_128.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.3.5 模式平均">
+		<param name="Local" value="_129.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.4 球面距离计算">
+		<param name="Local" value="_130.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.5 会商支持">
+		<param name="Local" value="_131.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.6 单站风廓线">
+		<param name="Local" value="_132.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.6.1 界面样式">
+		<param name="Local" value="_133.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.6.2 查询操作">
+		<param name="Local" value="_134.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.7 综合图检索">
+		<param name="Local" value="_135.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.8 演示模式">
+		<param name="Local" value="_136.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第五章 系统配置与本地化">
+		<param name="Local" value="_137.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.1 系统框架配置">
+		<param name="Local" value="_138.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.1.1 全局配置">
+		<param name="Local" value="_139.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.1.2 模块配置">
+		<param name="Local" value="_140.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.1.3 工具栏配置">
+		<param name="Local" value="_141.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.2 基础地图部分">
+		<param name="Local" value="_142.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.2.1 基础地理信息配置">
+		<param name="Local" value="_143.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.2.2 投影信息配置">
+		<param name="Local" value="_144.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3 数据源">
+		<param name="Local" value="_145.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.4 文件读取及存储">
+		<param name="Local" value="_146.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.1 综合图">
+		<param name="Local" value="_147.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.2 菜单项">
+		<param name="Local" value="_148.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.3 菜单及综合图配置工具">
+		<param name="Local" value="_149.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.4 参数检索窗口">
+		<param name="Local" value="_150.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.5 datainfo（数据信息配置）">
+		<param name="Local" value="_151.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.5.1 配置规则">
+		<param name="Local" value="_152.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.5.2 运行原理">
+		<param name="Local" value="_153.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.3.6 “另存为”窗口配置">
+		<param name="Local" value="_154.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.5 交互工具箱">
+		<param name="Local" value="_155.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.5.1 基本交互工具及强天气交互工具">
+		<param name="Local" value="_156.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.5.2 灾难恢复">
+		<param name="Local" value="_157.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.5.3 城市预报交互工具">
+		<param name="Local" value="_158.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6 基本功能配置本地化">
+		<param name="Local" value="_159.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.1 飞机报">
+		<param name="Local" value="_160.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.2 自动站">
+		<param name="Local" value="_161.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.3 云图[SG9] ">
+		<param name="Local" value="_162.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.4 单站雷达">
+		<param name="Local" value="_163.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.5 累计降水">
+		<param name="Local" value="_164.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.6 传真图">
+		<param name="Local" value="_165.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.7 填图客观分析">
+		<param name="Local" value="_166.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.8 出图[SG10] ">
+		<param name="Local" value="_167.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.9 保存布局">
+		<param name="Local" value="_168.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.10 表格">
+		<param name="Local" value="_169.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.11 模式资料曲线">
+		<param name="Local" value="_170.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.12 模式资料处理、模式资料曲线、模式平均[SG11] ">
+		<param name="Local" value="_171.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.13 流线数据[SG12] ">
+		<param name="Local" value="_172.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.14 模式剖面[SG13] ">
+		<param name="Local" value="_173.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.15 一维图">
+		<param name="Local" value="_174.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.16 样式">
+		<param name="Local" value="_175.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="矢量样式">
+		<param name="Local" value="_176.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="格点样式">
+		<param name="Local" value="_177.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="默认的风向杆分层颜色设置">
+		<param name="Local" value="_178.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="栅格样式">
+		<param name="Local" value="_179.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="调色板">
+		<param name="Local" value="_180.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.17 调色板">
+		<param name="Local" value="_181.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="调色板文件">
+		<param name="Local" value="_182.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.18 格点数据调色板配置">
+		<param name="Local" value="_183.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="5.6.19 交互预报图调色板配置">
+		<param name="Local" value="_184.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第六章 集合预报">
+		<param name="Local" value="_185.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.1 简介">
+		<param name="Local" value="_186.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.2 主要功能列表">
+		<param name="Local" value="_187.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3 集合预报功能配置与基本操作">
+		<param name="Local" value="_188.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.1 功能配置">
+		<param name="Local" value="_189.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.1.1 模式数据处理">
+		<param name="Local" value="_190.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.1.2 配置产品文件目录">
+		<param name="Local" value="_191.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.2 集合预报菜单">
+		<param name="Local" value="_192.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.3 集合预报面板">
+		<param name="Local" value="_193.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.4 集合预报产品显示子窗口">
+		<param name="Local" value="_194.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.3.4 集合预报产品图层翻页和动画">
+		<param name="Local" value="_195.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4 集合预报产品制作和交互设置">
+		<param name="Local" value="_196.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.1 集合统计量">
+		<param name="Local" value="_197.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.2 概率预报（含任意阈值概率）">
+		<param name="Local" value="_198.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.3 面条图">
+		<param name="Local" value="_199.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.4 邮票图">
+		<param name="Local" value="_200.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.4.1 邮票图属性设置">
+		<param name="Local" value="_201.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.5 箱须图和烟羽图">
+		<param name="Local" value="_202.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.5.1 在地图上选择站点">
+		<param name="Local" value="_203.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="6.4.6 风场玫瑰图">
+		<param name="Local" value="_204.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第七章 精细化预报订正平台">
+		<param name="Local" value="_205.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第八章 常见问题">
+		<param name="Local" value="_206.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="8.1 如何修改默认站点及站点列表">
+		<param name="Local" value="_207.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="8.2 程序第一次启动，显示TLOGP(时序图、剖面)时，提示如下错误">
+		<param name="Local" value="_208.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="8.3 远程登录机器时，启动MICAPS4报异常">
+		<param name="Local" value="_209.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="附录一 MICAPS反馈群">
+		<param name="Local" value="_210.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="附录二 本机支持OPENGL版本查看方法">
+		<param name="Local" value="_211.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="附录三 MICAPS文件说明">
+		<param name="Local" value="_212.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.1 第一类数据格式 : 地面全要素填图数据">
+		<param name="Local" value="_213.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.2 第二类数据格式 : 高空全要素填图">
+		<param name="Local" value="_214.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.3 第三类数据格式：通用填图和离散点等值线">
+		<param name="Local" value="_215.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.4 第四类数据格式 : 格点数据">
+		<param name="Local" value="_216.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.5 第五类数据格式 : TLOGP和站点剖面图数据">
+		<param name="Local" value="_217.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.6 第六类数据格式 : 传真图">
+		<param name="Local" value="_218.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.7 第七类数据格式 : 台风路径数据">
+		<param name="Local" value="_219.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.8 第八类数据格式：城市站点预报数据">
+		<param name="Local" value="_220.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.9 第九类数据格式 : 地图线条数据">
+		<param name="Local" value="_221.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.10 扩展第九类数据格式（地理信息）">
+		<param name="Local" value="_222.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.11 第十类数据格式 : 综合图定义（不可再次定义为综合图）">
+		<param name="Local" value="_223.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.12 第十一类数据格式：格点矢量数据">
+		<param name="Local" value="_224.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.13 第十二类数据格式：单点雷达图象（PPI）">
+		<param name="Local" value="_225.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.14 第十三类数据格式：图象数据（云图、雷达拼图、地形图）">
+		<param name="Local" value="_226.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.15 扩展第十三类数据格式：经纬度网格图象数据">
+		<param name="Local" value="_227.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.16 第十四类数据格式：编辑图象的图元数据（交互操作结果数据）">
+		<param name="Local" value="_228.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.17 第十五类数据格式：调色板数据">
+		<param name="Local" value="_229.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.18 第十六类数据格式：预报站点数据">
+		<param name="Local" value="_230.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.19 第十七类数据格式：站点文字信息数据">
+		<param name="Local" value="_231.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.20 第十八类数据格式：格点数据剖面图">
+		<param name="Local" value="_232.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.21 第十九类数据格式：MICAPS系统命令行参数">
+		<param name="Local" value="_233.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.22 第三十一类资料（AMDAR资料）">
+		<param name="Local" value="_234.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.23 第三十二类数据（一维图数据格式）">
+		<param name="Local" value="_235.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.24 第三十三类数据（一维图数据格式）">
+		<param name="Local" value="_236.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.25 第三十四类数据（多要素填图）">
+		<param name="Local" value="_237.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.26 第四十一类数据格式：闪电定位数据">
+		<param name="Local" value="_238.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.27 第四十二类数据格式：GPS数据">
+		<param name="Local" value="_239.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.28 第八十二类数据格式：自动生成多幅图片">
+		<param name="Local" value="_240.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.29 第一百一十一类数据（邮票图）">
+		<param name="Local" value="_241.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.30 第七百七十九类数据（饼图）">
+		<param name="Local" value="_242.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.31 第七百八十类数据（风玫瑰图）">
+		<param name="Local" value="_243.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.32 第七百八十一类数据（散点图）">
+		<param name="Local" value="_244.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.33 雷达拼图数据（武汉暴雨所）">
+		<param name="Local" value="_245.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.34 风廓线数据">
+		<param name="Local" value="_246.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.35 历史资料追加使用的文本数据格式">
+		<param name="Local" value="_247.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.36 用于调入特殊功能模块设置的数据类型">
+		<param name="Local" value="_248.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="A1.37 特别说明">
+		<param name="Local" value="_249.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="附录四 集合预报数据环境处理配置">
+		<param name="Local" value="_250.htm">
+		</OBJECT>
+</UL>
+</BODY>
+</HTML>

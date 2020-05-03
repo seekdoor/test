@@ -1,0 +1,218 @@
+<html>
+
+<head>
+  <title>1.3.2 安装目录下文件夹介绍（按文件名顺序）： - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;1.3.2 安装目录下文件夹介绍（按文件名顺序）：</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>1</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>config</span>目录：</span></b><span style='font-family:宋体'>该目录主要用来存放系统及模块配置信息，目录结构如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='margin-left:21.0pt;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img width=265
+height=405 id="图片 22" src="temp.files/image008.jpg"></span></p>
+
+<p class=MsoCaption><span style='font-family:黑体;color:black'>图</span><span
+lang=EN-US style='color:black'> 1.3- </span><span
+lang=EN-US style='color:black'>2</span><span lang=EN-US style='color:black'>
+config</span><span style='font-family:黑体;color:black'>目录</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>countyregion.txt</span></b><b><span
+style='font-family:宋体'>文件<span lang=EN-US>:</span></span></b><span lang=EN-US
+style='font-family:宋体'>MICAPS4</span><span style='font-family:宋体'>县行政边界配置文件，在离散点数据做行政区填充时使用。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>datasources.ini</span></b><b><span
+style='font-family:宋体'>文件<span lang=EN-US>:</span></span></b><span lang=EN-US
+style='font-family:宋体'>MICAPS4</span><span style='font-family:宋体'>数据源配置文件，用于配置<span
+lang=EN-US>MICAPS4</span>显示的数据来源，当<span lang=EN-US>MICAPS4</span>中的综合图中配置的路径为相对路径时，则尝试遍历使用该配置文件中的配置源作为前缀拼接完整文件名。该文件内容为：</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>[mdfs]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>path=mdfs:///</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>[samba]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>path=z:/data/</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>[samba2]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>path=z:/diamond/</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>[sav]</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>path=y:/daily/</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><span
+style='font-family:宋体'>用户可编辑该配置文件。其中“<span lang=EN-US>[]</span>”中的内容可为任意字符串，<span
+lang=EN-US>path</span>为关键字，“<span lang=EN-US>=</span>”后的内容为数据源路径，“<span
+lang=EN-US>[]</span>”与“<span lang=EN-US>path=…</span>”成对出现。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>menus.txt</span></b><b><span
+style='font-family:宋体'>文件<span lang=EN-US>:</span></span></b><span lang=EN-US
+style='font-family:宋体'> MICAPS4</span><span style='font-family:宋体'>的菜单配置文件，用于配置<span
+lang=EN-US>MICAPS4</span>菜单栏目的显示内容。该文件格式与<span lang=EN-US>MICAPS3</span>相同，<b>可将<span
+lang=EN-US>MICAPS3</span>中已经配置好的综合图复制过来使用</b>，<span lang=EN-US>MICAPS4</span>的菜单项支持综合图文件、<span
+lang=EN-US>MICAPS</span>标准格式文件以及可执行文件。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>module.ini</span></b><b><span
+style='font-family:宋体'>文件<span lang=EN-US>:</span></span></b><span lang=EN-US
+style='font-family:宋体'>MICAPS4</span><span style='font-family:宋体'>的模块配置文件，用于配置<span
+lang=EN-US>MICAPS4</span>模块是否加载、是否随系统启动；配置模块所在程序集的相对路径、模块类的命名空间以及所支持的文件类型。具体配置方式可<span
+style='color:red'>参考第五章</span>。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>set.ini</span></b><b><span style='font-family:
+宋体'>文件：</span></b><span lang=EN-US style='font-family:宋体'>MICAPS4</span><span
+style='font-family:宋体'>客户端全局配置文件，用于配置系统默认使用主题，默认站点编号，后台出图参数等。具体配置方式及说明可<span
+style='color:red'>参考第五章</span>。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>toolbars.ini</span></b><b><span
+style='font-family:宋体'>文件</span></b><span lang=EN-US style='font-family:宋体'>:MICAPS4</span><span
+style='font-family:宋体'>客户端工具栏配置文件，用于部署自定义应用程序。具体配置方式及说明可<span style='color:
+red'>参考第五章</span>。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Map</span></b><b><span style='font-family:
+宋体'>子目录</span></b><span style='font-family:宋体'>：<span lang=EN-US>MICAPS4</span>客户端地图配置目录，用于配置地图投影方式及投影参数。<span
+lang=EN-US>projections.ini</span>文件存储投影信息，全部投影参数使用<a><span lang=EN-US>proj4</span></a></span><span
+class=MsoCommentReference><span lang=EN-US><a class=msocomanchor id="_anchor_1"
+onmouseover="msoCommentShow('_anchor_1','_com_1')"
+onmouseout="msoCommentHide('_com_1')" href="#_msocom_1" language=JavaScript
+name="_msoanchor_1">[SG1]</a>&nbsp;</span></span><sup><span lang=EN-US
+style='font-family:宋体'>*</span></sup><span style='font-family:宋体'>标准字符串配置；<span
+lang=EN-US>map</span>用于配置基础地理信息。具体配置方式及说明可<span style='color:red'>参考第五章。</span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>datainfo</span></b><b><span style='font-family:
+宋体'>子目录：</span></b><span lang=EN-US style='font-family:宋体'>MICAPS4</span><span
+style='font-family:宋体'>元数据配置目录，用来配置<span lang=EN-US>samba</span>数据源下各类数据的元信息，包括数据描述、观测数据时间、预报数据起报时间及预报时效、数据层次层次对应目录等内容。该信息用于在客户端中数据的时间跳转、图层对齐、利用时间轴跳转文件使用。具体配置方式及说明可<span
+style='color:red'>参考第五章。</span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>2</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>data</span>目录：</span></b><span lang=EN-US style='font-family:宋体'>MICAPS4</span><span
+style='font-family:宋体'>中模块数据目录，用于存放<span lang=EN-US>MICAPS4</span>平台中各个模块使用的共有数据信息，目录结构如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US><img width=179 height=275 id="图片 23" src="temp.files/image009.jpg"></span></p>
+
+<p class=MsoCaption><span style='font-family:黑体;color:black'>图</span><span
+lang=EN-US style='color:black'> 1.3- </span><span
+lang=EN-US style='color:black'>3</span><span lang=EN-US style='color:black'>
+data</span><span style='font-family:黑体;color:black'>目录</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>changlog.txt</span></b><b><span
+style='font-family:宋体'>文件：</span></b><span style='font-family:宋体'>日志文件。用于存放更新日志，在<span
+lang=EN-US>MICAPS4</span>平台中</span><span lang=EN-US><img width=15 height=13
+id="图片 3" src="temp.files/image010.gif"></span><span style='font-family:宋体'>菜单下的<span
+lang=EN-US>“</span>关于<span lang=EN-US>...”</span>项中使用。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>ModeDataDictionary.txt</span></b><b><span
+style='font-family:宋体'>文件：</span></b><span style='font-family:宋体'>字典文件，当使用<span
+lang=EN-US>mdfs</span>数据源时，用来将该数据源中模式数据中的物理量由英文单词转换为中文描述。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Stations.dat:</span></b><span
+style='font-family:宋体'>站点信息文件，用于存放全国基本预报站点信息。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Grib2Table</span></b><b><span
+style='font-family:宋体'>目录：</span></b><span style='font-family:宋体'>用于存放<span
+lang=EN-US>Grib2</span>文件中对应的要素表信息。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>meshes</span></b><b><span style='font-family:
+宋体'>目录：</span></b><span style='font-family:宋体'>用于存放地图数据的临时二进制文件，<span
+lang=EN-US>MICAPS4</span>客户端将标准的地理信息文件按照投影方式预处理成渲染速度更快的二进制文件，以提升地理信息数据的显示效率。<span
+lang=EN-US>MICAPS4</span>安装目录下 <span lang=EN-US>config\map\map.ini</span><a
+name="OLE_LINK1">文件中配置参数使用的具体地理信息来源于此。</a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Palettes</span></b><b><span style='font-family:
+宋体'>目录：</span></b><span style='font-family:宋体'>用于存放所有的调色板文件<span lang=EN-US>,MICAPS4</span>客户端中的卫星显示、等值线填色显示、离散点分级填色显示等使用的调色板均存储在该目录下。系统默认提供<span
+lang=EN-US>“</span>黑、白<span lang=EN-US>”</span>两种主题下的调色板。具体配置方式及说明可<span
+style='color:red'>参考第五章。</span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Shapefiles</span></b><b><span
+style='font-family:宋体'>目录：</span></b><span style='font-family:宋体'>用于存放基础地理信息数据文件。该目录下有<span
+lang=EN-US>MICAPS3</span>定义的二进制地图文件，也有标准的<span lang=EN-US>shapefile</span>文件，<span
+lang=EN-US>MICAPS4</span>安装目录下 <span lang=EN-US>config\map\map.ini</span>文件中配置参数使用的具体地理信息来源于此。。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>Styles</span></b><b><span style='font-family:
+宋体'>目录：</span></b><span style='font-family:宋体'>用于存放所有的“样式”文件。<span lang=EN-US>“</span>样式<span
+lang=EN-US>”</span>文件决定了数据的显示方式，在<span lang=EN-US>MICAPS4</span>平台中，不同的数据文件在内存中统一按照<span
+lang=EN-US>“</span>格点<span lang=EN-US>”</span>、<span lang=EN-US>“</span>站点<span
+lang=EN-US>”</span>、<span lang=EN-US>“</span>栅格<span lang=EN-US>”</span>三种方式存储，而不同数据的显示方式则由<span
+lang=EN-US>“</span>样式<span lang=EN-US>”</span>文件来控制。<span lang=EN-US>MICAPS4</span>平台为每一类数据默认提供<span
+lang=EN-US>“</span>黑、白<span lang=EN-US>”</span>两种主题下的显示样式。具体配置方式及说明可<span
+style='color:red'>参考第五章。</span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>3</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>Fonts</span>目录：</span></b><span style='font-family:宋体'>该目录主要用于存放<span
+lang=EN-US>MICAPS4</span>平台中使用到的字体文件。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>4</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>image</span>目录：</span></b><span style='font-family:宋体'>该目录主要用于存放<span
+lang=EN-US>MICAPS4</span>平台中使用到的图标文件，包括出图设置中使用到的系统<span lang=EN-US>logo(logo.png)</span>以及图例中使用到的图片文件。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>5</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>logs</span>目录：</span></b><span style='font-family:宋体'>该目录主要存放系统的日志文件，日志文件的命名方式为平台启动日期<span
+lang=EN-US>_</span>进程号<span lang=EN-US>.log</span>。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>6</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>Modules</span>目录：</span></b><span style='font-family:宋体'>该目录主要存放功能模块。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>7</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>upgrade</span>目录：</span></b><span style='font-family:宋体'>该目录主要存放系统自动升级所需文件。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><b><span
+lang=EN-US style='font-family:宋体'>8</span></b><b><span style='font-family:宋体'>）<span
+lang=EN-US>zht</span>目录：</span></b><span style='font-family:宋体'>该目录主要存放综合图文件，该目录下组织方式与<span
+lang=EN-US>MICAPS3</span>完全相同，<b>可将<span lang=EN-US>MICAPS3</span>配置好的综合图完整移植过来使用</b>。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

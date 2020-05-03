@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <title>5.6.11 模式资料曲线 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;5.6.11 模式资料曲线</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>模式资料曲线配置文件：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>模式资料曲线模块的配置文件位于</span><span
+lang=EN-US>config\micapsdatachart\modeldatachart.ini</span><span
+style='font-family:宋体'>文件中，该文件内容为：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+lang=EN-US><img width=384 height=484 src="temp.files/image425.jpg"></span></p>
+
+<p class=MsoCaption><span style='font-family:黑体'>图</span><span lang=EN-US>
+5.6.11- </span><span
+lang=EN-US>1</span><span lang=EN-US> </span><span style='font-family:黑体'>模式资料曲线配置文件</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>各段说明如下：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>map</span><span
+style='font-family:宋体'>：绘制区基本颜色定义，该颜色按照</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>黑</span><span lang=EN-US>/</span><span style='font-family:
+宋体'>白</span><span lang=EN-US>”</span><span style='font-family:宋体'>两种主题进行分别设置，</span><span
+lang=EN-US>light.*</span><span style='font-family:宋体'>表示白色主题下的颜色设置，</span><span
+lang=EN-US>dark.*</span><span style='font-family:宋体'>表示黑色主题下的颜色设置。颜色定义分别为网格线颜色，坐标轴上的字体颜色、坐标边框颜色、实况纵轴颜色、预报纵轴颜色、实况预报分割线纵轴颜色。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>set:</span><span
+style='font-family:宋体'>时间和站点设置信息。表示时间间隔选项、默认时间间隔、预报时效选项，默认时效、默认站号</span><span
+lang=EN-US>(</span><span style='font-family:宋体'>多站可由分号分隔</span><span
+lang=EN-US>)</span><span style='font-family:宋体'>、数据源定义</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>defaultdata:</span><span
+style='font-family:宋体'>时间序列图启动时加载综合图</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>综合图组织方式为</span><span
+lang=EN-US> dataselect.{</span><span style='font-family:宋体'>节点名</span><span
+lang=EN-US>}.{</span><span style='font-family:宋体'>综合图名</span><span lang=EN-US>}.{</span><span
+style='font-family:宋体'>数据项名</span><span lang=EN-US>}</span><span
+style='font-family:宋体'>，以配置</span><span lang=EN-US><img width=76 height=50
+src="temp.files/image426.jpg"></span><span style='font-family:宋体'>为例，</span><span
+lang=EN-US><img width=224 height=21 src="temp.files/image427.jpg"></span><span
+style='font-family:宋体'>表示为“常用配置</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>节点，其后为默认的时间间隔配置，</span><span lang=EN-US><img width=376
+height=23 src="temp.files/image428.jpg"></span><span style='font-family:宋体'>为其下的</span><span
+lang=EN-US>“</span><span style='font-family:宋体'>地面温度</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>综合图定义，其中</span><span lang=EN-US>figuretype=DataGroup</span><span
+style='font-family:宋体'>代表该节点为综合图节点，</span><span lang=EN-US><img width=415
+height=22 src="temp.files/image429.jpg"></span><span style='font-family:宋体'>则为“地面温度</span><span
+lang=EN-US>”</span><span style='font-family:宋体'>综合图下的</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>温度</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>数据项定义，注意每一项的</span><span lang=EN-US>[]</span><span
+style='font-family:宋体'>名称均需包含父节点的</span><span lang=EN-US>[]</span><span
+style='font-family:宋体'>名称。</span><span lang=EN-US>path=Z:\data\surface\plot</span><span
+style='font-family:宋体'>代表该数据的绝对路径，</span><span lang=EN-US>datatype=surface</span><span
+style='font-family:宋体'>表示该数据为地面填图数据，</span><span lang=EN-US>interval=3</span><span
+style='font-family:宋体'>代表该数据的观测间隔为</span><span lang=EN-US>3</span><span
+style='font-family:宋体'>小时，</span><span lang=EN-US>linetype=Solid</span><span
+style='font-family:宋体'>表示该数据用</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>实线</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>显示，</span><span lang=EN-US>figuretype=Data</span><span
+style='font-family:宋体'>表示当前为数据项，</span><span lang=EN-US>datacolumn=19</span><span
+style='font-family:宋体'>表示需要显示的要素。其后是在</span><span lang=EN-US>“</span><span
+style='font-family:宋体'>黑白</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>背景下显示的颜色。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <title> A1.4 第四类数据格式 : 格点数据 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.4 第四类数据格式 : 格点数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 4&nbsp; </span><span style='font-family:
+宋体'>数据说明（字符串）<span lang=EN-US>&nbsp; </span>年<span lang=EN-US>&nbsp; </span>月<span
+lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp;
+</span>时效<span lang=EN-US>&nbsp; </span>层次（均为整数）经度格距<span lang=EN-US>&nbsp; </span>纬度格距<span
+lang=EN-US>&nbsp; </span>起始经度<span lang=EN-US>&nbsp; </span>终止经度<span
+lang=EN-US>&nbsp; </span>起始纬度<span lang=EN-US>&nbsp; </span>终止纬度（均为浮点数） 纬向格点数<span
+lang=EN-US>&nbsp; </span>经向格点数（均为整数）<span lang=EN-US>&nbsp; </span>等值线间隔<span
+lang=EN-US>&nbsp; </span>等值线起始值<span lang=EN-US>&nbsp; </span>终止值<span
+lang=EN-US>&nbsp; </span>平滑系数 加粗线值（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此类数据用于画格点数据的等值线。网格可以为经纬度网格，也可以为直角坐标网格。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>当使用直角坐标网格数据时：<span lang=EN-US>1</span>）将等值线终止值改为<span
+lang=EN-US>-1</span>（直角坐标在兰勃托投影下）或<span lang=EN-US>-2</span>（直角坐标在麦开托投影下）或<span
+lang=EN-US>-3</span>（直角坐标在北半球投影下）。<span lang=EN-US>2</span>）把网格经度间隔和纬度间隔改为格点数据第一行最后一个点的经纬度。<span
+lang=EN-US>3</span>）把起始经度和起始纬度改为格点数据第一行第一个点的经纬度。<span lang=EN-US>4</span>）把终止经度和终止纬度改为格点数据最后一行最后一个点的经纬度。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>第<span lang=EN-US>4</span>类数据文件可以直接用于填格点值。文件头中可以指定填图方式。指定方法为：<span
+lang=EN-US>1</span>）把加粗线值改为<span lang=EN-US>-1</span>，表示画等值线同时填图，<span
+lang=EN-US>2</span>）改为<span lang=EN-US>-2</span>表示只填图，不画等值线。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据按先纬向后经向放（直角坐标网格时为先<span
+lang=EN-US>X</span>方向后<span lang=EN-US>Y</span>方向），均为浮点数。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 4 95</span><span style='font-family:宋体'>年<span
+lang=EN-US>11</span>月<span lang=EN-US>27</span>日<span lang=EN-US>T63_200Hpa</span>涡度<span
+lang=EN-US>120</span>小时预报</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 120&nbsp;&nbsp;
+200&nbsp;&nbsp; 1.875&nbsp; -1.875&nbsp;&nbsp;&nbsp;&nbsp; 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>180&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 97&nbsp;&nbsp;&nbsp; 49&nbsp;&nbsp;&nbsp; 20&nbsp;
+-300&nbsp;&nbsp; 300&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp; &nbsp;18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp; &nbsp;18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp; &nbsp;18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 18</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;
+18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; </span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

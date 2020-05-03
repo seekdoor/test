@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <title> A1.20 第十八类数据格式：格点数据剖面图 - MICAPS4.0系统用户手册</title>
+  <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.20 第十八类数据格式：格点数据剖面图</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 18&nbsp; </span><span style='font-family:
+宋体'>数据说明（字符串） 年<span lang=EN-US>&nbsp; </span>月<span lang=EN-US>&nbsp; </span>日<span
+lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp; </span>时效<span lang=EN-US>&nbsp;
+</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>剖面上点数（均为整数）<span
+lang=EN-US>&nbsp;&nbsp; </span>等值线间隔<span lang=EN-US>&nbsp; </span>等值线起始值<span
+lang=EN-US>&nbsp; </span>终止值<span lang=EN-US>&nbsp; </span>平滑系数 加粗线值（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>显示层格点场文件名（字符串，即显示该数据图象时，可以画剖面图。该文件必须为第四类数据）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>剖面垂直层数（整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>第一层数据文件名（字符串，文件必须为第四类数据）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>第二层数据文件名（字符串，文件必须为第四类数据）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 18 T106_200Hpa</span><span style='font-family:
+宋体'>涡度<span lang=EN-US>120</span>小时预报</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 95&nbsp;&nbsp;&nbsp;
+11&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 120&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; 20&nbsp;
+-300&nbsp;&nbsp; 300&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～<span
+lang=EN-US>/t106/vor/500/112320.000</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>7</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～<span
+lang=EN-US>/t106/vor/850/96112320.000</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～<span
+lang=EN-US>/t106/vor/700/96112320.000</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～<span
+lang=EN-US>/t106/vor/500/96112320.000</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～</span><span
+lang=DE style='font-family:宋体'>/t106/vor/400/96112320.000</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～</span><span
+lang=DE style='font-family:宋体'>/t106/vor/300/96112320.000</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～</span><span
+lang=DE style='font-family:宋体'>/t106/vor/200/96112320.000</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～</span><span
+lang=DE style='font-family:宋体'>/t106/vor/100/96112320.000</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=DE style='font-family:
+宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>MICAPS</span><span style='font-family:宋体'>第三版针对该格式进行了扩展，包括以下部分：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>1</span><span style='font-family:宋体'>）文件路径：文件路径可以使用绝对路径，也可以使用<span
+lang=EN-US>MICAPS</span>第二版定义格式中的写法，注意原写法中路径中分隔使用斜杠（<span lang=EN-US>/</span>）。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>2</span><span style='font-family:宋体'>）文件名：文件名除使用上述直接定义的方式外，还可以使用时间替换方式，使用<span
+lang=EN-US>YY</span>代替两位年份、<span lang=EN-US>YYYY</span>代替四位年份、<span lang=EN-US>MM</span>代替月份，<span
+lang=EN-US>DD</span>代替日期，<span lang=EN-US>HH</span>代替小时<span lang=EN-US>,mm</span>代替分钟，后面增加一个表示日期修改的整数，系统自动替换为指定日期，注意除月份必需使用大写<span
+lang=EN-US>MM</span>替换、分钟使用小写<span lang=EN-US>mm</span>替换外，其它字母替换为指定时间时不区分大小写，如：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>～<span
+lang=EN-US>/t106/vor/850/yyMMdd20.000&nbsp; -1</span>在使用中会替换昨天日期相应文件，如果在<span
+lang=EN-US>2008</span>年<span lang=EN-US>4</span>月<span lang=EN-US>6</span>日打开文件，则本行中文件会使用<span
+lang=EN-US>08040520.000</span>。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>
