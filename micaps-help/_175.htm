@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>5.6.16 样式 - MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
@@ -21,51 +21,51 @@
 
 
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，将数据的内存组织方式进一步统一，并将数据本身与数据的绘制方式进行了剥离，这样的结果就是数据的存储方式与数据内存表现方式脱离，数据的内存表现方式与数据的显示方式脱离，举例来说：�?/span><span
-lang=EN-US>MICAPS</span><span style='font-family:宋体'>文件服务器中�?/span><span
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，将数据的内存组织方式进一步统一，并将数据本身与数据的绘制方式进行了剥离，这样的结果就是数据的存储方式与数据内存表现方式脱离，数据的内存表现方式与数据的显示方式脱离，举例来说：在</span><span
+lang=EN-US>MICAPS</span><span style='font-family:宋体'>文件服务器中，</span><span
 lang=EN-US>MICAPS1</span><span style='font-family:宋体'>类数据与</span><span
-lang=EN-US>MICAPS2</span><span style='font-family:宋体'>类数据是不同的文件格式（具体存储方式请参考附录），但�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，全部归一成“矢量数据”；另外，同样的“矢量数据”显示出来的效果是不同的，比如地面填图中的降水与天气现象虽然都是矢量数据，但是一个是以数字的方式进行显示，而另外一个是以“符号”的方式进行显示。后面提到的显示效果的配置文件，�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中统称为<b>“样式�?/b>�?/span></p>
+lang=EN-US>MICAPS2</span><span style='font-family:宋体'>类数据是不同的文件格式（具体存储方式请参考附录），但在</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，全部归一成“矢量数据”；另外，同样的“矢量数据”显示出来的效果是不同的，比如地面填图中的降水与天气现象虽然都是矢量数据，但是一个是以数字的方式进行显示，而另外一个是以“符号”的方式进行显示。后面提到的显示效果的配置文件，在</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中统称为<b>“样式”</b>。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>样式</span><span
 lang=EN-US>(Styles)</span><span style='font-family:宋体'>用来描述数据的展示方式，包括基本图元的颜色、大小、形状等信息，也可包括要素间的相对位置，特殊要素</span><span
-lang=EN-US>(</span><span style='font-family:宋体'>风向�?/span><span lang=EN-US>)</span><span
-style='font-family:宋体'>的显示方式，要素显示最大、最小比例尺，调色板信息</span><span lang=EN-US>�?/span><span
-style='font-family:宋体'>等�?/span></p>
+lang=EN-US>(</span><span style='font-family:宋体'>风向杆</span><span lang=EN-US>)</span><span
+style='font-family:宋体'>的显示方式，要素显示最大、最小比例尺，调色板信息</span><span lang=EN-US>…</span><span
+style='font-family:宋体'>等。</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>底层框架使用“图层”组织及管理数据，使用“数据源”来为图层提供数据内容，而本节将介绍的“样式”则是通知底层框架，“图层”中数据源提供的数据是以何种方式被绘制出来�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>底层框架使用“图层”组织及管理数据，使用“数据源”来为图层提供数据内容，而本节将介绍的“样式”则是通知底层框架，“图层”中数据源提供的数据是以何种方式被绘制出来。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>图层、数据源、样式关系如下图所示：</span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
 width=554 height=403 src="temp.files/image441.gif"></span><span
-style='font-family:宋体'>�?/span> <span lang=EN-US>5.6.16-1 </span><span
+style='font-family:宋体'>图</span> <span lang=EN-US>5.6.16-1 </span><span
 style='font-family:宋体'>图层、数据源、主题之间的关系</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-style='font-family:宋体'>本节信息只包含配置项说明内容，只介绍样式配置方式相关内容，具体的实现原理请参考�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>二次开发文档”�?/span></p>
+style='font-family:宋体'>本节信息只包含配置项说明内容，只介绍样式配置方式相关内容，具体的实现原理请参考“</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>二次开发文档”。</span></p>
 
-<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，“主题”使�?/span> <span
-style='font-family:宋体'>“样式”对基本数据进行渲染�?/span><span lang=EN-US>MICAPS4</span><span
+<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>在</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，“主题”使用</span> <span
+style='font-family:宋体'>“样式”对基本数据进行渲染，</span><span lang=EN-US>MICAPS4</span><span
 style='font-family:宋体'>中的图层类型与内存模型一一对应，因此主题中的“样式”也是与内存模型一一对应的：针对矢量数据</span><span
 lang=EN-US>(FeatureData)</span><span style='font-family:宋体'>有相应的矢量样式</span><span
-lang=EN-US>(FeatureStyle)</span><span style='font-family:宋体'>，针对格点数据有相应的格点样�?/span><span
+lang=EN-US>(FeatureStyle)</span><span style='font-family:宋体'>，针对格点数据有相应的格点样式</span><span
 lang=EN-US>(GridStyle),</span><span style='font-family:宋体'>针对栅格数据有相应的栅格样式</span><span
-lang=EN-US>(RasterStyle)</span><span style='font-family:宋体'>——不同的内存模型决定了不同的样式类型�?/span></p>
+lang=EN-US>(RasterStyle)</span><span style='font-family:宋体'>——不同的内存模型决定了不同的样式类型。</span></p>
 
-<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，所有的样式文件存放�?/span><span
-lang=EN-US>data\styles</span><span style='font-family:宋体'>目录下面，由�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>内置了“黑色主题”与“白色主题”，因此在该目录下相应的会有�?/span><span
+<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>在</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中，所有的样式文件存放在</span><span
+lang=EN-US>data\styles</span><span style='font-family:宋体'>目录下面，由于</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>内置了“黑色主题”与“白色主题”，因此在该目录下相应的会有“</span><span
 lang=EN-US>dark</span><span style='font-family:宋体'>”与</span> <span
-style='font-family:宋体'>�?/span><span lang=EN-US>light</span><span
-style='font-family:宋体'>”两个子目录�?/span></p>
+style='font-family:宋体'>“</span><span lang=EN-US>light</span><span
+style='font-family:宋体'>”两个子目录。</span></p>
 
-<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>首先针对不同样式类进行逐一介绍�?/span></p>
+<p class=MsoNormal style='text-indent:24.0pt'><span style='font-family:宋体'>首先针对不同样式类进行逐一介绍：</span></p>
 
 
 </div>

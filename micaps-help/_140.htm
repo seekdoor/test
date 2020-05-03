@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>5.1.2 模块配置 - MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
@@ -21,12 +21,12 @@
 
 
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在第一章介�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>安装目录时介绍过�?/span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>使用功能模块来组织不同的数据应用，因此同样支持“可插拔式”的模块组织及管理方式�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在第一章介绍</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>安装目录时介绍过，</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>使用功能模块来组织不同的数据应用，因此同样支持“可插拔式”的模块组织及管理方式。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>自带的功能模块统一存放在安装目录下�?/span><span lang=EN-US>modules</span><span
+style='font-family:宋体'>自带的功能模块统一存放在安装目录下的</span><span lang=EN-US>modules</span><span
 style='font-family:宋体'>文件夹内，通过</span><span lang=EN-US>config\module.ini</span><span
 style='font-family:宋体'>配置文件进行框架配置，该文件内容如下图所示：</span></p>
 
@@ -34,68 +34,68 @@ style='font-family:宋体'>配置文件进行框架配置，该文件内容如�
 width=275 height=226 src="temp.files/image356.jpg"></span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span
-style='font-family:宋体'>�?/span><span lang=EN-US>5.1.2-1 module.ini</span><span
+style='font-family:宋体'>图</span><span lang=EN-US>5.1.2-1 module.ini</span><span
 style='font-family:宋体'>配置文件</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>如上图所示：所有的功能模块均放在一个配置信息组中，模块名称用中括号</span><span
-lang=EN-US>”[]�?/span><span style='font-family:宋体'>标识，该组下�?/span> <span
+lang=EN-US>”[]”</span><span style='font-family:宋体'>标识，该组下的</span> <span
 style='font-family:宋体'>“键</span><span lang=EN-US>-</span><span
 style='font-family:宋体'>值”对用来描述该模块的一些基本信息：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>location</span><span
 style='font-family:宋体'>（必填）</span><span lang=EN-US>:</span><span
-style='font-family:宋体'>用来标识功能模块对应的动态库文件所在的相对路径位置�?/span></p>
+style='font-family:宋体'>用来标识功能模块对应的动态库文件所在的相对路径位置。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>moduletype</span><span
-style='font-family:宋体'>（必填）：用来描述实�?/span><span lang=EN-US>IModule</span><span
-style='font-family:宋体'>接口的类的命名空间（二次开发相关）�?/span></p>
+style='font-family:宋体'>（必填）：用来描述实现</span><span lang=EN-US>IModule</span><span
+style='font-family:宋体'>接口的类的命名空间（二次开发相关）。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>dependson</span><span
-style='font-family:宋体'>（选填）：模块依赖�?/span></p>
+style='font-family:宋体'>（选填）：模块依赖项</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>ondemand</span><span
-style='font-family:宋体'>（选填）：是否按需加载该模块�?/span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>（选填）：是否按需加载该模块。</span><span lang=EN-US>MICAPS4</span><span
 style='font-family:宋体'>中为了提升主程序的启动速度，减少不必要的内存开销，程序启动时只对部分模块进行加载，如果需要模块在程序启动时即被加载并初始化，则该项设置为</span><span
-lang=EN-US>false,</span><span style='font-family:宋体'>否则设置�?/span><span
+lang=EN-US>false,</span><span style='font-family:宋体'>否则设置为</span><span
 lang=EN-US>true</span><span style='font-family:宋体'>。该项默认为</span><span
-lang=EN-US>true</span><span style='font-family:宋体'>，即不自动加载�?/span></p>
+lang=EN-US>true</span><span style='font-family:宋体'>，即不自动加载。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>filebindings</span><span
 style='font-family:宋体'>（选填）：</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>部分模块用来支持文件加载，当数据被程序打开时框架会调用各个模块的类型判断方法进行识别，如果该模块支持打开指定格式的数据，则需要在这里标明支持文件类型判断的类名称�?/span></p>
+style='font-family:宋体'>部分模块用来支持文件加载，当数据被程序打开时框架会调用各个模块的类型判断方法进行识别，如果该模块支持打开指定格式的数据，则需要在这里标明支持文件类型判断的类名称。</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>如果需要注释一个功能模块，可在该模块对应的方括�?/span><span
-lang=EN-US>[]</span><span style='font-family:宋体'>中的模块名前添加一�?/span><span
-lang=EN-US>�?�?/span><span style='font-family:宋体'>符号即可，例如，需要注释集合预报模块，可将</span><span
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>如果需要注释一个功能模块，可在该模块对应的方括号</span><span
+lang=EN-US>[]</span><span style='font-family:宋体'>中的模块名前添加一个</span><span
+lang=EN-US>“#”</span><span style='font-family:宋体'>符号即可，例如，需要注释集合预报模块，可将</span><span
 lang=EN-US>[EnsembleForecast]</span><span style='font-family:宋体'>改为</span><span
-lang=EN-US>[#EnsembleForecast]</span><span style='font-family:宋体'>�?/span></p>
+lang=EN-US>[#EnsembleForecast]</span><span style='font-family:宋体'>。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>如果模块还带有相应的配置文件，则建议将该配置文件统一放在</span><span
 lang=EN-US>config</span><span style='font-family:宋体'>目录下，</span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中各个功能模块的配置文件会在后续章节逐一进行介绍�?/span></p>
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>中各个功能模块的配置文件会在后续章节逐一进行介绍。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>module.ini</span><span
-style='font-family:宋体'>中默认的模块说明�?/span></p>
+style='font-family:宋体'>中默认的模块说明：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>GISMap</span><span
-style='font-family:宋体'>（不可注释）：基础地理信息模块，显示所有的行政区边界、陆地线以及自定义地理信息数据�?/span></p>
+style='font-family:宋体'>（不可注释）：基础地理信息模块，显示所有的行政区边界、陆地线以及自定义地理信息数据。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>ToolBox</span><span
-style='font-family:宋体'>（不可注释）：工具箱模块，所有交互图层使用的工具箱窗口�?/span></p>
+style='font-family:宋体'>（不可注释）：工具箱模块，所有交互图层使用的工具箱窗口。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>RadarS</span><span
-style='font-family:宋体'>（可注释）：单站雷达模块，工具栏上的单站雷达功能模块�?/span></p>
+style='font-family:宋体'>（可注释）：单站雷达模块，工具栏上的单站雷达功能模块。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>EnsembleForecast</span><span
-style='font-family:宋体'>（可注释）：集合预报工具箱模块�?/span></p>
+style='font-family:宋体'>（可注释）：集合预报工具箱模块。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>MicapsDataBinding</span><span
-style='font-family:宋体'>（不可注释）�?/span><span lang=EN-US>MICAPS</span><span
-style='font-family:宋体'>数据类型格式判断模块，用于所�?/span><span lang=EN-US>MICAPS</span><span
-style='font-family:宋体'>默认支持格式数据的类型判断�?/span></p>
+style='font-family:宋体'>（不可注释）：</span><span lang=EN-US>MICAPS</span><span
+style='font-family:宋体'>数据类型格式判断模块，用于所有</span><span lang=EN-US>MICAPS</span><span
+style='font-family:宋体'>默认支持格式数据的类型判断。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>DataProperty</span><span
-style='font-family:宋体'>（不可注释）：属性弹出窗口模块�?/span></p>
+style='font-family:宋体'>（不可注释）：属性弹出窗口模块。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>Typhoon</span><span
 style='font-family:宋体'>（可注释）：台风路径显示模块</span></p>
@@ -115,16 +115,16 @@ style='font-family:宋体'>功能模块</span></p>
 style='font-family:宋体'>（可注释）：站点一维图模块</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>ModeDataProcessor</span><span
-style='font-family:宋体'>（可注释）：模式时间序列图、模式资料处理、模式平均功能模�?/span></p>
+style='font-family:宋体'>（可注释）：模式时间序列图、模式资料处理、模式平均功能模块</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>CumulativeRainfall</span><span
 style='font-family:宋体'>（可注释）：自动站及模式雨量累加模块</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>Diamond8ToolBox</span><span
-style='font-family:宋体'>（可注释）：城市报模�?/span></p>
+style='font-family:宋体'>（可注释）：城市报模块</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>ImageGenerator</span><span
-style='font-family:宋体'>（可注释）：工具栏上的出图设置模�?/span></p>
+style='font-family:宋体'>（可注释）：工具栏上的出图设置模块</span></p>
 
 
 </div>

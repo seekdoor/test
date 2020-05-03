@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title> A1.12 第十一类数据格式：格点矢量数据 - MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
@@ -28,39 +28,39 @@ style='font-family:宋体'>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
 style='font-family:宋体'>diamond&nbsp; 11&nbsp; </span><span style='font-family:
-宋体'>数据说明（字符串�?span lang=EN-US>&nbsp; </span>�?span lang=EN-US>&nbsp; </span>�?span
-lang=EN-US>&nbsp; </span>�?span lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp;
+宋体'>数据说明（字符串）<span lang=EN-US>&nbsp; </span>年<span lang=EN-US>&nbsp; </span>月<span
+lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp;
 </span>时效<span lang=EN-US>&nbsp; </span>层次（均为整数）经度格距<span lang=EN-US>&nbsp; </span>纬度格距<span
 lang=EN-US>&nbsp; </span>起始经度<span lang=EN-US>&nbsp; </span>终止经度<span
 lang=EN-US>&nbsp; </span>起始纬度<span lang=EN-US>&nbsp; </span>终止纬度（均为浮点数）纬向格点数<span
-lang=EN-US>&nbsp; </span>经向格点数（均为整数�?/span></p>
+lang=EN-US>&nbsp; </span>经向格点数（均为整数）</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此类数据主要用于画风场的流线。网格可以为经纬度网格，也可以为直角坐标网格�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此类数据主要用于画风场的流线。网格可以为经纬度网格，也可以为直角坐标网格。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>当使用直角坐标网格时，文件头做如下改动：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
-style='font-family:宋体'>1</span><span style='font-family:宋体'>）把网格经度间隔和纬度间隔改为格点数据第一行最后一个点的经纬度�?span
-lang=EN-US>2</span>）把起始经度和起始纬度改为格点数据第一行第一个点的经纬度�?span lang=EN-US>3</span>）把终止经度和终止纬度改为格点数据最后一行最后一个点的经纬度�?span
-lang=EN-US>4</span>）在第一行最后一点的经度上加一个数，指示在哪个底图投影下的直角坐标�?span lang=EN-US>LAMBERT</span>投影�?span
-lang=EN-US>1000</span>�?span lang=EN-US>MECATOR</span>投影�?span lang=EN-US>2000</span>、北半球投影�?span
-lang=EN-US>3000</span>�?/span></p>
+style='font-family:宋体'>1</span><span style='font-family:宋体'>）把网格经度间隔和纬度间隔改为格点数据第一行最后一个点的经纬度。<span
+lang=EN-US>2</span>）把起始经度和起始纬度改为格点数据第一行第一个点的经纬度。<span lang=EN-US>3</span>）把终止经度和终止纬度改为格点数据最后一行最后一个点的经纬度。<span
+lang=EN-US>4</span>）在第一行最后一点的经度上加一个数，指示在哪个底图投影下的直角坐标：<span lang=EN-US>LAMBERT</span>投影加<span
+lang=EN-US>1000</span>、<span lang=EN-US>MECATOR</span>投影加<span lang=EN-US>2000</span>、北半球投影加<span
+lang=EN-US>3000</span>。</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>先放<span
-lang=EN-US>U</span>分量，数据按先纬向后经向放（若为直角坐标网格数据，则�?span lang=EN-US>X</span>方向，后<span
-lang=EN-US>Y</span>方向），均为浮点数。所有格点的<span lang=EN-US>U</span>分量放完后再�?span
-lang=EN-US>V</span>分量，也是按先纬向后经向放�?/span></p>
+lang=EN-US>U</span>分量，数据按先纬向后经向放（若为直角坐标网格数据，则先<span lang=EN-US>X</span>方向，后<span
+lang=EN-US>Y</span>方向），均为浮点数。所有格点的<span lang=EN-US>U</span>分量放完后再放<span
+lang=EN-US>V</span>分量，也是按先纬向后经向放。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
 style='font-family:宋体'>&nbsp;</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
-style='font-family:宋体'>diamond 11 96</span><span style='font-family:宋体'>�?span
-lang=EN-US>2</span>�?span lang=EN-US>6</span>�?span lang=EN-US>20</span>�?span
+style='font-family:宋体'>diamond 11 96</span><span style='font-family:宋体'>年<span
+lang=EN-US>2</span>月<span lang=EN-US>6</span>日<span lang=EN-US>20</span>时<span
 lang=EN-US>T63_200Hpa</span>风场分析</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US

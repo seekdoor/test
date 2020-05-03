@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>5.3.5.1 配置规则 - MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
@@ -23,49 +23,49 @@
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>dataInfo</span><span
 style='font-family:宋体'>文件夹组织形式是由文件夹目录和从属的</span><span lang=EN-US>ini</span><span
-style='font-family:宋体'>的配置文件组成的树形结构。创建文件夹�?/span><span lang=EN-US>ini</span><span
-style='font-family:宋体'>文件需要符合的规则�?/span></p>
+style='font-family:宋体'>的配置文件组成的树形结构。创建文件夹和</span><span lang=EN-US>ini</span><span
+style='font-family:宋体'>文件需要符合的规则：</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-family:宋体'>文件夹按照模�?/span><span lang=EN-US>-</span><span
-style='font-family:宋体'>要素方式进行命名�?/span></p>
+</span></span><span style='font-family:宋体'>文件夹按照模式</span><span lang=EN-US>-</span><span
+style='font-family:宋体'>要素方式进行命名。</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-family:宋体'>每一个文件夹下必须存在一个和文件夹同名的配置文件，该文件的格式必须是</span><span
-lang=EN-US>ini</span><span style='font-family:宋体'>格式。它是当前文件夹下其它文件的主配置，其它文件则属于子配置�?/span></p>
+lang=EN-US>ini</span><span style='font-family:宋体'>格式。它是当前文件夹下其它文件的主配置，其它文件则属于子配置。</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-family:宋体'>所�?/span><span lang=EN-US>ini</span><span
+</span></span><span style='font-family:宋体'>所有</span><span lang=EN-US>ini</span><span
 style='font-family:宋体'>文件中的每一个配置段</span><span lang=EN-US>[Section]</span><span
 style='font-family:宋体'>中，必须包含</span><span lang=EN-US>path</span><span
-style='font-family:宋体'>配置，表明当前数据的路径�?/span></p>
+style='font-family:宋体'>配置，表明当前数据的路径。</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=EN-US>path</span><span style='font-family:宋体'>一般表示当前要素或者层次在共享目录中的物理存储地址。系统会把各级目录下�?/span><span
+</span></span><span lang=EN-US>path</span><span style='font-family:宋体'>一般表示当前要素或者层次在共享目录中的物理存储地址。系统会把各级目录下的</span><span
 lang=EN-US>ini</span><span style='font-family:宋体'>文件</span><span lang=EN-US>path</span><span
-style='font-family:宋体'>中定义的路径组织成树形结构�?/span></p>
+style='font-family:宋体'>中定义的路径组织成树形结构。</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-family:宋体'>共享文件服务器中的全局数据路径如果包含</span><span
-lang=EN-US>�?/span><span style='font-family:宋体'>数据�?/span><span lang=EN-US>�?/span><span
+lang=EN-US>“</span><span style='font-family:宋体'>数据源</span><span lang=EN-US>”</span><span
 style='font-family:宋体'>中定义的路径地址，则</span><span lang=EN-US>ini</span><span
 style='font-family:宋体'>文件中的</span><span lang=EN-US>path</span><span
-style='font-family:宋体'>项只需填写相对路径�?/span></p>
+style='font-family:宋体'>项只需填写相对路径。</span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>下面以欧洲中心细网格的高度场为例进行介绍�?/span></p>
+<p class=MsoNormal><span style='font-family:宋体'>下面以欧洲中心细网格的高度场为例进行介绍：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>它在共享目录的存储路径为</span><span
 lang=EN-US>z:\data\newecmwf_grib\height\100</span><span style='font-family:
-宋体'>�?/span><span lang=EN-US>newecmwf_grib/height/200...</span><span
-style='font-family:宋体'>其中最后一级的数字代表各个层次�?/span></p>
+宋体'>、</span><span lang=EN-US>newecmwf_grib/height/200...</span><span
+style='font-family:宋体'>其中最后一级的数字代表各个层次。</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>我们�?/span><span
-lang=EN-US>datainfo</span><span style='font-family:宋体'>目录下建立如下的相同目录结构�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>我们在</span><span
+lang=EN-US>datainfo</span><span style='font-family:宋体'>目录下建立如下的相同目录结构：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
 
@@ -74,9 +74,9 @@ lang=EN-US><img width=99 height=100 src="temp.files/image392.jpg"><img
 width=182 height=67 src="temp.files/image393.jpg"></span><span lang=EN-US><img
 width=121 height=156 src="temp.files/image394.gif"></span></p>
 
-<p class=MsoCaption style='text-indent:20.0pt'><span style='font-family:黑体'>�?/span><span
+<p class=MsoCaption style='text-indent:20.0pt'><span style='font-family:黑体'>图</span><span
 lang=EN-US> 5.3.5.1- </span><span
-lang=EN-US>1</span><span lang=EN-US> </span><span style='font-family:黑体'>文件组织�?/span><span
+lang=EN-US>1</span><span lang=EN-US> </span><span style='font-family:黑体'>文件组织和</span><span
 lang=EN-US>ini</span><span style='font-family:黑体'>文件结构</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体;
@@ -87,7 +87,7 @@ color:black'>下的组织方式保持一致：</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
 style='color:black'>newecmwf_grib</span><span style='font-family:宋体;color:black'>目录下有一个同名配置文件：</span><span
-lang=EN-US>newecmwf_grib.ini</span><span style='font-family:宋体'>，文件内容为�?/span></p>
+lang=EN-US>newecmwf_grib.ini</span><span style='font-family:宋体'>，文件内容为：</span></p>
 
 <div align=center>
 
@@ -112,7 +112,7 @@ lang=EN-US>newecmwf_grib.ini</span><span style='font-family:宋体'>，文件内
 
 </div>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>可以看到这里定义�?/span><span
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>可以看到这里定义了</span><span
 lang=EN-US>newecmwf_grib</span><span style='font-family:宋体'>这个模式的一些补充说明，其中</span></p>
 
 <div align=center>
@@ -130,10 +130,10 @@ lang=EN-US>newecmwf_grib</span><span style='font-family:宋体'>这个模式的�
   color:#943634'>path</span></b><b><span style='font-family:宋体;color:#943634'>：模式的存储路径</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>arrivetime</span></b><b><span style='font-family:宋体;
-  color:#943634'>：估算的数据到达时间，主要用于获�?/span></b><b><span lang=EN-US
-  style='font-family:"Calibri","sans-serif";color:#943634'>�?/span></b><b><span
-  style='font-family:宋体;color:#943634'>最�?/span></b><b><span lang=EN-US
-  style='font-family:"Calibri","sans-serif";color:#943634'>�?/span></b><b><span
+  color:#943634'>：估算的数据到达时间，主要用于获取</span></b><b><span lang=EN-US
+  style='font-family:"Calibri","sans-serif";color:#943634'>“</span></b><b><span
+  style='font-family:宋体;color:#943634'>最新</span></b><b><span lang=EN-US
+  style='font-family:"Calibri","sans-serif";color:#943634'>”</span></b><b><span
   style='font-family:宋体;color:#943634'>文件使用</span></b></p>
   </td>
  </tr>
@@ -146,18 +146,18 @@ lang=EN-US>newecmwf_grib</span><span style='font-family:宋体'>这个模式的�
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体;
 color:black'>数据目录下，</span><span lang=EN-US style='color:black'>height</span><span
 style='font-family:宋体;color:black'>目录下为</span><span lang=EN-US
-style='color:black'>�?/span><span style='font-family:宋体;color:black'>层次</span><span
-lang=EN-US style='color:black'>�?/span><span style='font-family:宋体;color:black'>子目录，�?/span><span
+style='color:black'>“</span><span style='font-family:宋体;color:black'>层次</span><span
+lang=EN-US style='color:black'>”</span><span style='font-family:宋体;color:black'>子目录，而</span><span
 lang=EN-US style='color:black'>datainfo</span><span style='font-family:宋体;
 color:black'>配置目录中，</span><span lang=EN-US style='color:black'>height</span><span
 style='font-family:宋体;color:black'>文件夹下存在两个</span><span lang=EN-US
-style='color:black'>ini</span><span style='font-family:宋体;color:black'>文件，其�?/span><span
+style='color:black'>ini</span><span style='font-family:宋体;color:black'>文件，其中</span><span
 lang=EN-US style='color:black'>height</span><span style='font-family:宋体;
-color:black'>是和文件夹名称同名，表示它是主配置文件�?/span><span lang=EN-US style='color:black'>levels.ini</span><span
-style='font-family:宋体;color:black'>�?/span><span lang=EN-US style='color:black'>height.ini</span><span
-style='font-family:宋体;color:black'>的子配置文件，从文件名可看出该文件是层次配置信息�?/span><span
+color:black'>是和文件夹名称同名，表示它是主配置文件。</span><span lang=EN-US style='color:black'>levels.ini</span><span
+style='font-family:宋体;color:black'>是</span><span lang=EN-US style='color:black'>height.ini</span><span
+style='font-family:宋体;color:black'>的子配置文件，从文件名可看出该文件是层次配置信息，</span><span
 lang=EN-US style='color:black'>levels.ini</span><span style='font-family:宋体;
-color:black'>也是固定配置名称，用于表示高空要素的层次配置项�?/span></p>
+color:black'>也是固定配置名称，用于表示高空要素的层次配置项。</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>height.ini</span><span
 style='font-family:宋体'>中的文件内容为：</span></p>
@@ -193,7 +193,7 @@ style='font-family:宋体'>中的文件内容为：</span></p>
 
 </div>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这里定义高度场这个要素的特点�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这里定义高度场这个要素的特点。</span></p>
 
 <div align=center>
 
@@ -205,29 +205,29 @@ style='font-family:宋体'>中的文件内容为：</span></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>description</span></b><b><span style='font-family:宋体;
-  color:#943634'>：描述信�?/span></b></p>
+  color:#943634'>：描述信息</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
-  color:#943634'>path</span></b><b><span style='font-family:宋体;color:#943634'>：存储路�?/span></b></p>
+  color:#943634'>path</span></b><b><span style='font-family:宋体;color:#943634'>：存储路径</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
-  color:#943634'>duration</span></b><b><span style='font-family:宋体;color:#943634'>：当前要素的预报时效列表，翻页时会参考这个预报时效列表�?/span></b></p>
+  color:#943634'>duration</span></b><b><span style='font-family:宋体;color:#943634'>：当前要素的预报时效列表，翻页时会参考这个预报时效列表。</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
-  color:#943634'>starttime</span></b><b><span style='font-family:宋体;color:#943634'>：起报时�?/span></b></p>
+  color:#943634'>starttime</span></b><b><span style='font-family:宋体;color:#943634'>：起报时间</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
-  color:#943634'>step</span></b><b><span style='font-family:宋体;color:#943634'>：预报时间间�?/span></b></p>
+  color:#943634'>step</span></b><b><span style='font-family:宋体;color:#943634'>：预报时间间隔</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>filepattern</span></b><b><span style='font-family:宋体;
-  color:#943634'>：文件名格式�?/span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
+  color:#943634'>：文件名格式。</span></b><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>{$time:yyMMddHH}.{$duration:D3}</span></b><b><span
-  style='font-family:宋体;color:#943634'>，�?/span></b><b><span lang=EN-US
+  style='font-family:宋体;color:#943634'>，“</span></b><b><span lang=EN-US
   style='font-family:"Calibri","sans-serif";color:#943634'>{$name:format}</span></b><b><span
-  style='font-family:宋体;color:#943634'>”格式表明这是一个变量，冒号后是该变量的格式，其�?/span></b><b><span
+  style='font-family:宋体;color:#943634'>”格式表明这是一个变量，冒号后是该变量的格式，其中</span></b><b><span
   lang=EN-US style='font-family:"Calibri","sans-serif";color:#943634'>time</span></b><b><span
-  style='font-family:宋体;color:#943634'>�?/span></b><b><span lang=EN-US
+  style='font-family:宋体;color:#943634'>和</span></b><b><span lang=EN-US
   style='font-family:"Calibri","sans-serif";color:#943634'>duration</span></b><b><span
-  style='font-family:宋体;color:#943634'>是保留字段分别表示时间和时效�?/span></b></p>
+  style='font-family:宋体;color:#943634'>是保留字段分别表示时间和时效。</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>timepattern=</span></b><b><span style='font-family:宋体;
-  color:#943634'>文件名中时间部分的格式�?/span></b></p>
+  color:#943634'>文件名中时间部分的格式。</span></b></p>
   </td>
  </tr>
 </table>
@@ -237,7 +237,7 @@ style='font-family:宋体'>中的文件内容为：</span></p>
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>levels.ini</span><span
-style='font-family:宋体'>�?/span><span lang=EN-US>height</span><span
+style='font-family:宋体'>是</span><span lang=EN-US>height</span><span
 style='font-family:宋体'>目录的子配置文件，主要用于该数据的上下翻页描述。它的文件内容如下：</span></p>
 
 <div align=center>
@@ -359,7 +359,7 @@ style='font-family:宋体'>目录的子配置文件，主要用于该数据的�
 
 </div>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>它描述了高度场各层次的数据特�?/span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>它描述了高度场各层次的数据特点</span></p>
 
 <div align=center>
 
@@ -371,21 +371,21 @@ style='font-family:宋体'>目录的子配置文件，主要用于该数据的�
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>description</span></b><b><span style='font-family:宋体;
-  color:#943634'>：描�?/span></b><b><span style='font-family:"Calibri","sans-serif";
+  color:#943634'>：描述</span></b><b><span style='font-family:"Calibri","sans-serif";
   color:#943634'> </span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>startanalysisvalue</span></b><b><span style='font-family:宋体;
-  color:#943634'>：起始分析�?/span></b></p>
+  color:#943634'>：起始分析值</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>endanalysisvalue</span></b><b><span style='font-family:宋体;
-  color:#943634'>：终止分析�?/span></b></p>
+  color:#943634'>：终止分析值</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>analysisinterval</span></b><b><span style='font-family:宋体;
-  color:#943634'>：分析间�?/span></b></p>
+  color:#943634'>：分析间隔</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
   color:#943634'>pallete</span></b><b><span style='font-family:宋体;color:#943634'>：调色板</span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri","sans-serif";
-  color:#943634'>path</span></b><b><span style='font-family:宋体;color:#943634'>：存储路径�?/span></b></p>
+  color:#943634'>path</span></b><b><span style='font-family:宋体;color:#943634'>：存储路径。</span></b></p>
   </td>
  </tr>
 </table>
