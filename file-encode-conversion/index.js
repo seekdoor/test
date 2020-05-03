@@ -23,6 +23,12 @@ let convDirSync = (pathA,pathB)=>{
             let contentBuf = fs.readFileSync(pathLeft);
             let content = iconv.decode( contentBuf, 'GB2312');
             
+            var re = /font-family:楷体_GB2312/g;
+            content = content.replace(re,'');
+            
+            re = /GB2312/gi;
+            content = content.replace(re,'utf-8');
+            
             let convBuf = iconv.encode(content, 'utf8');
             
             fs.writeFileSync(pathRight, content);
