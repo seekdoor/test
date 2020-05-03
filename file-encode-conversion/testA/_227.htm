@@ -1,0 +1,67 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.15 扩展第十三类数据格式：经纬度网格图象数据 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.15 扩展第十三类数据格式：经纬度网格图象数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>（云图、雷达拼图、地形图等图象数据）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：（文件头为<span
+lang=EN-US>TEXT</span>格式，各字段之间以空格隔开，总长度<span lang=EN-US>149</span>个字符，不足使用空格补齐）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>MICAPS 13&nbsp;&nbsp; </span><span style='font-family:
+宋体'>数据说明<span lang=EN-US>&nbsp; </span>年<span lang=EN-US>&nbsp; </span>月<span
+lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp; </span>时 分 类别<span
+lang=EN-US>&nbsp; </span>调色板序号<span lang=EN-US> X</span>方向图象大小<span lang=EN-US>&nbsp;
+Y</span>方向图象大小<span lang=EN-US>&nbsp; </span>开始经度<span lang=EN-US>&nbsp; </span>开始纬度坐标
+结束经度<span lang=EN-US>&nbsp; </span>结束纬度<span lang=EN-US>&nbsp; </span>经向分辨率<span
+lang=EN-US>&nbsp;&nbsp; </span>纬向分辨率<span lang=EN-US>&nbsp; </span>保留<span
+lang=EN-US>&nbsp; </span>保留<span lang=EN-US> </span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>（文件头部分共</span><span
+lang=EN-US>149</span><span style='font-family:宋体'>个字符）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>其中类别使用整数表示数据类型，<span
+lang=EN-US>1</span>表示红外云图，<span lang=EN-US>2</span>表示可见光云图，<span lang=EN-US>3</span>表示水汽云图，<span
+lang=EN-US>5</span>表示雷达数据。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>MICAPS
+13&nbsp;&nbsp;&nbsp; 2006年08月04日06时00分FY-2C红外云图气象中心制&nbsp; 2006 08 04 06 00 2 1
+1600 1200 70.00000 60.00000 149.9500 0.000000 0.050000 -0.05000&nbsp; 0&nbsp; 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

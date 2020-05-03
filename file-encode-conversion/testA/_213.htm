@@ -1,0 +1,114 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.1 第一类数据格式 : 地面全要素填图数据 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.1 第一类数据格式 : 地面全要素填图数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 1&nbsp; </span><span style='font-family:
+宋体'>数据说明（字符串）<span lang=EN-US>&nbsp; </span>年<span lang=EN-US>&nbsp; </span>月<span
+lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp;
+</span>总站点数（均为整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此类数据用于规范的地面填图</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：<span
+lang=EN-US>&nbsp; </span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>区站号（长整数）<span
+lang=EN-US>&nbsp; </span>经度<span lang=EN-US>&nbsp; </span>纬度<span lang=EN-US>&nbsp;
+</span>拔海高度（均为浮点数）站点级别（整数）<span lang=EN-US>&nbsp; </span>总云量<span lang=EN-US>&nbsp;
+</span>风向<span lang=EN-US>&nbsp; </span>风速<span lang=EN-US>&nbsp; </span>海平面气压（或本站气压）<span
+lang=EN-US>&nbsp; 3</span>小时变压<span lang=EN-US>&nbsp; </span>过去天气<span
+lang=EN-US>1&nbsp; </span>过去天气<span lang=EN-US>2 &nbsp;6</span>小时降水 低云状<span
+lang=EN-US>&nbsp; </span>低云量<span lang=EN-US>&nbsp; </span>低云高<span lang=EN-US>&nbsp;
+</span>露点<span lang=EN-US>&nbsp; </span>能见度<span lang=EN-US>&nbsp; </span>现在天气<span
+lang=EN-US>&nbsp; </span>温度 中云状<span lang=EN-US>&nbsp; </span>高云状<span
+lang=EN-US>&nbsp; </span>标志<span lang=EN-US>1&nbsp; </span>标志<span lang=EN-US>2</span>（均为整数）<span
+lang=EN-US> 24</span>小时变温<span lang=EN-US>&nbsp; 24</span>小时变压</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>&#61548;<span
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>缺值时用<span lang=EN-US>9999</span>表示，以后相同。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>&#61548;<span
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>站点级别表示站点的放大级别，即只有当图象放大到该级别时此站才被填图。以后相同。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>&#61548;<span
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体'>当标志<span lang=EN-US>1</span>为<span lang=EN-US>1</span>，标志<span
+lang=EN-US>2</span>为<span lang=EN-US>2</span>时，说明后面有<span lang=EN-US>24</span>小时变温变压。否则说明后面没有<span
+lang=EN-US>24</span>小时变温变压。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 1 2016</span><span style='font-family:
+宋体'>年<span lang=EN-US>06</span>月<span lang=EN-US>30</span>日<span lang=EN-US>08</span>时地面观测（全站点）<span
+lang=EN-US>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>16&nbsp; 06&nbsp; 30&nbsp; 08&nbsp; 4680</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>38149&nbsp; 58.93&nbsp; 43.08&nbsp;&nbsp; 60
+1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp; 2&nbsp;
+054&nbsp;&nbsp;&nbsp; 8 9999 9999&nbsp;&nbsp; 9999 9999 9999 9999&nbsp;&nbsp;
+12&nbsp;&nbsp; 20 9999&nbsp;&nbsp; 22.4 9999 9999 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>48920 111.92&nbsp;&nbsp; 8.65&nbsp;&nbsp;&nbsp; 3
+1&nbsp;&nbsp;&nbsp; 7&nbsp; 200&nbsp;&nbsp;&nbsp; 1&nbsp; 121&nbsp;&nbsp;
+14&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 9999&nbsp;&nbsp;
+32&nbsp;&nbsp;&nbsp; 3&nbsp; 600&nbsp;&nbsp; 26&nbsp;&nbsp; 20 &nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;
+27.6 9999&nbsp;&nbsp; 18 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>65351&nbsp;&nbsp; 0.25&nbsp; 10.87&nbsp; 330
+1&nbsp;&nbsp;&nbsp; 9&nbsp; 280&nbsp;&nbsp;&nbsp; 2 9999 9999&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 9999 9999&nbsp;&nbsp;&nbsp; 9
+9999&nbsp;&nbsp; 22&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;
+25.0&nbsp;&nbsp; 24 9999 9999 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注意：地面自动站数据如果写为该类格式，可以在文件说明中加入可以识别的文字，默认使用“自动”作为识别文字，但自动站文件名定义可以使用<span
+lang=EN-US>8.3</span>格式的“年月日时<span lang=EN-US>.000</span>”或<span lang=EN-US>10.3</span>的“年月日时分<span
+lang=EN-US>.000</span>”格式，文件名定义规则主要用于时间变化曲线的显示。不支持“月日时分<span lang=EN-US>.000</span>”的文件命名格式。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

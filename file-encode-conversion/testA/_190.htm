@@ -1,0 +1,67 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title>6.3.1.1 模式数据处理 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;6.3.1.1 模式数据处理</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>为提高</span><span
+style='font-family:宋体'>客户端用户交互系统的效率，</span><span lang=EN-US>MICAPS 4</span><span
+style='font-family:宋体'>并不直接读取集合预报模式输出的</span><span lang=EN-US>GRIB</span><span
+style='font-family:宋体'>格式的原始数据文件，而是将原始数据文件转换为</span><span lang=EN-US>MICAPS</span><span
+style='font-family:宋体'>数据格式编码的数据文件，保存到文件服务器，或者分布式数据库。目前，</span><span
+lang=EN-US>MICAPS 4</span><span style='font-family:宋体'>可以从以下三种数据源读取集合预报产品文件，并生成图层：</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>共享文件目录</span><span lang=EN-US>samba2</span><span
+style='font-family:宋体'>；</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>共享文件目录</span><span lang=EN-US>sav</span><span
+style='font-family:宋体'>；</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:宋体'>分布式数据库</span><span lang=EN-US>MDFS</span><span
+style='font-family:宋体'>。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这三个数据源的位置可以在配置文件</span><span
+lang=EN-US>bin/config/datasource.ini</span><span style='font-family:宋体'>中指定。其中</span><span
+lang=EN-US>sav</span><span style='font-family:宋体'>为存放集合预报工具箱生成的</span><span
+lang=EN-US>.sav</span><span style='font-family:宋体'>文件的目录，相关配置请参考集合预报工具箱使用文档；</span><span
+lang=EN-US>MDFS</span><span style='font-family:宋体'>为</span><span lang=EN-US>MICAPS
+4</span><span style='font-family:宋体'>服务器分布式数据库，关于如何配置</span><span lang=EN-US>MICAPS
+4</span><span style='font-family:宋体'>服务器请参考本文档相关章节；</span><span lang=EN-US>samba2</span><span
+style='font-family:宋体'>为存放</span><span lang=EN-US>NUMBERS</span><span
+style='font-family:宋体'>（模式融合与集合预报系统）生成的</span><span lang=EN-US>micaps</span><span
+style='font-family:宋体'>文件的目录。下面介绍如何配置</span><span lang=EN-US>NUMBERS</span><span
+style='font-family:宋体'>自动作业以生成</span><span lang=EN-US>MICAPS</span><span
+style='font-family:宋体'>格式的集合预报产品文件。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

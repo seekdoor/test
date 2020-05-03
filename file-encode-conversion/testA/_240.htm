@@ -1,0 +1,84 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.28 第八十二类数据格式：自动生成多幅图片 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.28 第八十二类数据格式：自动生成多幅图片</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>类型为</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>82</span><span
+style='font-family:宋体'>，用于自动生成图片文件列表，格式为文件头（包括识别字符串、类别代码和文件说明）和文件内容，文件内容为打开文件数、每个文件的文件名，打开的文件数，相应的每个文件名，直至文件结束（</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>0</span><span
+style='font-family:宋体'>为结束符号）。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>diamond 82 </span><span
+style='font-family:宋体'>图片列表文件</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>-</span><span
+style='font-family:宋体'>可以是综合图或数据文件</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>2</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>C:\MICAPS3.2\zht\zht2.zht</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>d:\MICAPSData\ecmwf\h500\00</span><span
+style='font-family:宋体'>天气图</span><span lang=EN-US style='font-family:"Tahoma","sans-serif"'>500</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>1</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>C:\MICAPS3.2\zht\zht2.zht</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>……</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>C:\micaps3\savegif.gif</span></p>
+
+<p class=MsoNormal style='text-indent:26.25pt'><span style='font-family:宋体'>需要打开的文件若为具体的以时间命名的数据文件，可用通配符</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>YYMMDD</span><span
+style='font-family:宋体'>表示文件名，后面可加参数</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>0</span><span style='font-family:宋体'>表示当日的数据文件，</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>-1</span><span
+style='font-family:宋体'>表示前一天的数据文件，以此类推（例子见下面第</span><span lang=EN-US
+style='font-family:"Tahoma","sans-serif"'>111</span><span style='font-family:
+宋体'>类数据说明）。</span></p>
+
+<p class=MsoNormal style='text-indent:26.25pt'><span style='font-family:宋体'>最后可以增加一行，表示要输出动画</span><span
+lang=EN-US style='font-family:"Tahoma","sans-serif"'>Gif</span><span
+style='font-family:宋体'>文件，这里给定的是保存动画</span><span lang=EN-US style='font-family:
+"Tahoma","sans-serif"'>Gif</span><span style='font-family:宋体'>的路径和文件名。</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

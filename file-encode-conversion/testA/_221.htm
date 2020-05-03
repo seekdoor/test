@@ -1,0 +1,187 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.9 第九类数据格式 : 地图线条数据 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.9 第九类数据格式 : 地图线条数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp;
+9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>投影方式
+标准经度<span lang=EN-US>&nbsp; </span>标准纬度<span lang=EN-US>&nbsp; X</span>放大系数<span
+lang=EN-US>&nbsp; Y</span>放大系数<span lang=EN-US>&nbsp; X</span>偏移<span
+lang=EN-US>&nbsp; Y</span>偏移<span lang=EN-US>&nbsp; </span>保留<span lang=EN-US>&nbsp;
+</span>保留<span lang=EN-US>&nbsp; </span>保留（均为整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>上述底图中，四种投影的缺省标准配置如下：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>投影方式<span lang=EN-US>&nbsp; </span>标准经度<span lang=EN-US>&nbsp;
+</span>标准纬度<span lang=EN-US>&nbsp; X</span>放大系数<span lang=EN-US>&nbsp; Y</span>放大系数<span
+lang=EN-US>&nbsp; X</span>偏移<span lang=EN-US>&nbsp; Y</span>偏移<span lang=EN-US>&nbsp;
+</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>Lambert&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 79&nbsp;&nbsp;&nbsp;&nbsp;
+29.999990&nbsp; 1.899990&nbsp;&nbsp; 1.899990&nbsp;&nbsp; -581&nbsp; -3411</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>Mecator&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-family:宋体'>无影响<span
+lang=EN-US>&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.558&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.573&nbsp;&nbsp;&nbsp;&nbsp; 478.0&nbsp;
+1276.0</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>北半球<span
+lang=EN-US>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+20&nbsp;&nbsp;&nbsp;&nbsp; </span>无影响<span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>南半球<span
+lang=EN-US>&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+20&nbsp;&nbsp;&nbsp;&nbsp; </span>无影响<span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>投影方式为<span
+lang=EN-US>0</span>时：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>本线段上的点数（整数）
+本线段标识字符串（字符串）<span lang=EN-US>&nbsp; </span>颜色 线宽 线型（均为整数） 本线段上各点的经度<span
+lang=EN-US>&nbsp; </span>纬度<span lang=EN-US>&nbsp;&nbsp;&nbsp; </span>（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此投影方式专为在原有底图上叠加地理信息线条而用，即调用此数据后原有底图仍保留，此数据图象将叠加在原有底图上。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>投影方式大于<span
+lang=EN-US>0</span>时：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>本线段上的点数（整数）
+本线段标识字符串（字符串） 本线段上各点的<span lang=EN-US>X</span>坐标<span lang=EN-US>&nbsp; Y</span>坐标<span
+lang=EN-US>&nbsp;&nbsp;&nbsp; </span>（均为浮点数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 9</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>0 20 0 1 1 100 1100&nbsp; 0 0 0 0 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp; 6 map&nbsp; 358 1 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp; 166.33
+-77.58&nbsp; 168.16 -77.66&nbsp; 169.66 -77.41&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>168.16 -77.33&nbsp; 166.66 -77.08&nbsp; 166.33 -77.58</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;&nbsp; 10
+map</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;-164.00 -78.75 -163.00 -79.08 -163.66 -79.33 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>-163.66 -79.83 -161.66 -80.25 -160.00 -79.91 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>-160.00 -79.50</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;-160.66 -79.08 -161.66 -78.75 -164.00 -78.75</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>或者：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 9</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>3 20 0 1 1 100 1100&nbsp; 0 0 0 0 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>6 map</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;11184.136 -6115.509 11448.041 -5792.840 11363.692 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>-5381.285 11147.518 -5640.771 10781.509 -5814.939 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>11184.136 -6115.509</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>10 map</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;14080.418&nbsp;&nbsp; 245.795
+14502.004&nbsp;&nbsp; 506.440 14848.824&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>347.358 15582.991&nbsp;&nbsp; 364.533
+16234.553&nbsp;&nbsp; 947.472 </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>15651.704&nbsp; 1369.370</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;15037.301&nbsp;
+1315.616 14469.233&nbsp; 1098.124 14058.641&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>820.483 14080.418&nbsp;&nbsp; 245.795</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

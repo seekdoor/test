@@ -1,0 +1,62 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.36 用于调入特殊功能模块设置的数据类型 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.36 用于调入特殊功能模块设置的数据类型</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>除上述数据类型用于实际的地理信息或气象数据外，还定义了一些数据用于特殊模块的调入。由于</span><span
+lang=EN-US>MICAPS 3.2</span><span style='font-family:宋体'>使用的是核心框架与外围功能模块结合的系统结构，因此，系统核心不直接调用功能模块，一些系统需要实现的功能模块通过定义特殊数据类型的方式启动，具体方法是，打开一个特殊定义的数据类型，通过数据检测类型模块确认后调入相应的功能模块。目前系统使用的用于调入特殊功能模块的文件一般是定义为类似</span><span
+lang=EN-US>MICAPS</span><span style='font-family:宋体'>标准数据格式的方式，如使用文件识别标志“</span><span
+lang=EN-US>diamond</span><span style='font-family:宋体'>”后再加一个数字的格式，下面列出的一些识别代码不能再用做数据类型定义。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>定义的上述功能的数据类型有：</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond&nbsp;
+81</span></b><b><span style='font-family:宋体'>：</span></b><span
+style='font-family:宋体'>用于</span><span lang=EN-US>WS</span><span
+style='font-family:宋体'>报模块启动判别。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond &nbsp;100</span></b><b><span
+style='font-family:宋体'>：</span></b><span style='font-family:宋体'>文件名为</span><span
+lang=EN-US>LoadReliefMap.txt</span><span style='font-family:宋体'>，用于地形模块，该文件名和内容均不可修改。</span><span
+lang=EN-US>LoadTuLi.txt</span><span style='font-family:宋体'>，用于调入地形图图例，该文件名和内容均不可修改。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond&nbsp;
+101</span></b><span style='font-family:宋体'>：用于球面距离及面积计算模块启动判别。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond&nbsp;
+112</span></b><b><span style='font-family:宋体'>：</span></b><span
+style='font-family:宋体'>用于单站雷达显示模块的调入。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond&nbsp;
+121</span></b><span style='font-family:宋体'>：用于预警信号图层生成。</span></p>
+
+<p class=MsoNormal style='text-indent:21.1pt'><b><span lang=EN-US>diamond&nbsp;
+200</span></b><span style='font-family:宋体'>：用于台风历史数据检索模块启动判别（专业版本）。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

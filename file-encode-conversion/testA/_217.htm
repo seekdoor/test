@@ -1,0 +1,214 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title> A1.5 第五类数据格式 : TLOGP和站点剖面图数据 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;A1.5 第五类数据格式 : TLOGP和站点剖面图数据</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>文件头：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond&nbsp; 5&nbsp; </span><span style='font-family:
+宋体'>数据说明（字符串）<span lang=EN-US>&nbsp; </span>年<span lang=EN-US>&nbsp; </span>月<span
+lang=EN-US>&nbsp; </span>日<span lang=EN-US>&nbsp; </span>时次<span lang=EN-US>&nbsp;
+</span>总站点数（均为整数）</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：此类数据包括各站的多层数据。用于画温度对数压力图和站点剖面图。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>数据：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>区站号<span
+lang=EN-US>&nbsp; </span>经度<span lang=EN-US>&nbsp; </span>纬度<span lang=EN-US>&nbsp;
+</span>跋海高度<span lang=EN-US>&nbsp; </span>单站内容长度<span lang=EN-US>&nbsp; </span>第一层气压<span
+lang=EN-US>&nbsp; </span>高度<span lang=EN-US>&nbsp; </span>温度<span lang=EN-US>&nbsp;
+</span>露点 风向<span lang=EN-US>&nbsp; </span>风速<span lang=EN-US>&nbsp; </span>第二层气压<span
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>除风向风速外缺值时整个层次取消掉，风向风速缺值用<span
+lang=EN-US>9999</span>表示</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>注：单站内容长度为层数×<span
+lang=EN-US>6</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>例子：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>diamond 5 98</span><span style='font-family:宋体'>年<span
+lang=EN-US>08</span>月<span lang=EN-US>21</span>日<span lang=EN-US>08</span>时温度对数压力图</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>98 08 21 08&nbsp;&nbsp; 348</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>53068&nbsp; 112.00&nbsp;&nbsp; 43.65&nbsp;
+966&nbsp;&nbsp; 96</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 904&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp;&nbsp;&nbsp; 115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 850&nbsp;&nbsp;&nbsp;&nbsp;
+149&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp;&nbsp;&nbsp; 210&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 835&nbsp;&nbsp;&nbsp; 9999&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; 9999&nbsp;&nbsp;&nbsp;
+9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 700&nbsp;&nbsp;&nbsp;&nbsp;
+312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp;&nbsp; 240&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 500&nbsp;&nbsp;&nbsp;&nbsp;
+581&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -8&nbsp;&nbsp;&nbsp;&nbsp;
+-10&nbsp;&nbsp;&nbsp;&nbsp; 210&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 413&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp; -16&nbsp;&nbsp;&nbsp;&nbsp; -18&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp; 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 400&nbsp;&nbsp;&nbsp;&nbsp;
+751&nbsp;&nbsp;&nbsp;&nbsp; -17&nbsp;&nbsp;&nbsp;&nbsp;
+-20&nbsp;&nbsp;&nbsp;&nbsp; 235&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 351&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp; -24&nbsp;&nbsp;&nbsp;&nbsp; -27&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp; 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 300&nbsp;&nbsp;&nbsp;&nbsp;
+961&nbsp;&nbsp;&nbsp;&nbsp; -33&nbsp;&nbsp;&nbsp;&nbsp;
+-35&nbsp;&nbsp;&nbsp;&nbsp; 230&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 255&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp; -42&nbsp;&nbsp;&nbsp;&nbsp; -45&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp; 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 250&nbsp;&nbsp;&nbsp;
+1087&nbsp;&nbsp;&nbsp;&nbsp; -42&nbsp;&nbsp;&nbsp;&nbsp;
+-45&nbsp;&nbsp;&nbsp;&nbsp; 240&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 235&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp; -41&nbsp;&nbsp;&nbsp;&nbsp; -45&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp; 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 200&nbsp;&nbsp;&nbsp;
+1238&nbsp;&nbsp;&nbsp;&nbsp; -45&nbsp;&nbsp;&nbsp;&nbsp; -51&nbsp; &nbsp;&nbsp;&nbsp;270&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+31</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 150&nbsp;&nbsp;&nbsp;
+1427&nbsp;&nbsp;&nbsp;&nbsp; -55&nbsp;&nbsp;&nbsp;&nbsp;
+-61&nbsp;&nbsp;&nbsp;&nbsp; 285&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 142&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp; -56&nbsp;&nbsp;&nbsp;&nbsp; -62&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp; 9999</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;
+1680&nbsp;&nbsp;&nbsp;&nbsp; -65&nbsp;&nbsp;&nbsp; 9999&nbsp;&nbsp;&nbsp;&nbsp;
+280&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>53336&nbsp; 108.52&nbsp;&nbsp; 41.57 1290&nbsp;&nbsp; 60</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 869&nbsp;&nbsp;&nbsp;
+9999&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 850&nbsp;&nbsp;&nbsp;&nbsp; 148&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;
+175&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 700&nbsp;&nbsp;&nbsp;&nbsp;
+312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp; 235&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 500&nbsp;&nbsp;&nbsp;&nbsp;
+581&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -9&nbsp;&nbsp;&nbsp;&nbsp;
+-12&nbsp;&nbsp;&nbsp;&nbsp; 275&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 400&nbsp;&nbsp;&nbsp;&nbsp;
+751&nbsp;&nbsp;&nbsp;&nbsp; -19&nbsp;&nbsp;&nbsp;&nbsp;
+-28&nbsp;&nbsp;&nbsp;&nbsp; 250&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 300&nbsp;&nbsp;&nbsp;&nbsp;
+960&nbsp;&nbsp;&nbsp;&nbsp; -28&nbsp;&nbsp;&nbsp;&nbsp;
+-40&nbsp;&nbsp;&nbsp;&nbsp; 265&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 250&nbsp;&nbsp;&nbsp;
+1089&nbsp;&nbsp;&nbsp;&nbsp; -36&nbsp;&nbsp;&nbsp;&nbsp;
+-48&nbsp;&nbsp;&nbsp;&nbsp; 270&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 200&nbsp;&nbsp;&nbsp;
+1241&nbsp;&nbsp;&nbsp;&nbsp; -45&nbsp;&nbsp;&nbsp;&nbsp;
+-56&nbsp;&nbsp;&nbsp;&nbsp; 280&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 150&nbsp;&nbsp;&nbsp;
+1429&nbsp;&nbsp;&nbsp;&nbsp; -57&nbsp;&nbsp;&nbsp;&nbsp;
+-67&nbsp;&nbsp;&nbsp;&nbsp; 290&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;
+1679&nbsp;&nbsp;&nbsp;&nbsp; -67&nbsp;&nbsp;&nbsp; 9999&nbsp;&nbsp;&nbsp;&nbsp;
+295&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

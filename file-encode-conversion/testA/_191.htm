@@ -1,0 +1,146 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title>6.3.1.2 配置产品文件目录 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;6.3.1.2 配置产品文件目录</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在使用集合预报功能之前，需要先配置数据文件路径，以便让</span><span
+lang=EN-US>MICAPS 4</span><span style='font-family:宋体'>能够找到数据文件。</span><span
+lang=EN-US>MICAPS 4</span><span style='font-family:宋体'>中集合预报模式的配置文件均在</span><span
+lang=EN-US>MICAPS 4</span><span style='font-family:宋体'>安装目录下面。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>数据源盘符配置</span></b><span
+style='font-family:宋体'>（文件名</span><span lang=EN-US>/config/datasource.ini</span><span
+style='font-family:宋体'>）</span> </p>
+
+<p class=MsoNormal><span style='font-family:宋体'>该文件指定了</span><span lang=EN-US>MICAPS
+4</span><span style='font-family:宋体'>所有数据源路径，其中</span><span lang=EN-US>[samba2]</span><span
+style='font-family:宋体'>节点和</span><span lang=EN-US>[sav]</span><span
+style='font-family:宋体'>节点的</span><span lang=EN-US>path</span><span
+style='font-family:宋体'>属性指定了集合预报的两个数据源。以下为文件内容：</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>[mdfs]</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>path=mdfs:///</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>[samba]</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>path=z:/data/</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>[samba2]</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>path=Z:/diamond/</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>[sav]</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>path=y:/daily/</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>集合预报产品路径配置</span></b><span
+style='font-family:宋体'>（文件名</span><span lang=EN-US>bin/config/datainfo/ensemble/ensemble.ini</span><span
+style='font-family:宋体'>）</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>此文件包含一个名为</span><span
+lang=EN-US>[ensemble]</span><span style='font-family:宋体'>的节点，其</span><span
+lang=EN-US>path</span><span style='font-family:宋体'>属性给出了集合预报产品文件在</span><span
+lang=EN-US>[samba2]</span><span style='font-family:宋体'>下面的路径。以下为文件内容：</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>[ensemble]</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>description=</span><span
+style='font-family:宋体;background:#D9D9D9'>集合预报</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='background:#D9D9D9'>path=ensemble/micaps/</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>集合预报</span><span lang=EN-US>MICAPS</span></b><b><span
+style='font-family:宋体'>格式产品路径配置</span></b><span style='font-family:宋体'>（文件名</span><span
+lang=EN-US>bin/config/datainfo/ensemble/micaps/micaps.ini</span><span
+style='font-family:宋体'>）</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>该文件的内容为：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>[micaps]</span></p>
+
+<p class=MsoNormal><span lang=EN-US>description=ensembleforcast</span><span
+style='font-family:宋体'>集合预报</span></p>
+
+<p class=MsoNormal><span lang=EN-US>path=</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>模式路径配置</span></b><span
+style='font-family:宋体'>（文件名</span><span lang=EN-US>bin/config/datainfo/ensemble/micaps/ecmwf/ecmwf.ini</span><span
+style='font-family:宋体'>）</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>每个模式都有自己的配置文件，并且单独放在自己的目录下面。这些目录均位于</span><span
+lang=EN-US>bin/config/datainfo/ensemble/micaps</span><span style='font-family:
+宋体'>下面。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:宋体'>配置文件示例</span></b><span
+style='font-family:宋体'>：</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>例</span><span lang=EN-US>1</span><span
+style='font-family:宋体'>：若数据路径为</span><span lang=EN-US>z:/diamond/ensemble/micaps/ecmwf/rain</span><span
+style='font-family:宋体'>，则配置如下：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>datasource.ini </span><span
+style='font-family:宋体'>文件</span><span lang=EN-US>[samba2]</span><span
+style='font-family:宋体'>节点</span><span lang=EN-US>path=z:/diamond;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>ensemble.ini </span><span style='font-family:
+宋体'>文件</span><span lang=EN-US>[ensemble]</span><span style='font-family:宋体'>节点</span><span
+lang=EN-US>path=ensemble;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>micaps.ini</span><span style='font-family:
+宋体'>文件中</span><span lang=EN-US> [micaps]</span><span style='font-family:宋体'>节点</span><span
+lang=EN-US>path=micaps;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>例</span><span lang=EN-US>2</span><span
+style='font-family:宋体'>：若数据路径为</span><span lang=EN-US>d:/ecmwf,</span><span
+style='font-family:宋体'>则可以如下配置</span><span lang=EN-US>:</span></p>
+
+<p class=MsoNormal><span lang=EN-US>datasource.ini </span><span
+style='font-family:宋体'>文件</span><span lang=EN-US>[samba2]</span><span
+style='font-family:宋体'>节点</span><span lang=EN-US>path=d:/;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>ensemble.ini </span><span style='font-family:
+宋体'>文件</span><span lang=EN-US>[ensemble]</span><span style='font-family:宋体'>节点</span><span
+lang=EN-US>path=;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>micaps.ini</span><span style='font-family:
+宋体'>文件中</span><span lang=EN-US> [micaps]</span><span style='font-family:宋体'>节点</span><span
+lang=EN-US>path=;</span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>

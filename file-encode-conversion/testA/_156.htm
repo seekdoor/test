@@ -1,0 +1,275 @@
+<!DOCTYPE html><html>
+
+<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+  <title>5.5.1 基本交互工具及强天气交互工具 - MICAPS4.0系统用户手册</title>
+  
+  <meta name="GENERATOR" content="Macrobject Word-2-CHM">
+  <link rel="stylesheet" href="Word2Chm.css" type="text/css">
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td class="moHeader">&nbsp;5.5.1 基本交互工具及强天气交互工具</td>
+    </tr>
+  </table>
+  
+  <p></p>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>的交互工具可以通过配置文件进行调整，交互工具配置文件</span><span lang=EN-US>ToolBox.ini</span><span
+style='font-family:宋体'>保存在</span><span lang=EN-US>\config\toolbox</span><span
+style='font-family:宋体'>目录下，打开该文件后如下图所示：</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=269 height=350 src="temp.files/image398.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:宋体'>图</span><span lang=EN-US>5.5.1-1 toolbox.ini</span><span
+style='font-family:宋体'>配置文件</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>该配置文件中</span><span
+lang=EN-US>toolbox</span><span style='font-family:宋体'>组中可对基本工具箱</span><span
+lang=EN-US>(default)</span><span style='font-family:宋体'>与强天气工具箱</span><span
+lang=EN-US>(strongweather)</span><span style='font-family:宋体'>的顺序进行设置。后续即分别对</span><span
+lang=EN-US>2</span><span style='font-family:宋体'>组工具进行逐一设置，交互工具箱和强天气工具箱的配置在文件中以下面的标识进行区分，</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;<b>[toolbox.default]</b></span><span lang=EN-US>:</span><span
+style='font-family:宋体'>表示交互工具箱；</span></p>
+
+<p class=MsoNormal style='text-indent:26.35pt'><b><span lang=EN-US>[</span></b><b><span
+lang=EN-US style='font-family:宋体'>toolbox.</span><span lang=EN-US>strongweather]</span></b><span
+style='font-family:宋体'>，表示强天气工具箱；</span></p>
+
+<p class=MsoNormal style='text-indent:26.25pt'><span style='font-family:宋体'>交互工具箱和强天气箱中包含点、线</span>
+<span style='font-family:宋体'>基本工具几种符号类型：</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:宋体'>点类型</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>配置通常情况下用户只需修改符号的名称及颜色即可，其他各项不建议修改以免造成异常。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>点类所包含的交互工具箱符号有：“小雨”，“中雨”、“大雨”、“暴雨”、“大暴雨”、“特大暴雨”、“阵雨”、“轻冻雨”、“冻雨”、“雨雪”、“小雪”、“中雪”、“大雪”、“暴雪”、“阵雪”、“轻雾”、“雾”、“晴天”、“多云”、“阴天”、“无风”、“<span
+lang=EN-US>2-3</span>级风”、“<span lang=EN-US>3-4</span>级风”、“<span lang=EN-US>4-5</span>级风”、“<span
+lang=EN-US>5-6</span>级风”、“<span lang=EN-US>6-7</span>级风”、“<span lang=EN-US>7-8</span>级风”、“<span
+lang=EN-US>8-9</span>级风”、“<span lang=EN-US>9-10</span>级风”、“<span lang=EN-US>10-11</span>级风”、“<span
+lang=EN-US>11-12</span>级风”、“旋转风”、“霜冻”、“浮沉”、“扬沙”、“轻沙暴”、“沙暴”、“雷暴”、“冰雹”、“单点符号”、“台风”、“烟”、“霾”等，均使用点类配置方法即可；由于“修改线值标注”符号是修改符号，所以不需要区分黑白背景颜色。</span></p>
+
+<p class=MsoNormal style='text-indent:26.25pt'><span style='font-family:宋体'>点类所包含的强天气工具箱符号有：“<span
+lang=EN-US>7-8</span>级风”，“冰雹”，“雷暴”，“龙卷”，“冷堆”，“输值风向杆”等，均使用点类配置方法即可；由于“修改线值标注”符号是修改符号，所以不需要区分黑白背景颜色。</span></p>
+
+<p class=MsoNormal style='text-indent:26.25pt'><span style='font-family:宋体'>举例：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>[toolbox.default.xiaoyu]</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>id=XiaoYu</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>group=</span></b><b><span style='font-family:宋体'>点符号</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>label=</span></b><b><span style='font-family:宋体'>小雨</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>property=true</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>dark.color=0,255,0,255</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>light.color=2,221,0,255</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>icon=P_XiaoYu</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>action=SymbolPoint </span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>说明如下：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>id=XiaoYu</span>”表示区分该符号的唯一标识；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>group=</span>点符号”表示符号所属的类；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>label=</span>小雨”表示符号的名称；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>property=true</span>”表示符号是否有属性面板；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>dark.color=0,255,0,255</span>”表示黑色主题下该符号的颜色；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>light.color=2,221,0,255</span>”表示白色主题下该符号的颜色；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>icon=P_XiaoYu</span>”表示符号的图标；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>action=SymbolPoint</span>”表示绘制该符号时的动作；</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:宋体'>线条类型</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>配置通常情况下用户只需修改符号的名称、颜色及线宽即可，其他各项不建议修改以免造成异常。
+</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>线条类所包含的交互工具箱符号有：“添加等值线”，“槽线、线条符号”，“高低中心<span
+lang=EN-US>G</span>或<span lang=EN-US>D</span>”，“冷暖中心<span lang=EN-US>N</span>或<span
+lang=EN-US>L</span>”，“闭合线”，“文字标注”，“冷锋”，“暖锋”，“静止锋”，“锢囚锋”，“霜冻线”，“高温线”，“箭头符号”，“双实线”，“图像填充区域和气象填充区域”等，均使用点类配置方法即可；由于“修改等值线和线条符号”符号是修改符号，所以不需要区分黑白背景颜色。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>线条类所包含的强天气工具箱符号有：“等压线”，“等风速线”，“<span
+lang=EN-US>3h</span>显著升压线”，“<span lang=EN-US>3h</span>显著升压线”，“湿轴”，“<span
+lang=EN-US>3h</span>显著升压线”，“暖锋”，“过去<span lang=EN-US>12</span>小时槽线”，“静止锋”，“过去<span
+lang=EN-US>12</span>小时暖锋”，“强降水区”，“等露点温度线”，“等温度线”，“<span lang=EN-US>3h</span>显著降压线”，“<span
+lang=EN-US>250hPa</span>季节温度特征线”，“干舌”，“显著湿区”，“显著湿区”，“冷锋”，“过去<span lang=EN-US>12</span>小时冷锋”，“过去<span
+lang=EN-US>12</span>小时切变线”，“中尺度对流系统”，“槽线”，“等露点温度差（<span lang=EN-US>T-Td</span>）线”，“等<span
+lang=EN-US>850hPa</span>与<span lang=EN-US>500hPa</span>温度差（<span lang=EN-US>.T85</span>线）<span
+lang=EN-US>;</span>等<span lang=EN-US>700hPa</span>与<span lang=EN-US>500hPa</span>温度差（<span
+lang=EN-US>.T75</span>线）”，“等变高线”，“文字标注”，“未定义<span lang=EN-US>1</span>”，“未定义<span
+lang=EN-US>2</span>”，“中尺度对流系统移动趋势”，“折线”，“显著流线”，“大风速轴”，“切变线”，“干线”，“辐合线”，“温度脊”，“<span
+lang=EN-US>12h(24h)</span>显著降温区”，“<span lang=EN-US>24h</span>变温”，“温度槽”，“带层标注槽线”，“等比湿线”，“带层标注未来<span
+lang=EN-US>12</span>小时槽线”，“干侵入特征线”，“急流核”，“分流区”等，均使用点类配置方法即可；由于“修改等值线和线条符号”符号是修改符号，所以不需要区分黑白背景颜色。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>举例：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>[toolbox.default.caoxian_1]</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>id=CaoXian_1</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>group=</span></b><b><span style='font-family:宋体'>线条符号</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>label=</span></b><b><span style='font-family:宋体'>槽线、线条符号</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>property=true</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>dark.color=255,255,0,255</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>light.color=165,42,42,255</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>linewidth=4</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>icon=P_CaoXian</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>action=SymbolLine </span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>说明如下：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>id=CaoXian_1</span>”：表示区分该符号的唯一标示；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>group=</span>线条符号”：表示该符号所属的类；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>label=</span>槽线、线条符号”：表示符号的名称；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>property=true</span>”表示符号是否有属性面板；</span></p>
+
+<p class=MsoNormal align=left style='margin-left:20.9pt;text-align:left'><span
+style='font-family:宋体'>“<span lang=EN-US>dark.color=255,255,0,255</span>”表示黑背景下该符号的颜色；“<span
+lang=EN-US>light.color=165,42,42,255</span>”表示白背景下该符号的颜色；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>linewidth=4</span>”表示该符号的线宽；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>icon=P_CaoXian</span>”表示该符号的图标；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+style='font-family:宋体'>“<span lang=EN-US>action=SymbolLine</span>”表示绘制该符号时的动作；</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US style='font-family:宋体'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:12.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:宋体'>基本工具类型</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>该类型符号的配置相对于其他类配置较少一些，不必配置其颜色与线性，只作为基础功能配置即可。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>基本工具类所包含的交互工具箱符号有：“漫游”，“鼠标左键为线条或者符号移动，右键删除”，“控制点修改线条”，配置方法使用基本工具类配置即可。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>基本工具类所包含的强天气工具箱符号有：“漫游”，“鼠标左键为线条或者符号移动，右键删除”，配置方法使用基本工具类配置即可。</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>举例：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>[toolbox.default.nmc_micaps3_main_cut]</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>id=NMC_MICAPS3_MAIN_CUT</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>group=</span></b><b><span style='font-family:宋体'>基本工具</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>label=</span></b><b><span style='font-family:宋体'>鼠标左键为线条或者符号移动，右键删除</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>property=true</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>icon=cut</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><b><span lang=EN-US
+style='font-family:宋体'>action=Cut</span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>说明如下：</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-family:宋体'>&nbsp;</span><span style='font-family:宋体'>“<span
+lang=EN-US>id=NMC_MICAPS3_MAIN_CUT</span>”表示区分该符号的唯一标识；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>group=</span>基本工具”表示该符号所属的类；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>label=</span>鼠标左键为线条或者符号移动，右键删除”表示该符号的名称；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>property=true</span>”表示符号是否有属性面板；</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>“<span
+lang=EN-US>icon=cut</span>”表示该符号的图标；</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>“<span lang=EN-US>action=Cut</span>”表示绘制该符号时的动作；</span><span
+lang=EN-US> </span></p>
+
+
+</div>
+  <p></p>
+
+</body>
+
+</html>
