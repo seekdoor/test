@@ -1,7 +1,7 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
-  <title>5.3 数据源 - MICAPS4.0系统用户手册</title>
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>5.3 数据�?- MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
   <link rel="stylesheet" href="Word2Chm.css" type="text/css">
@@ -11,7 +11,7 @@
 <body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
-      <td class="moHeader">&nbsp;5.3 数据源</td>
+      <td class="moHeader">&nbsp;5.3 数据�?/td>
     </tr>
   </table>
   
@@ -22,12 +22,12 @@
 
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-style='font-family:宋体'>在介绍下节“文件读取”内容之前，有必要先要了解</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>中对于“数据源”的定义。该部分内容与第一章最后一节相近，完全是为了保证内容的连续性，再将原有内容重述一遍，如果已经理解了</span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>对“数据源”的定义，可跳过此节。</span></p>
+style='font-family:宋体'>在介绍下节“文件读取”内容之前，有必要先要了�?/span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>中对于“数据源”的定义。该部分内容与第一章最后一节相近，完全是为了保证内容的连续性，再将原有内容重述一遍，如果已经理解�?/span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>对“数据源”的定义，可跳过此节�?/span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在之前的版本中，<span
-lang=EN-US>MICAPS</span>客户端所对应的数据来源比较单一，数据一般存储在一个单一的“数据服务器”中，<span lang=EN-US>MICAPS</span>客户端通常将该服务器提供的共享文件夹挂载为某一虚盘。在此基础上定义的综合图一般只需写相对路径，然后在全局配置文件中标明数据目录的前缀即可。例如，某一客户端挂载的虚盘如右图所示</span><span
+lang=EN-US>MICAPS</span>客户端所对应的数据来源比较单一，数据一般存储在一个单一的“数据服务器”中�?span lang=EN-US>MICAPS</span>客户端通常将该服务器提供的共享文件夹挂载为某一虚盘。在此基础上定义的综合图一般只需写相对路径，然后在全局配置文件中标明数据目录的前缀即可。例如，某一客户端挂载的虚盘如右图所�?/span><span
 lang=EN-US><img width=148 height=26 src="temp.files/image367.jpg"></span><span
 style='font-family:宋体'>，地面观测数据存放的文件夹为<span lang=EN-US> z:\data\surface\plot</span>目录，则可以如下定义地面观测数据的综合图</span></p>
 
@@ -36,67 +36,67 @@ style='font-family:宋体'>diamond 10 1</span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
 style='font-family:宋体'>/surface/plot/ .000 1&nbsp;&nbsp;&nbsp; </span><span
-style='font-family:宋体'>注：综合图定义不在本节介绍</span></p>
+style='font-family:宋体'>注：综合图定义不在本节介�?/span></p>
 
 <p class=MsoNormal><span style='font-family:宋体'>随后在综合图模块的配置文件中做如下定义：</span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
 width=197 height=78 src="temp.files/image368.jpg"></span></p>
 
-<p class=MsoNormal><span style='font-family:宋体'>这样凡是以<span lang=EN-US>z:\data</span>开头的文件均可以相对路径的方式定义综合图，这样带来的一个好处是节省综合图定义文件书写的长度，另外一个好处则是可以共享该综合图，其它机器只需修改<span
-lang=EN-US>combine.ini</span>配置文件即可。但是，随着数据服务器的增加，<span lang=EN-US>MICAPS</span>客户端所需的文件服务器逐渐增加，上述配置方式则不再适合<span
-lang=EN-US>:</span>还是只能用全局路径描述大部分综合图文件。</span></p>
+<p class=MsoNormal><span style='font-family:宋体'>这样凡是�?span lang=EN-US>z:\data</span>开头的文件均可以相对路径的方式定义综合图，这样带来的一个好处是节省综合图定义文件书写的长度，另外一个好处则是可以共享该综合图，其它机器只需修改<span
+lang=EN-US>combine.ini</span>配置文件即可。但是，随着数据服务器的增加�?span lang=EN-US>MICAPS</span>客户端所需的文件服务器逐渐增加，上述配置方式则不再适合<span
+lang=EN-US>:</span>还是只能用全局路径描述大部分综合图文件�?/span></p>
 
 <p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>此外，在<span
-lang=EN-US>MICAPS4</span>系统中，我们引入了<span lang=EN-US>CIMISS-</span>“分布式高速缓存”服务器的支持，可用多台分布式数据来解决海量数据的高并发高速访问所带来的效率问题，我们将这个“分布式高速缓存”称为<span
-lang=EN-US>MDFS</span>服务。</span></p>
+lang=EN-US>MICAPS4</span>系统中，我们引入�?span lang=EN-US>CIMISS-</span>“分布式高速缓存”服务器的支持，可用多台分布式数据来解决海量数据的高并发高速访问所带来的效率问题，我们将这个“分布式高速缓存”称�?span
+lang=EN-US>MDFS</span>服务�?/span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这样的话，<span
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这样的话�?span
 lang=EN-US>MICAPS4</span>将同时面对多台、多协议的数据来源，如下图所示：</span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
 width=517 height=272 src="temp.files/image369.gif"></span></p>
 
 <p class=MsoCaption style='text-indent:20.0pt'><span style='font-family:黑体;
-color:black'>图</span><span style='color:black'> <span lang=EN-US>5.3-1 MICAPS</span></span><span
-style='font-family:黑体;color:black'>数据源</span></p>
+color:black'>�?/span><span style='color:black'> <span lang=EN-US>5.3-1 MICAPS</span></span><span
+style='font-family:黑体;color:black'>数据�?/span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
 style='font-family:宋体'>我们将“数据存储服务器”统称为“数据源”，同时为了减轻综合图配置工作，将全部的数据源储存在统一的配置文件中</span><span
 lang=EN-US>(config/datasources.ini)</span><span style='font-family:宋体'>如上图右方所示。默认的</span><span
 lang=EN-US>datasources.ini</span><span style='font-family:宋体'>中定义了</span><span
-lang=EN-US>4</span><span style='font-family:宋体'>组数据源，其中</span><span lang=EN-US>mdfs</span><span
-style='font-family:宋体'>即为前面提到的</span><span lang=EN-US>“</span><span
-style='font-family:宋体'>分布式数据缓存</span><span lang=EN-US>”</span><span
-style='font-family:宋体'>，该数据集群搭建在</span><span lang=EN-US>CIMISS</span><span
-style='font-family:宋体'>系统之上，接上之后自动完成数据格式处理及存储处理，</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>可直接访问使用（访问配置方式请参考</span><span lang=EN-US>1.3.1</span><span
+lang=EN-US>4</span><span style='font-family:宋体'>组数据源，其�?/span><span lang=EN-US>mdfs</span><span
+style='font-family:宋体'>即为前面提到�?/span><span lang=EN-US>�?/span><span
+style='font-family:宋体'>分布式数据缓�?/span><span lang=EN-US>�?/span><span
+style='font-family:宋体'>，该数据集群搭建�?/span><span lang=EN-US>CIMISS</span><span
+style='font-family:宋体'>系统之上，接上之后自动完成数据格式处理及存储处理�?/span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>可直接访问使用（访问配置方式请参�?/span><span lang=EN-US>1.3.1</span><span
 style='font-family:宋体'>节（</span><span lang=EN-US>MICAPS.exe.config</span><span
-style='font-family:宋体'>文件说明）。</span></p>
+style='font-family:宋体'>文件说明）�?/span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; samba</span><span
-style='font-family:宋体'>为</span><span lang=EN-US>MICAPS3</span><span
-style='font-family:宋体'>传统数据源，使用</span><span lang=EN-US>“</span><span
-style='font-family:宋体'>共享文件夹</span><span lang=EN-US>”</span><span
-style='font-family:宋体'>方式提供数据访问，</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>对这种数据访问方式进行了兼容。</span></p>
+style='font-family:宋体'>�?/span><span lang=EN-US>MICAPS3</span><span
+style='font-family:宋体'>传统数据源，使用</span><span lang=EN-US>�?/span><span
+style='font-family:宋体'>共享文件�?/span><span lang=EN-US>�?/span><span
+style='font-family:宋体'>方式提供数据访问�?/span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>对这种数据访问方式进行了兼容�?/span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Samba2</span><span
-style='font-family:宋体'>为本地其它数据源，</span><span lang=EN-US>path</span><span
-style='font-family:宋体'>指定数据源路径。</span></p>
+style='font-family:宋体'>为本地其它数据源�?/span><span lang=EN-US>path</span><span
+style='font-family:宋体'>指定数据源路径�?/span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sav</span><span
-style='font-family:宋体'>为“集合预报工具箱</span><span lang=EN-US>”</span><span
+style='font-family:宋体'>为“集合预报工具箱</span><span lang=EN-US>�?/span><span
 style='font-family:宋体'>软件所使用的集合预报数据，</span><span lang=EN-US>MICAPS4</span><span
 style='font-family:宋体'>对该部分数据进行了部分兼容，可通过</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>集合预报功能模块进行加载显示。</span></p>
+style='font-family:宋体'>集合预报功能模块进行加载显示�?/span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>允许用户添加自定义数据源，目前只支持本地文件或</span><span
-lang=EN-US>”</span><span style='font-family:宋体'>共享文件夹</span><span lang=EN-US>“</span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>允许用户添加自定义数据源，目前只支持本地文件�?/span><span
+lang=EN-US>�?/span><span style='font-family:宋体'>共享文件�?/span><span lang=EN-US>�?/span><span
 style='font-family:宋体'>方式的数据源，在</span><span lang=EN-US>config/datasources.ini</span><span
-style='font-family:宋体'>配置文件中添加一个</span><span lang=EN-US>section</span><span
-style='font-family:宋体'>即可，</span><span lang=EN-US>section</span><span
+style='font-family:宋体'>配置文件中添加一�?/span><span lang=EN-US>section</span><span
+style='font-family:宋体'>即可�?/span><span lang=EN-US>section</span><span
 style='font-family:宋体'>名称可自定义，如下所示：</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
@@ -106,11 +106,11 @@ lang=EN-US>[myownsource]</span></p>
 lang=EN-US>path=X:/ARealFolder/&nbsp; </span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
-lang=EN-US>path</span><span style='font-family:宋体'>为关键字，后面的路径最后需要增加一个斜线</span><span
-lang=EN-US>”/”</span></p>
+lang=EN-US>path</span><span style='font-family:宋体'>为关键字，后面的路径最后需要增加一个斜�?/span><span
+lang=EN-US>�?�?/span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这样，所有的综合图还是可以定义为相对路径，当加载某个综合图时，</span><span
-lang=EN-US>MICAPS4</span><span style='font-family:宋体'>会自动将“数据源”与综合图相对目录进行拼接，如果拼接后的全局路径存在，则使用该路径，如果不存在，则使用下一个“数据源”。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>这样，所有的综合图还是可以定义为相对路径，当加载某个综合图时�?/span><span
+lang=EN-US>MICAPS4</span><span style='font-family:宋体'>会自动将“数据源”与综合图相对目录进行拼接，如果拼接后的全局路径存在，则使用该路径，如果不存在，则使用下一个“数据源”�?/span></p>
 
 
 </div>

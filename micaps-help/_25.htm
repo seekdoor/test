@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
 
-<head><meta http-equiv="content-type" content="text/html; charset=gb2312" />
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>2.3 数据翻页 - MICAPS4.0系统用户手册</title>
   
   <meta name="GENERATOR" content="Macrobject Word-2-CHM">
@@ -22,36 +22,36 @@
 
 
 <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>MICAPS</span><span
-style='font-family:宋体'>客户端中，用户对于“数据”操作中经常用到的功能就是根据数据的时间规则进行前后翻页，而部分图层无法进行翻页操作，包括“基础地图”图层、系统默认的“交互图层”、目前正处于“编辑状态”</span><span
+style='font-family:宋体'>客户端中，用户对于“数据”操作中经常用到的功能就是根据数据的时间规则进行前后翻页，而部分图层无法进行翻页操作，包括“基础地图”图层、系统默认的“交互图层”、目前正处于“编辑状态�?/span><span
 lang=EN-US><img width=15 height=14 src="temp.files/image076.gif"></span><span
-style='font-family:宋体'>的交互图层以及处于“隐藏”</span><span lang=EN-US><img width=22
-height=19 src="temp.files/image077.gif"></span><span style='font-family:宋体'>状态的图层。</span></p>
+style='font-family:宋体'>的交互图层以及处于“隐藏�?/span><span lang=EN-US><img width=22
+height=19 src="temp.files/image077.gif"></span><span style='font-family:宋体'>状态的图层�?/span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>在</span><span
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>�?/span><span
 lang=EN-US>2.2.1</span><span style='font-family:宋体'>节中我们已经介绍过，</span><span
 lang=EN-US>MICAPS4</span><span style='font-family:宋体'>的“图层管理”中<span
 style='color:red'>截图</span>工具支持对数据的前后翻页，此外，</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>在工具栏上也支持对<b>全部图层</b>进行前后、上下翻页以及时间跳转。</span></p>
+style='font-family:宋体'>在工具栏上也支持�?b>全部图层</b>进行前后、上下翻页以及时间跳转�?/span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
 width=163 height=30 src="temp.files/image078.jpg"></span></p>
 
-<p class=MsoCaption><span style='font-family:黑体'>图</span><span lang=EN-US>2.3-1
+<p class=MsoCaption><span style='font-family:黑体'>�?/span><span lang=EN-US>2.3-1
 </span><span style='font-family:黑体'>数据翻页控件</span></p>
 
-<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>由于工具栏上的前后翻页与旧版本功能一致，因此在该说明书中不再进行详细介绍。</span></p>
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>由于工具栏上的前后翻页与旧版本功能一致，因此在该说明书中不再进行详细介绍�?/span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MICAPS4</span><span
-style='font-family:宋体'>版本在数据前后翻页功能中，新增了“跳转到最新”和“按指定时间间距”进行翻页，“跳转到最新”功能点击时加载最新数据文件，“按指定时间间距”翻页功能可以设置所有图层前后翻页的“时间间隔”，默认间隔为“固有”，也即按照数据自身的间隔数据进行翻页。时间间隔控件提供选项如图所示</span><span
+style='font-family:宋体'>版本在数据前后翻页功能中，新增了“跳转到最新”和“按指定时间间距”进行翻页，“跳转到最新”功能点击时加载最新数据文件，“按指定时间间距”翻页功能可以设置所有图层前后翻页的“时间间隔”，默认间隔为“固有”，也即按照数据自身的间隔数据进行翻页。时间间隔控件提供选项如图所�?/span><span
 lang=EN-US><img width=70 height=59 src="temp.files/image079.jpg"></span><span
-style='font-family:宋体'>，单位为“小时”。</span></p>
+style='font-family:宋体'>，单位为“小时”�?/span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-style='font-family:宋体'>使用指定时间间隔前后翻页的功能需要</span><span lang=EN-US>MICAPS4</span><span
-style='font-family:宋体'>平台获取加载数据的“时间”信息，由于现有的</span><span lang=EN-US>SAMBA</span><span
-style='font-family:宋体'>数据源或者本地数据源目录下的文件名命名方式不统一，有些文件使用文件名为“年年月月日日时时分分”、有些是“年年年年月月日日时时”，因此在文件名判定上，无法准确的获得时间相关信息，因此此功能使用需要搭配“<b>文件夹描述信息</b>”内容配合获取某一目录下文件的时间信息。该信息的配置文件在</span><span
-lang=EN-US>config/datainfo</span><span style='font-family:宋体'>目录下。<span
-style='color:red'>该配置的详细介绍说明请参考第五章。</span></span></p>
+style='font-family:宋体'>使用指定时间间隔前后翻页的功能需�?/span><span lang=EN-US>MICAPS4</span><span
+style='font-family:宋体'>平台获取加载数据的“时间”信息，由于现有�?/span><span lang=EN-US>SAMBA</span><span
+style='font-family:宋体'>数据源或者本地数据源目录下的文件名命名方式不统一，有些文件使用文件名为“年年月月日日时时分分”、有些是“年年年年月月日日时时”，因此在文件名判定上，无法准确的获得时间相关信息，因此此功能使用需要搭配�?b>文件夹描述信�?/b>”内容配合获取某一目录下文件的时间信息。该信息的配置文件在</span><span
+lang=EN-US>config/datainfo</span><span style='font-family:宋体'>目录下�?span
+style='color:red'>该配置的详细介绍说明请参考第五章�?/span></span></p>
 
 
 </div>
