@@ -150,9 +150,15 @@
                 $('#run').click();
             }
 
+            function fixedEncodeURIComponent(str) {
+                return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+                    return '%' + c.charCodeAt(0).toString(16);
+                });
+            }
+
             $('#code').keyup(function () {
                 //log($('#code').val());
-                location.hash = encodeURIComponent($('#code').val());
+                location.hash = fixedEncodeURIComponent($('#code').val());
 
                 $(this).height(1);
                 $(this).height(25 + this.scrollHeight);
