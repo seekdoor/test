@@ -22,12 +22,12 @@ var draw_map = async () => {
 
     chinaGeoJson = JSON.parse(chinaGeoJson);
 
-    projection.fitExtent([[20, 120], [940, 940]], chinaGeoJson);
+    projection.fitExtent([[20, 120], [1200, 1200]], chinaGeoJson);
 
-    const svg = d3.select("#map")
+    const map = d3.select("#map")
     //.attr("viewBox", [80, 0, 140, 70]);
 
-    const g = svg.append("g")
+    const g = map.append("g")
         .attr("stroke", "gray")
         .attr("stroke-width", 2);
 
@@ -79,12 +79,14 @@ var draw_diamond4 = (content, { color = 'blue', fill = 'none', thresholds } = {}
 
     var colorScale = d3.scaleSequential(d3.interpolateOranges).domain(d3.extent(values))
 
-    const svg = d3.select("#weather")
+    //const svg = d3.select("#weather")
     //.attr("viewBox", wide ? [0, 0, width, height] : [0, 0, height, width])
     //.style("display", "block")
     //.style("margin", "0 -14px");
 
-    const g = svg.append("g")
+    const weather = d3.select("#weather")
+
+    const g = weather.append("g")
         .attr("transform", wide ? null : `
             rotate(90 ${width / 2},${height / 2})
             translate(${(width - height) / 2},${(width - height) / 2})
