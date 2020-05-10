@@ -129,4 +129,16 @@ var draw_demo = async () => {
 
 }
 
+const zoomg = d3.select("#zoom");
+
+d3.select("#plot-svg")
+    .call(d3.zoom()
+      //.extent([[0, 0], [width, height]])
+      .scaleExtent([1, 8])
+      .on("zoom", zoomed));
+
+      function zoomed() {
+            zoomg.attr("transform", d3.event.transform);
+      }
+
 draw_demo()
