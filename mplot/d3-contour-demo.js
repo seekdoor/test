@@ -10,7 +10,52 @@ var get_data = async (data_url = "https://likev.github.io/test/high-surface-data
 
 }
 
-const projection = d3.geoConicConformal().rotate([-120, -40, 0]);//const projection = d3.geoOrthographic().fitExtent([[1, 1], [width - 1, height - 1]], sphere);
+const interpolatePathd = d3.line().x(d => +d[0]).y(d => +d[1]).curve(d3.curveBasis);
+
+var dequel = (a,b) => Math.abs(a-b)<1e-1;
+const smoothPath = (pathd) => {
+    
+    var lines = pathd.slice(1).split('M');
+    if(lines.length === 0) return '';
+
+    let result = '';
+    for(let line of lines){
+        var sp = line.replace(/M|Z/, '').split('L').map((d) => d.split(','));
+        var spview = [];
+
+        for(let v of sp){
+            if(+v[0] > 0 && +v[0] < 1400 && +v[1]>0 && +v[1]<800) spview.push(v)
+        }
+
+        sp = spview;
+        if(sp.length === 0) continue;
+
+        /**/
+        let beginpoint = sp[0], endpoint = sp[sp.length - 1];
+
+        if( dequel( beginpoint[0], endpoint[0]) && dequel(beginpoint[1],endpoint[1]) ){
+            //let s = interpolatePathd(sp.slice(1));
+            
+            //result += s.slice(0, -1) + `L${beginpoint}Z`;
+
+            result += interpolatePathd(sp);
+
+            /*
+            console.log(line);
+            console.log(interpolatePathd(sp));
+            break;
+            */
+
+        }else{
+            result += interpolatePathd(sp);
+        } 
+    }
+
+    return result;
+    
+};
+
+const projection = d3.geoConicConformal().rotate([-110, -40, 0]);//const projection = d3.geoOrthographic().fitExtent([[1, 1], [width - 1, height - 1]], sphere);
 
 const path = d3.geoPath(projection);
 
@@ -28,15 +73,27 @@ var draw_map = async () => {
     //.attr("viewBox", [80, 0, 140, 70]);
 
     const g = map.append("g")
-        .attr("stroke", "gray")
-        .attr("stroke-width", 2);
+        .attr("stroke", "#505050")
+        .attr("stroke-width", 1);
+
+    var pathd = path(chinaGeoJson);
 
     g.append("path")
-        .attr("d", path(chinaGeoJson))
-        .attr("fill", 'none')
+        .attr("d", smoothPath(pathd))
+        .attr("fill", 'none');
+
+    pathd = path(d3.geoGraticule10());
+
+    g.append("path")
+        .attr("class", "graticule")
+        //.datum(d3.geoGraticule())
+        .attr("d", pathd )
+        .attr("stroke", "#707070")
+        .attr("stroke-width", 0.5)
+        .attr("fill", 'none');
 }
 
-var draw_diamond4 = (content, { color = 'blue', fill = 'none', thresholds } = {}) => {
+var draw_diamond4 = (content, { color = 'blue', fill = 'none', smooth = false, thresholds } = {}) => {
     var values = content.slice(22);
 
     console.log(values)
@@ -67,7 +124,7 @@ var draw_diamond4 = (content, { color = 'blue', fill = 'none', thresholds } = {}
 
     var extent = d3.extent(values);
     //var thresholds = d3.range(0, 10).map(p => extent[0] + (extent[1] - extent[0]) * p / 10);
-    
+
     thresholds = thresholds || d3.ticks(extent[0], extent[1], 10);
 
     var wide = true;
@@ -95,20 +152,35 @@ var draw_diamond4 = (content, { color = 'blue', fill = 'none', thresholds } = {}
         .attr("stroke-width", 1);
 
 
-
+/*
     var i = 0;
     setInterval(_ => {
         if (i === thresholds.length) return;
         threshold = thresholds[i++];
 
         var geoJsonOfthreshold = transform(contours.contour(values, threshold));
+
+        var pathd = path(geoJsonOfthreshold);
+
         g.append("path")
-            .attr("d", path(geoJsonOfthreshold))
+            .attr("d", pathd)//
             .attr("fill", fill);//.attr("fill", colorScale(threshold));
 
     }, 3000)
-    //console.log(svg.node())
-    //d3.select('#plot').append(svg.node())
+    */
+    for(let threshold of thresholds){
+        var geoJsonOfthreshold = transform(contours.contour(values, threshold));
+
+        var pathd = path(geoJsonOfthreshold);
+        
+        if(smooth) pathd = smoothPath(pathd);
+
+        g.append("path")
+            .attr("d", pathd)//
+            .attr("fill", fill);//.attr("fill", colorScale(threshold));
+
+        //window.alert(threshold)
+    }
 }
 
 var draw_demo = async () => {
@@ -117,28 +189,39 @@ var draw_demo = async () => {
 
     var content = await get_data("https://likev.github.io/test/high-surface-data/surface-p0-20050220.000");
 
+    content = clip_lonlat(content, 30, 180, 70, 0);
     draw_diamond4(content, { color: '#333' });
+
+    //draw_diamond4(content, { color: '#CE9178', smooth: true });
 
     content = await get_data("https://likev.github.io/test/high-surface-data/height-500-20050220.000");
 
-    draw_diamond4(content, { color: 'blue', thresholds: d3.range(500, 600, 4)  })
+    content = clip_lonlat(content, 30, 180, 70, 0);
+    draw_diamond4(content, { color: 'blue', thresholds: d3.range(500, 600, 4) })
 
     content = await get_data("https://likev.github.io/test/high-surface-data/temper-500-20050220.000");
 
+    content = clip_lonlat(content, 30, 180, 70, 0);
     draw_diamond4(content, { color: 'red', thresholds: d3.range(-40, 40, 4) })
 
+    $('#weather path').click(function(){
+
+        //console.log($(this).attr('d'))
+    });
 }
 
 const zoomg = d3.select("#zoom");
 
 d3.select("#plot-svg")
     .call(d3.zoom()
-      //.extent([[0, 0], [width, height]])
-      .scaleExtent([1, 8])
-      .on("zoom", zoomed));
+        //.extent([[0, 0], [width, height]])
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed));
 
-      function zoomed() {
-            zoomg.attr("transform", d3.event.transform);
-      }
+function zoomed() {
+    zoomg.attr("transform", d3.event.transform);
+}
+
+
 
 draw_demo()
