@@ -12,43 +12,21 @@ var get_data = async (data_url = "https://likev.github.io/test/high-surface-data
 
 const interpolatePathd = d3.line().x(d => +d[0]).y(d => +d[1]).curve(d3.curveBasis);
 
-var dequel = (a,b) => Math.abs(a-b)<1e-1;
 const smoothPath = (pathd) => {
-    
+    if(typeof(pathd) !== "string" || pathd.length < 1) return "";
+
     var lines = pathd.slice(1).split('M');
     if(lines.length === 0) return '';
 
     let result = '';
     for(let line of lines){
+        var closed =  (line[line.length - 1] === 'Z');
+      
         var sp = line.replace(/M|Z/, '').split('L').map((d) => d.split(','));
-        var spview = [];
-
-        for(let v of sp){
-            if(+v[0] > 0 && +v[0] < 1400 && +v[1]>0 && +v[1]<800) spview.push(v)
-        }
-
-        sp = spview;
-        if(sp.length === 0) continue;
-
-        /**/
-        let beginpoint = sp[0], endpoint = sp[sp.length - 1];
-
-        if( dequel( beginpoint[0], endpoint[0]) && dequel(beginpoint[1],endpoint[1]) ){
-            //let s = interpolatePathd(sp.slice(1));
-            
-            //result += s.slice(0, -1) + `L${beginpoint}Z`;
-
-            result += interpolatePathd(sp);
-
-            /*
-            console.log(line);
-            console.log(interpolatePathd(sp));
-            break;
-            */
-
-        }else{
-            result += interpolatePathd(sp);
-        } 
+        
+        if(closed) sp.push(sp[0]);//sp = sp.concat(sp.slice(0,2));
+        result += interpolatePathd(sp);
+        
     }
 
     return result;
@@ -93,7 +71,7 @@ var draw_map = async () => {
         .attr("fill", 'none');
 }
 
-var draw_diamond4 = (content, { color = 'blue', fill = 'none', smooth = false, thresholds } = {}) => {
+var draw_diamond4 = (content, { color = 'blue', fill = 'none', smooth = true, thresholds } = {}) => {
     var values = content.slice(22);
 
     console.log(values)
