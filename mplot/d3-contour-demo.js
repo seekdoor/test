@@ -60,9 +60,9 @@ const smoothPath = (pathd, context) => {
 };
 
 var clipRectangle = [[0, 0], [1400, 800]];
-const projection = d3.geoConicConformal()
+const projection = d3.geoConicEquidistant()
     .parallels([35, 65])
-    .clipExtent(clipRectangle)
+    //.clipExtent(clipRectangle)
     .rotate([-110, -40, 0]);//const projection = d3.geoOrthographic().fitExtent([[1, 1], [width - 1, height - 1]], sphere);
 
 const path = d3.geoPath(projection);
@@ -75,7 +75,7 @@ var draw_map = async () => {
 
     chinaGeoJson = JSON.parse(chinaGeoJson);
 
-    projection.fitExtent([[20, 120], [1200, 1200]], chinaGeoJson);
+    projection.fitExtent([[300, 120], [1200, 800]], chinaGeoJson);
 
     const map = d3.select("#map")
     //.attr("viewBox", [80, 0, 140, 70]);
@@ -264,12 +264,12 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
                     return rings.map(points => {
                         var line = [];
 
-                        for (let [x,y] of points) {
+                        for (let [x, y] of points) {
 
                             var newLon = lonBegin + lonSpan * x,
                                 newLat = latBegin + latSpan * y;
 
-                            if (newLon < 0 || newLon > 180 || newLat < 0 || newLat > 80) continue;
+                            //!!! wrong will delete some point !!! //if (newLon < 0 || newLon > 180 || newLat < 0 || newLat > 80) continue;
                             line.push([newLon, newLat]);
                         }
                         return line;
@@ -308,7 +308,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     console.time("geoJsonOfthreshold");
 
-    context.beginPath();
+
 
     var t = [0, 0, 0, 0];
 
@@ -319,8 +319,9 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         var geoJsonOfthreshold = transform(geoJson);
         t[0] += +new Date() - t1;
 
-
+        context.beginPath();
         if (smooth) {
+
             t1 = +new Date();
             var pathd = path(geoJsonOfthreshold);
             t[1] += +new Date() - t1;
@@ -328,23 +329,23 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
             t1 = +new Date();
             smoothPath(pathd, context);
             t[2] += +new Date() - t1;
+
         } else {
             t1 = +new Date();
-
 
             path(geoJsonOfthreshold);
             //d3.geoPath().context(context)(geoJsonOfthreshold)
 
-
             t[3] += +new Date() - t1;
         }
+        if (fill !== 'none') context.fill();
+        context.stroke();
 
     }
 
     console.log(t)
 
-    if (fill !== 'none') context.fill();
-    context.stroke();
+
     console.timeEnd("geoJsonOfthreshold");
 
     context.restore();
@@ -386,13 +387,13 @@ var draw_demo = async (transform) => {
     content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/height-500-20050220.000");
 
     content = clip_lonlat(content, 30, 180, 70, 0);
-    //draw_diamond4_canvas(content, { transform, color: 'blue', thresholds: d3.range(500, 600, 4) })
+    draw_diamond4_canvas(content, { transform, color: 'blue', thresholds: d3.range(500, 600, 4) })
 
     content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/temper-500-20050220.000");
 
     content = clip_lonlat(content, 30, 180, 70, 0);
     //draw_diamond4(content, { color: 'red', thresholds: d3.range(-40, 40, 4) })
-    //draw_diamond4_canvas(content, { transform, color: 'red', thresholds: d3.range(-40, 40, 4) })
+    draw_diamond4_canvas(content, { transform, color: 'red', thresholds: d3.range(-40, 40, 4) })
 
     $('#weather path').click(function () {
 
