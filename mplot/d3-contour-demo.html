@@ -8,6 +8,13 @@
     <style>
         #plot {
             padding: 20px;
+            position: relative;
+        }
+
+        #plot-svg, #plot-canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
@@ -20,6 +27,7 @@
                 <g id='weather'></g>
             </g>   
         </svg>
+        <canvas id='plot-canvas' width=1400 height=800></canvas>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
