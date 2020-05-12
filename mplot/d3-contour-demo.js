@@ -1,7 +1,26 @@
-var get_data = async (data_url = "https://likev.github.io/test/high-surface-data/surface-p0-20050220.000") => {
-    var f = await fetch(data_url);
+const DATA_CACHE = {};
 
-    var content = await f.text();
+var get_data = async (data_url) => {
+
+    var content = null;
+
+    if (DATA_CACHE[data_url]) {
+        content = DATA_CACHE[data_url];
+    } else {
+        var f = await fetch(data_url);
+        content = await f.text();
+
+        DATA_CACHE[data_url] = content;
+    }
+
+    return content;
+
+}
+
+
+var get_data_diamond4 = async (data_url = "https://likev.github.io/test/high-surface-data/surface-p0-20050220.000") => {
+
+    var content = await get_data(data_url)
 
     //console.log(content.split(/\s+/))
     content = content.trim().split(/\s+/).map(p => +p);
@@ -76,6 +95,50 @@ var draw_map = async () => {
         .attr("stroke", "#707070")
         .attr("stroke-width", 0.5)
         .attr("fill", 'none');
+}
+
+var draw_map_canvas = async ({ context = null, transform = null, color = '#505050', fill = 'none', smooth = true, thresholds } = {}) => {
+
+    if (!context) context = $('#map-canvas')[0].getContext('2d');
+
+    context.save();
+    if (transform) {
+        context.translate(transform.x, transform.y);
+        context.scale(transform.k, transform.k);
+    }
+
+    var chinaGeoJson = await get_data("https://raw.githubusercontent.com/lizhiqianduan/geojson-of-china-full/master/data/100000_geojson_full.json");
+
+    chinaGeoJson = JSON.parse(chinaGeoJson);
+
+    projection.fitExtent([[20, 120], [1200, 1200]], chinaGeoJson);
+
+    context.fillStyle = fill;
+    context.strokeStyle = color;
+
+    context.beginPath();
+
+    if (smooth) {
+        var pathd = path(chinaGeoJson);
+
+        smoothPath(pathd, context);
+    } else {
+        path.context(context);
+        path(chinaGeoJson);
+        path.context(null);
+    }
+    if (fill !== 'none') context.fill();
+    context.stroke();
+
+    context.beginPath();
+    path.context(context);
+    path(d3.geoGraticule10());
+    path.context(null);
+
+    context.stroke();
+
+    context.restore();
+
 }
 
 var draw_diamond4 = (content, { context = null, color = 'blue', fill = 'none', smooth = true, thresholds } = {}) => {
@@ -172,6 +235,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
+    context.save();
     if (transform) {
         context.translate(transform.x, transform.y);
         context.scale(transform.k, transform.k);
@@ -218,14 +282,17 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         .size([n, m])
         .thresholds(thresholds);
 
+    var geoJsonArray = contours(values);
+
     var colorScale = d3.scaleSequential(d3.interpolateOranges).domain(d3.extent(values))
 
     context.fillStyle = fill;
     context.strokeStyle = color;
 
 
-    for (let threshold of thresholds) {
-        var geoJsonOfthreshold = transform(contours.contour(values, threshold));
+
+    for (let geoJson of geoJsonArray) {
+        var geoJsonOfthreshold = transform( geoJson );
 
         context.beginPath();
 
@@ -241,28 +308,43 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         if (fill !== 'none') context.fill();
         context.stroke();
     }
+
+    context.restore();
 }
 
-var draw_demo = async () => {
+var draw_demo = async (transform) => {
 
-    await draw_map();
+    //await draw_map();
 
-    var content = await get_data("https://likev.github.io/test/high-surface-data/surface-p0-20050220.000");
+    var map_canvas = $('#map-canvas')[0];
+    var map_context = map_canvas.getContext('2d');
+
+    map_context.clearRect(0, 0, map_canvas.width, map_canvas.height);
+
+    await draw_map_canvas({transform});
+
+    var weather_canvas = $('#plot-canvas')[0];
+    var weather_context = weather_canvas.getContext('2d');
+
+    weather_context.clearRect(0, 0, weather_canvas.width, weather_canvas.height);
+
+    var content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/surface-p0-20050220.000");
 
     content = clip_lonlat(content, 30, 180, 70, 0);
-    draw_diamond4_canvas(content, { color: '#333' });
+    draw_diamond4_canvas(content, { transform, color: '#333' });
 
     //draw_diamond4(content, { color: '#CE9178', smooth: true });
 
-    content = await get_data("https://likev.github.io/test/high-surface-data/height-500-20050220.000");
+    content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/height-500-20050220.000");
 
     content = clip_lonlat(content, 30, 180, 70, 0);
-    draw_diamond4_canvas(content, { color: 'blue', thresholds: d3.range(500, 600, 4) })
+    draw_diamond4_canvas(content, { transform, color: 'blue', thresholds: d3.range(500, 600, 4) })
 
-    content = await get_data("https://likev.github.io/test/high-surface-data/temper-500-20050220.000");
+    content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/temper-500-20050220.000");
 
     content = clip_lonlat(content, 30, 180, 70, 0);
-    draw_diamond4(content, { color: 'red', thresholds: d3.range(-40, 40, 4) })
+    //draw_diamond4(content, { color: 'red', thresholds: d3.range(-40, 40, 4) })
+    draw_diamond4_canvas(content, {transform, color: 'red', thresholds: d3.range(-40, 40, 4) })
 
     $('#weather path').click(function () {
 
@@ -271,17 +353,17 @@ var draw_demo = async () => {
 }
 
 const zoomg = d3.select("#zoom");
-
-d3.select("#plot-svg")
+/**/
+d3.select("#plot-canvas")//#plot-svg
     .call(d3.zoom()
         //.extent([[0, 0], [width, height]])
         .scaleExtent([1, 8])
-        .on("zoom", zoomed));
+        .on("end", zoomed));
 
 function zoomed() {
-    zoomg.attr("transform", d3.event.transform);
+    //zoomg.attr("transform", d3.event.transform);
+
+    draw_demo(d3.event.transform)
 }
-
-
 
 draw_demo()
