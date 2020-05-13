@@ -107,35 +107,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
     //console.log(values)
     //console.log(d3)
     var n = content[15], m = content[16],
-        lonBegin = content[11], latBegin = content[13], lonSpan = content[9], latSpan = content[10],
-
-
-        // Converts from grid coordinates (indexes) to map coordinates (lat lon).
-        transform = ({ type, value, coordinates }) => {
-            return {
-                type,
-                value,
-
-                coordinates: coordinates.map(rings => {
-                    return rings.map(points => {
-                        var line = [];
-
-                        for (let [x, y] of points) {
-
-                            var newLon = lonBegin + lonSpan * x,
-                                newLat = latBegin + latSpan * y;
-
-                            //!!! wrong will delete some point !!! //if (newLon < 0 || newLon > 180 || newLat < 0 || newLat > 80) continue;
-                            line.push([newLon, newLat]);
-                        }
-                        return line;
-                    })
-
-
-                })
-
-            };
-        };
+        lonBegin = content[11], latBegin = content[13], lonSpan = content[9], latSpan = content[10];
 
 
     var width = n, height = m;
@@ -172,7 +144,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
     for (let geoJson of geoJsonArray) {
 
         var t1 = +new Date();
-        var geoJsonOfthreshold = transform(geoJson);
+        var geoJsonOfthreshold = d3contour_to_lonlat(geoJson, { lonBegin, lonSpan, latBegin, latSpan });
         t[0] += +new Date() - t1;
 
         context.beginPath();
@@ -203,6 +175,59 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
 
     console.timeEnd("geoJsonOfthreshold");
+
+    context.restore();
+}
+
+var draw_diamond2_canvas = (content, { context = null, transform = null, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
+
+    if (!context) context = $('#plot-canvas')[0].getContext('2d');
+
+    context.save();
+
+
+    if (transform) {
+        //context.translate(transform.x, transform.y);
+        //context.scale(transform.k, transform.k);
+    }
+
+    context.fillStyle = fill;
+    context.strokeStyle = color;
+
+
+    console.time("draw_diamond2_canvas");
+
+    var t = [0, 0, 0, 0];
+
+    for (let stationid in content) {
+        var station = content[stationid];
+        var pos = path.projection()([station[1], station[2]]);
+
+        if(stationid == 57083) console.log(pos);
+
+        if (transform) { pos = position_after_transform(pos, transform) };
+
+        if(stationid == 57083) console.log(pos);
+
+        var t0 = +new Date();
+
+        context.strokeStyle = color;
+        drawWind(context, pos[0], pos[1], station[9], station[8]);
+
+        context.font = '14px serif';
+
+        context.strokeStyle = 'red';
+        context.strokeText(station[6], pos[0]-10, pos[1]-20);
+
+        context.strokeStyle = 'green';
+        context.strokeText(station[7], pos[0]-10, pos[1]);
+
+        t[0] += +new Date() - t0;
+    }
+
+    console.log(t)
+
+    console.timeEnd("draw_diamond2_canvas");
 
     context.restore();
 }

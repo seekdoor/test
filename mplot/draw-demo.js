@@ -27,6 +27,7 @@ var draw_demo = async (transform) => {
 
     weather_context.clearRect(0, 0, weather_canvas.width, weather_canvas.height);
 
+    /*
     var content = await get_data_diamond4("https://likev.github.io/test/high-surface-data/surface-p0-20050220.000");
 
     console.time("draw_surcace");
@@ -45,12 +46,13 @@ var draw_demo = async (transform) => {
 
     content = clip_lonlat(content, 30, 180, 70, 0);
     //draw_diamond4(content, { color: 'red', thresholds: d3.range(-40, 40, 4) })
-    draw_diamond4_canvas(content, { transform, color: 'red', thresholds: d3.range(-40, 40, 4) })
+    draw_diamond4_canvas(content, { transform, color: 'red', thresholds: d3.range(-40, 40, 4) });
+*/
 
-    $('#weather path').click(function () {
+    content = await get_data_diamond2("https://likev.github.io/test/high-surface-data/plot-500-20050220.000");
+    draw_diamond2_canvas(content, { transform, color: '#333' });
 
-        //console.log($(this).attr('d'))
-    });
+    
     console.timeEnd("draw_demo");
 }
 
