@@ -141,3 +141,11 @@ const position_after_transform = ([x0, y0], { x = 0, y = 0, k = 1 } = {}) => {
 
     return [k * x0 + x, k * y0 + y];
 }
+
+const check_threshold_bottom = (v, threshold = -1e6, nullValue = 9999) => {
+    return (v != nullValue && v >= threshold)
+}
+
+const check_threshold_top = (v, threshold = 1e6, nullValue = 9999) => {
+    return (v != nullValue && v <= threshold)
+}

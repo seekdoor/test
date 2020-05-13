@@ -203,11 +203,11 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
         var station = content[stationid];
         var pos = path.projection()([station[1], station[2]]);
 
-        if(stationid == 57083) console.log(pos);
+        if (stationid == 57083) console.log(pos);
 
         if (transform) { pos = position_after_transform(pos, transform) };
 
-        if(stationid == 57083) console.log(pos);
+        if (stationid == 57083) console.log(pos);
 
         var t0 = +new Date();
 
@@ -217,10 +217,13 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
         context.font = '14px serif';
 
         context.strokeStyle = 'red';
-        context.strokeText(station[6], pos[0]-10, pos[1]-20);
+
+        var T = station[6];
+        if (check_threshold_bottom(T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
 
         context.strokeStyle = 'green';
-        context.strokeText(station[7], pos[0]-10, pos[1]);
+        var T_Td = station[7];
+        if (check_threshold_bottom(T_Td)) context.strokeText(T_Td, pos[0] - 20, pos[1]);
 
         t[0] += +new Date() - t0;
     }
@@ -228,6 +231,74 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
     console.log(t)
 
     console.timeEnd("draw_diamond2_canvas");
+
+    context.restore();
+}
+
+var draw_diamond1_canvas = (content, { context = null, transform = null, viewlevel=16, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
+
+    if (!context) context = $('#plot-canvas')[0].getContext('2d');
+
+    context.save();
+
+
+    if (transform) {
+        //context.translate(transform.x, transform.y);
+        //context.scale(transform.k, transform.k);
+    }
+
+    context.fillStyle = fill;
+    context.strokeStyle = color;
+
+
+    console.time("draw_diamond1_canvas");
+
+    var t = [0, 0, 0, 0];
+
+    for (let stationid in content) {
+        var station = content[stationid];
+
+        if (!check_threshold_top(station[4], viewlevel)) continue;
+
+        var pos = path.projection()([station[1], station[2]]);
+
+        if (stationid == 57083) console.log(pos);
+
+        if (transform) { pos = position_after_transform(pos, transform) };
+
+        if (stationid == 57083) console.log(pos);
+
+        var t0 = +new Date();
+
+        context.strokeStyle = color;
+        drawWind(context, pos[0], pos[1], station[7], station[6]);
+        t[0] += +new Date() - t0;
+
+
+        var t1 = +new Date();
+        context.font = '14px serif';
+
+        context.strokeStyle = 'red';
+        var T = station[19];
+        if (check_threshold_bottom(T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
+
+        context.strokeStyle = 'green';
+
+        var Td = station[16];
+        if (check_threshold_bottom(Td)) context.strokeText(Td, pos[0] - 20, pos[1]);
+
+        context.strokeStyle = 'blue';
+        var rainPast6 = station[12];
+        var rainPast6Threshold = 1;
+        if (check_threshold_bottom(rainPast6, rainPast6Threshold)) context.strokeText(rainPast6, pos[0] + 20, pos[1]);
+
+        t[1] += +new Date() - t1;
+        
+    }
+
+    console.log(t)
+
+    console.timeEnd("draw_diamond1_canvas");
 
     context.restore();
 }
