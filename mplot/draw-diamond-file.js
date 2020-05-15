@@ -201,7 +201,10 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
 
     for (let stationid in content) {
         var station = content[stationid];
-        var pos = path.projection()([station[1], station[2]]);
+        var pos = path.projection()([station[1], station[2]]),
+        pos1 = path.projection()([station[1], station[2]+1 ]);
+
+        var slope_angle = projection_slope_angle(pos, pos1);
 
         if (stationid == 57083) console.log(pos);
 
@@ -212,7 +215,7 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[9], station[8]);
+        drawWind(context, pos[0], pos[1], station[9], station[8]+slope_angle);
 
         context.font = '14px serif';
 
@@ -260,18 +263,23 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
 
         if (!check_threshold_top(station[4], viewlevel)) continue;
 
-        var pos = path.projection()([station[1], station[2]]);
+        var pos = path.projection()([station[1], station[2]]),
+        pos1 = path.projection()([station[1], station[2]+1 ]);
+
+        var slope_angle = projection_slope_angle(pos, pos1);
 
         if (stationid == 57083) console.log(pos);
 
-        if (transform) { pos = position_after_transform(pos, transform) };
+        if (transform) {
+             pos = position_after_transform(pos, transform);
+        };
 
         if (stationid == 57083) console.log(pos);
 
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[7], station[6]);
+        drawWind(context, pos[0], pos[1], station[7], station[6]+slope_angle);
         t[0] += +new Date() - t0;
 
 

@@ -142,6 +142,11 @@ const position_after_transform = ([x0, y0], { x = 0, y = 0, k = 1 } = {}) => {
     return [k * x0 + x, k * y0 + y];
 }
 
+const projection_slope_angle = ([x0, y0], [x1, y1]) => {
+
+    return Math.atan( (x1-x0)/(y0-y1) )*180/Math.PI;
+}
+
 const check_threshold_bottom = (v, threshold = -1e6, nullValue = 9999) => {
     return (v != nullValue && v >= threshold)
 }
