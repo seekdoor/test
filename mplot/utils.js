@@ -154,3 +154,9 @@ const check_threshold_bottom = (v, threshold = -1e6, nullValue = 9999) => {
 const check_threshold_top = (v, threshold = 1e6, nullValue = 9999) => {
     return (v != nullValue && v <= threshold)
 }
+
+function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
