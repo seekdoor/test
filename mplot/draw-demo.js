@@ -15,10 +15,35 @@ const compositeType = {
     ]
 }
 
+const get_top_bottom_level = (level, top_or_bottom) => {
+    let levels_all = ['925', '850', '700', '500', '400', '300', '200', '100'];
+    let index = levels_all.indexOf(level);
+
+    let result = false;
+
+    if (index === -1);
+    else if (top_or_bottom === 'top' && index < levels_all.length - 1) result = levels_all[index + 1];
+    else if (top_or_bottom === 'bottom' && index > 0) result = levels_all[index - 1];
+
+    return result;
+
+}
+
+const get_top_bottom_plot = (plot, top_or_bottom) => {
+    let newplot = clone_object(plot);
+    newplot.level = get_top_bottom_level(newplot.level, top_or_bottom);
+
+    newplot.config.thresholds = d3.range(-2000, 2000, 4);//need optimize
+
+
+    return newplot;
+
+}
+
 const composite_array = [];
 
-const generate_plot_item = (composite_type_name, plot_index) => {
-    let item = compositeType[composite_type_name];
+const generate_plot_item = (item, plot_index) => {
+    //let item = compositeType[composite_type_name];
 
     let plot = item[plot_index]
 
@@ -33,13 +58,13 @@ const generate_plot_item = (composite_type_name, plot_index) => {
 }
 
 const generate_composite_item = (composite_array_index) => {
-    let [file_datetime_str, composite_type_name] = composite_array[composite_array_index];
+    let [file_datetime_str, composite_type_name, ctype] = composite_array[composite_array_index];
 
-    let file_datetime = +moment(file_datetime_str), ctype = compositeType[composite_type_name];
+    let file_datetime = +moment(file_datetime_str);
 
     var listhtml = '';
     for (let i = 0; i < ctype.length; i++) {
-        listhtml += generate_plot_item(composite_type_name, i);
+        listhtml += generate_plot_item(ctype, i);
     }
 
 
@@ -113,7 +138,7 @@ const draw_request = async (transform) => {
     }
 
     for (let c of composite_array) {
-        let file_datetime = moment(c[0]), ctype = compositeType[c[1]];
+        let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
             var content = await get_data_diamond(filetype)(`https://likev.github.io/test/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
@@ -206,17 +231,71 @@ function zoomed() {
 
 $('#request').click(function () {
 
-    let [file_datetime, composite_type] = [$('#file-datetime').val(), $('#composite-type').val()];
+    let [file_datetime, composite_type_name] = [$('#file-datetime').val(), $('#composite-type').val()];
 
-    composite_array.push([file_datetime, composite_type]);
+    composite_array.push([file_datetime, composite_type_name, clone_object(compositeType[composite_type_name])]);
 
     $('#composite-list').prepend(generate_composite_item(composite_array.length - 1));
 
+    $($('#composite-list .panel')[0]).click();
+
     draw_request(transform_current);
 
-    location.hash = `/${file_datetime}/${composite_type}/`;//fixedEncodeURIComponent(`/${file_datetime}/${composite_type}/`)
+    location.hash = `/${file_datetime}/${composite_type_name}/`;//fixedEncodeURIComponent(`/${file_datetime}/${composite_type_name}/`)
 }
 )
+
+$('#composite-list').on('click', '.panel', function () {
+    $('#composite-list .panel-primary').removeClass('panel-primary').addClass('panel-default');
+    $(this).removeClass('panel-default').addClass('panel-primary');
+})
+
+let request_top_bottom = (top_or_bottom) => {
+    let this_panel = $('.panel-primary');
+    let composite_array_index = this_panel.data('index');
+
+    let ctype = composite_array[composite_array_index][2];
+
+    composite_array[composite_array_index][1] = 'composite';
+
+    for (let i = 0; i < ctype.length; i++) {
+        ctype[i] = get_top_bottom_plot(ctype[i], top_or_bottom);
+    }
+
+    let newpanel = $(generate_composite_item(composite_array_index));
+    this_panel.before(newpanel);
+    $(newpanel).click()
+
+    this_panel.remove();
+
+    draw_request(transform_current);
+}
+
+$(document).keyup(function (e) {
+    let top_or_bottom = '';
+    console.log(e.which)
+    switch (e.which) {
+        case 37://left
+            //time left
+            break;
+        case 38://top
+            top_or_bottom = 'top';
+
+            request_top_bottom(top_or_bottom);
+
+            break;
+        case 39://right
+            //time right
+            break;
+        case 40://bottom
+            //bottom level
+            top_or_bottom = 'bottom';
+
+            request_top_bottom(top_or_bottom);
+            break;
+        default: break;
+    }
+})
 
 $('#composite-list').on('click', '.panel-title .glyphicon-remove', function () {
 
@@ -246,8 +325,7 @@ $('#composite-list').on('click', '.panel-title .glyphicon-check, .panel-title .g
     }
 
     let composite_array_index = $(this).parents('.panel').data('index'),
-        composite_type_name = composite_array[composite_array_index][1],
-        ctype = compositeType[composite_type_name];
+        ctype = composite_array[composite_array_index][2];
 
     for (let plot of ctype) {
         plot.show = is_show;
@@ -266,8 +344,7 @@ $('#composite-list').on('click', '.panel-body .glyphicon-check, .panel-body .gly
 
     var is_show = $(this).hasClass('glyphicon-check');
 
-    let composite_type_name = composite_array[composite_array_index][1],
-        ctype = compositeType[composite_type_name];
+    let ctype = composite_array[composite_array_index][2];
 
     ctype[plot_index].show = is_show;
 

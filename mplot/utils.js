@@ -144,7 +144,7 @@ const position_after_transform = ([x0, y0], { x = 0, y = 0, k = 1 } = {}) => {
 
 const projection_slope_angle = ([x0, y0], [x1, y1]) => {
 
-    return Math.atan( (x1-x0)/(y0-y1) )*180/Math.PI;
+    return Math.atan((x1 - x0) / (y0 - y1)) * 180 / Math.PI;
 }
 
 const check_threshold_bottom = (v, threshold = -1e6, nullValue = 9999) => {
@@ -155,8 +155,12 @@ const check_threshold_top = (v, threshold = 1e6, nullValue = 9999) => {
     return (v != nullValue && v <= threshold)
 }
 
-function fixedEncodeURIComponent(str) {
+const fixedEncodeURIComponent = (str) => {
     return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
         return '%' + c.charCodeAt(0).toString(16);
     });
 }
+
+const clone_object = obj => {
+    return JSON.parse(JSON.stringify(obj));
+} 
