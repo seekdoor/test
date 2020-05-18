@@ -171,6 +171,8 @@ function zoomed() {
     draw_request(transform_current);
 }
 
+
+
 $('#request').click(function () {
 
     let [file_datetime, composite_type_name] = [$('#file-datetime').val(), $('#composite-type').val()];
@@ -293,6 +295,20 @@ $('#composite-list').on('click', '.panel-body .glyphicon-check, .panel-body .gly
     draw_request(transform_current);
 
 })
+
+$(window).resize(function () {
+    var top = $('#plot').position().top;
+    var width = $(window).width(), height = $(window).height() - top;
+
+    $('#plot').width(width).height(height);
+    $('#plot-svg, #map-canvas, #plot-canvas').each(function () {
+        $(this).attr({ 'width': width, height: height });
+    })
+
+    draw_request(transform_current);
+})
+
+$(window).resize();
 
 const init = async () => {
 
