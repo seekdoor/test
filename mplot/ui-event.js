@@ -167,7 +167,7 @@ d3.select("#plot-svg")//#plot-canvas
 function zoomed() {
     //zoomg.attr("transform", d3.event.transform);
     transform_current = d3.event.transform;
-    //draw_demo(transform_current)
+    
     draw_request(transform_current);
 }
 
