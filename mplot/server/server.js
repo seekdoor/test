@@ -45,7 +45,7 @@ let getData = async (req, res, postItems) => {
 			name = name.replace(/plot|p0/g, function (c) {
 				let result = '';
 				if(c === 'plot') result = 'PLOT_GLOBAL_1H';
-				else if(c === 'p0') result = false;//SURFACE\ANALYSIS\PRES  diamond 14 not support now!!!
+				else if(c === 'p0') result = 'ANALYSIS/PRES';//SURFACE\ANALYSIS\PRES  diamond 14 not support now!!!
 				return result;
 			});
 
@@ -54,7 +54,8 @@ let getData = async (req, res, postItems) => {
 			name = name.replace(/plot|height|temper/g, function (c) {
 				let result = '';
 				if(c === 'plot') result = 'PLOT';
-				else if(c === 'height') result = false;//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
+				else if(c === 'height') result = 'ANALYSIS/HGT';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
+				else if(c === 'temper') result = 'ANALYSIS/TMP';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
 				return result;
 			});
 

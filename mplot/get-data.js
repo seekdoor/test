@@ -93,6 +93,58 @@ var get_data_diamond2 = async (data_url = "https://likev.github.io/test/high-sur
 
 }
 
+var get_data_diamond14 = (content) => {
+
+    content = content.trim();
+
+    //console.log(content)
+
+    const re = /LINES:\s+(\d+)([-\d\s.]+)(LINES_SYMBOL|SYMBOLS|CLOSED_CONTOURS|STATION_SITUATION|WEATHER_REGION|FILLAREA|NOTES_SYMBOL|WithProp_LINESYMBOLS)/i;
+    const found = content.match(re);
+
+    const lines_count = +found[1];
+    const lines_content = found[2].trim().split(/\s+/);
+
+    console.log(lines_content.length)
+
+    let lines = [];
+
+    lines.type = 'diamond14';
+
+    let k = 0;
+    for (let i = 0; i < lines_count; i++) {
+        let line_width = lines_content[k++], point_count = lines_content[k++];
+
+        let line = {
+            points: [],
+            label: {
+                name: '',
+                points: []
+            }
+        };
+        for (let j = 0; j < point_count; j++) {
+            let x = lines_content[k++], y = lines_content[k++], z = lines_content[k++];
+            line.points.push([x, y]);
+        }
+
+
+        let label_name = lines_content[k++], label_count = +lines_content[k++];
+
+        line.label.name = label_name;
+        for (let j = 0; j < label_count; j++) {
+            let x = lines_content[k++], y = lines_content[k++], z = lines_content[k++];
+            line.label.points.push([x, y]);
+        }
+
+        lines.push(line);
+    }
+
+    //console.log(JSON.stringify(lines, null, 2) );
+
+    return lines;
+
+}
+
 var get_data_diamond4 = async (data_url = "https://likev.github.io/test/high-surface-data/surface-p0-20050220.000") => {
 
     var content = await get_data(data_url)
@@ -101,6 +153,8 @@ var get_data_diamond4 = async (data_url = "https://likev.github.io/test/high-sur
     var result = [];
     //console.log(content.split(/\s+/))
     result = content.trim().split(/\s+/).map(p => +p);
+
+    if(+result[1] === 14) return get_data_diamond14(content);
 
     return result;
 

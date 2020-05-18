@@ -91,7 +91,47 @@ var draw_diamond4 = (content, { context = null, color = 'blue', fill = 'none', s
     }
 }
 
+var draw_diamond14_canvas = (lines, { context = null, transform = null, color = 'blue', fill = 'none', smooth = true, thresholds } = {}) => {
+
+    if (!context) context = $('#plot-canvas')[0].getContext('2d');
+
+    context.save();
+    if (transform) {
+        //context.translate(transform.x, transform.y);
+        //context.scale(transform.k, transform.k);
+    }
+
+    context.fillStyle = fill;
+    context.strokeStyle = color;
+
+    let path_canvas = d3.line().context(context);
+
+    console.time("draw_diamond14_canvas");
+
+    context.beginPath();
+
+    for (let line of lines) {
+        let line_points = line.points, line_label = line.label;
+        for (let i = 0; i < line_points.length; i++) {
+            line_points[i] = path.projection()(line_points[i]);
+        }
+
+        line_points = line_after_transform(line_points, transform);
+
+        path_canvas(line_points);
+    }
+
+    context.stroke();
+
+    console.timeEnd("draw_diamond14_canvas");
+
+    context.restore();
+}
+
 var draw_diamond4_canvas = (content, { context = null, transform = null, color = 'blue', fill = 'none', smooth = true, thresholds } = {}) => {
+
+
+    if (content.type === 'diamond14') return draw_diamond14_canvas(content, { context, transform, color, fill, smooth, thresholds });
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
@@ -202,7 +242,7 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
     for (let stationid in content) {
         var station = content[stationid];
         var pos = path.projection()([station[1], station[2]]),
-        pos1 = path.projection()([station[1], station[2]+1 ]);
+            pos1 = path.projection()([station[1], station[2] + 1]);
 
         var slope_angle = projection_slope_angle(pos, pos1);
 
@@ -215,7 +255,7 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[9], station[8]+slope_angle);
+        drawWind(context, pos[0], pos[1], station[9], station[8] + slope_angle);
 
         context.font = '14px serif';
 
@@ -238,7 +278,7 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
     context.restore();
 }
 
-var draw_diamond1_canvas = (content, { context = null, transform = null, viewlevel=16, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
+var draw_diamond1_canvas = (content, { context = null, transform = null, viewlevel = 16, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
@@ -264,14 +304,14 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         if (!check_threshold_top(station[4], viewlevel)) continue;
 
         var pos = path.projection()([station[1], station[2]]),
-        pos1 = path.projection()([station[1], station[2]+1 ]);
+            pos1 = path.projection()([station[1], station[2] + 1]);
 
         var slope_angle = projection_slope_angle(pos, pos1);
 
         if (stationid == 57083) console.log(pos);
 
         if (transform) {
-             pos = position_after_transform(pos, transform);
+            pos = position_after_transform(pos, transform);
         };
 
         if (stationid == 57083) console.log(pos);
@@ -279,7 +319,7 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[7], station[6]+slope_angle);
+        drawWind(context, pos[0], pos[1], station[7], station[6] + slope_angle);
         t[0] += +new Date() - t0;
 
 
@@ -301,7 +341,7 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         if (check_threshold_bottom(rainPast6, rainPast6Threshold)) context.strokeText(rainPast6, pos[0] + 20, pos[1]);
 
         t[1] += +new Date() - t1;
-        
+
     }
 
     console.log(t)

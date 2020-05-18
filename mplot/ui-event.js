@@ -141,6 +141,8 @@ const draw_request = async (transform) => {
     }
 
     for (let c of composite_array) {
+        if(!c) continue;
+        
         let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
@@ -245,7 +247,7 @@ $('#composite-list').on('click', '.panel-title .glyphicon-remove', function () {
 
     let composite_array_index = $(this).parents('.panel-title').data('index');
 
-    composite_array.splice(composite_array_index, 1);
+    composite_array[composite_array_index] = false;
 
     $(this).parents('.panel').remove();
 
