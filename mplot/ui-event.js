@@ -100,6 +100,8 @@ const generate_composite_item = (composite_array_index) => {
 
 }
 
+var transform_current = { x: 0, y: 0, k: 1 };//need when draw new data or ui caused redraw
+
 let data_api = 'http://localhost:2020/data';
 const draw_request = async (transform) => {
 
@@ -146,15 +148,13 @@ const draw_request = async (transform) => {
 
             var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
 
-            if (content && item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
+            if (transform === transform_current && content && item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
         }
     }
 
     console.timeEnd("draw_request");
 
 }
-
-var transform_current = { x: 0, y: 0, k: 1 };//need when draw new data or ui caused redraw
 
 const zoomg = d3.select("#zoom");
 /**/
@@ -167,7 +167,7 @@ d3.select("#plot-svg")//#plot-canvas
 function zoomed() {
     //zoomg.attr("transform", d3.event.transform);
     transform_current = d3.event.transform;
-    
+
     draw_request(transform_current);
 }
 
