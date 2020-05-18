@@ -99,7 +99,7 @@ const generate_composite_item = (composite_array_index) => {
 
 }
 
-
+let data_api = 'http://localhost:2020/data';
 const draw_request = async (transform) => {
 
     console.time("draw_request");
@@ -141,9 +141,11 @@ const draw_request = async (transform) => {
         let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
-            var content = await get_data_diamond(filetype)(`https://likev.github.io/test/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
+            //var content = await get_data_diamond(filetype)(`https://likev.github.io/test/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
 
-            if (item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
+            var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
+
+            if (content && item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
         }
     }
 

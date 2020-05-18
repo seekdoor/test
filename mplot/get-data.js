@@ -7,10 +7,20 @@ var get_data = async (data_url) => {
     if (DATA_CACHE[data_url]) {
         content = DATA_CACHE[data_url];
     } else {
-        var f = await fetch(data_url);
-        content = await f.text();
+        try {
+            var f = await fetch(data_url);
 
-        DATA_CACHE[data_url] = content;
+            if (!f.ok) {
+                console.log('File not find');
+                return false;
+            }
+
+            content = await f.text();
+
+            DATA_CACHE[data_url] = content;
+        } catch (e) {
+            alert('NetworkError')
+        }
     }
 
     return content;
@@ -20,8 +30,8 @@ var get_data = async (data_url) => {
 
 var get_data_diamond1 = async (data_url = "https://likev.github.io/test/high-surface-data/surface-plot-20050220.000") => {
 
-    var content = await get_data(data_url)
-
+    var content = await get_data(data_url);
+    if (!content) return false;
     /*
     var content = `68352   27.25  -27.66 1300   32 9999  280    5 9999  -27 9999 9999
       0 9999 9999 9999    5.5   9999 9999   27.0 9999 9999    1    2 9999 9999
@@ -44,7 +54,7 @@ var get_data_diamond1 = async (data_url = "https://likev.github.io/test/high-sur
     for (let line of records) {
         var record = line.trim().split(/\s+/).map(p => +p);
         //console.log(record)
-        result[ record[0] ] = record;
+        result[record[0]] = record;
     }
 
     return result;
@@ -54,7 +64,7 @@ var get_data_diamond1 = async (data_url = "https://likev.github.io/test/high-sur
 var get_data_diamond2 = async (data_url = "https://likev.github.io/test/high-surface-data/plot-500-20050220.000") => {
 
     var content = await get_data(data_url)
-
+    if (!content) return false;
     /*
     var content = `  1028   19.02   74.52   14    1  534  -30    9  260    7
   2365   17.45   62.53    6    1  538  -28   14  210   21
@@ -76,7 +86,7 @@ var get_data_diamond2 = async (data_url = "https://likev.github.io/test/high-sur
     for (let line of records) {
         var record = line.trim().split(/\s+/).map(p => +p);
         //console.log(record)
-        result[ record[0] ] = record;
+        result[record[0]] = record;
     }
 
     return result;
@@ -86,6 +96,7 @@ var get_data_diamond2 = async (data_url = "https://likev.github.io/test/high-sur
 var get_data_diamond4 = async (data_url = "https://likev.github.io/test/high-surface-data/surface-p0-20050220.000") => {
 
     var content = await get_data(data_url)
+    if (!content) return false;
 
     var result = [];
     //console.log(content.split(/\s+/))

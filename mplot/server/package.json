@@ -1,0 +1,10 @@
+{
+  "name": "history-plot",
+  "version": "0.1.1",
+  "description": "get the history weather data",
+  "main": "main.js",
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
+  "author": "xfl"
+}
