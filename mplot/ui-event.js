@@ -6,13 +6,13 @@
 
 const compositeType = {
     composite_500_a: [
-        { show: true, name: 'height', level: '500', filetype: 4, config: { color: 'blue', thresholds: d3.range(500, 600, 4) } },
-        { show: false, name: 'temper', level: '500', filetype: 4, config: { color: 'red', thresholds: d3.range(-40, 40, 4) } },
-        { show: true, name: 'plot', level: '500', filetype: 2, config: { color: '#333' } }
+        { show: true, name: 'height', level: '500', filetype: 4, timespan: '12 hours', config: { color: 'blue', thresholds: d3.range(500, 600, 4) } },
+        { show: false, name: 'temper', level: '500', filetype: 4, timespan: '12 hours', config: { color: 'red', thresholds: d3.range(-40, 40, 4) } },
+        { show: true, name: 'plot', level: '500', filetype: 2, timespan: '12 hours', config: { color: '#333' } }
     ],
     composite_1000_a: [
-        { show: true, name: 'p0', level: 'surface', filetype: 4, config: { color: '#333', smooth: true } },
-        { show: true, name: 'plot', level: 'surface', filetype: 1, config: { color: '#333' } }
+        { show: true, name: 'p0', level: 'surface', filetype: 4, timespan: '3 hours', config: { color: '#333', smooth: true } },
+        { show: true, name: 'plot', level: 'surface', filetype: 1, timespan: '3 hours', config: { color: '#333' } }
     ]
 }
 
@@ -33,6 +33,8 @@ const get_top_bottom_level = (level, top_or_bottom) => {
 const get_top_bottom_plot = (plot, top_or_bottom) => {
     let newplot = clone_object(plot);
     newplot.level = get_top_bottom_level(newplot.level, top_or_bottom);
+
+    if (!newplot.level) return plot;//no change
 
     newplot.config.thresholds = d3.range(-2000, 2000, 4);//need optimize
 
@@ -72,7 +74,7 @@ const generate_composite_item = (composite_array_index) => {
     var result = `<div class="panel panel-default" data-index=${composite_array_index} data-filedatetime=${file_datetime}>
                         <div class="panel-heading">
                             <h3 class="panel-title" data-index=${composite_array_index}><span class="glyphicon glyphicon-check"
-                                    aria-hidden="true"></span>${file_datetime_str + ' ' + composite_type_name}<span class="glyphicon glyphicon-cog invisible"
+                                    aria-hidden="true"></span><span class="composite-title">${file_datetime_str + ' ' + composite_type_name}</span><span class="glyphicon glyphicon-cog invisible"
                                     aria-hidden="true"></span><span class="glyphicon glyphicon-remove pull-right"
                                     aria-hidden="true"></span></h3>
                         </div>
@@ -141,8 +143,8 @@ const draw_request = async (transform) => {
     }
 
     for (let c of composite_array) {
-        if(!c) continue;
-        
+        if (!c) continue;
+
         let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
@@ -217,12 +219,41 @@ let request_top_bottom = (top_or_bottom) => {
     draw_request(transform_current);
 }
 
+let request_prev_next = (prev_or_next) => {
+    let this_panel = $('.panel-primary');
+    let composite_array_index = this_panel.data('index');
+
+    let [file_datetime_str, composite_type_name, ctype] = composite_array[composite_array_index];
+
+    let file_datetime = moment(file_datetime_str),
+        new_file_datetime, new_file_datetime_str;
+
+    let time_span = ctype[0].timespan.split(' ');
+
+    if (prev_or_next === 'prev') {
+        new_file_datetime = file_datetime.subtract(+time_span[0], time_span[1])//3 hours
+    } else {
+        new_file_datetime = file_datetime.add(+time_span[0], time_span[1])//3 hours
+    }
+
+    new_file_datetime_str = new_file_datetime.format('YYYY-MM-DD HH:mm');
+    composite_array[composite_array_index][0] = new_file_datetime_str;
+
+    //<span class="composite-title">${file_datetime_str + ' ' + composite_type_name}</span>
+
+    this_panel.find('.composite-title').text(new_file_datetime_str + ' ' + composite_type_name);
+
+    draw_request(transform_current);
+}
+
 $(document).keyup(function (e) {
-    let top_or_bottom = '';
+    let top_or_bottom = '', prev_or_next = '';
     console.log(e.which)
     switch (e.which) {
         case 37://left
             //time left
+            prev_or_next = 'prev';
+            request_prev_next(prev_or_next);
             break;
         case 38://top
             top_or_bottom = 'top';
@@ -232,6 +263,8 @@ $(document).keyup(function (e) {
             break;
         case 39://right
             //time right
+            prev_or_next = 'next';
+            request_prev_next(prev_or_next);
             break;
         case 40://bottom
             //bottom level
