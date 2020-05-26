@@ -209,6 +209,20 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         if (fill !== 'none') context.fill();
         context.stroke();
 
+        
+        context.save();
+     
+        context.translate(0, 0);
+        context.scale(1, 1);
+    
+
+        var label_points = d3lonlat_contour_to_label_points(geoJsonOfthreshold, path.projection(), transform);
+        for(let pos of label_points){
+            context.strokeText(geoJsonOfthreshold.value, pos[0] , pos[1] );
+        }
+
+        context.restore();
+
     }
 
     console.log(t)
