@@ -163,7 +163,7 @@ const d3lonlat_contour_to_label_points = ({ type, value, coordinates },  project
                 var next_point = position_after_transform(projection(pos), transform);
 
                 var dx = next_point[0] - prev_point[0], dy = next_point[1] - prev_point[1];
-                if (Math.sqrt(dx * dx + dy * dy) > 200) {
+                if (Math.sqrt(dx * dx + dy * dy) > 400) {
                     result.push(next_point);
                     prev_point = next_point;
                 }

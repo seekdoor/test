@@ -119,6 +119,13 @@ var draw_diamond14_canvas = (lines, { context = null, transform = null, color = 
         line_points = line_after_transform(line_points, transform);
 
         path_canvas(line_points);
+
+        for (let point of line_label.points) {
+            let pos = path.projection()(point);
+            pos = position_after_transform(pos, transform);
+
+            context.strokeText(line_label.name, pos[0], pos[1]);
+        }
     }
 
     context.stroke();
@@ -135,11 +142,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
-    context.save();
-    if (transform) {
-        context.translate(transform.x, transform.y);
-        context.scale(transform.k, transform.k);
-    }
+
 
 
     var values = content.slice(22);
@@ -187,6 +190,12 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         var geoJsonOfthreshold = d3contour_to_lonlat(geoJson, { lonBegin, lonSpan, latBegin, latSpan });
         t[0] += +new Date() - t1;
 
+        context.save();
+        if (transform) {
+            context.translate(transform.x, transform.y);
+            context.scale(transform.k, transform.k);
+        }
+
         context.beginPath();
         if (smooth) {
 
@@ -209,19 +218,13 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
         if (fill !== 'none') context.fill();
         context.stroke();
 
-        
-        context.save();
-     
-        context.translate(0, 0);
-        context.scale(1, 1);
-    
+        context.restore();
+
 
         var label_points = d3lonlat_contour_to_label_points(geoJsonOfthreshold, path.projection(), transform);
-        for(let pos of label_points){
-            context.strokeText(geoJsonOfthreshold.value, pos[0] , pos[1] );
+        for (let pos of label_points) {
+            context.strokeText(geoJsonOfthreshold.value, pos[0], pos[1]);
         }
-
-        context.restore();
 
     }
 
@@ -230,7 +233,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     console.timeEnd("geoJsonOfthreshold");
 
-    context.restore();
+
 }
 
 var draw_diamond2_canvas = (content, { context = null, transform = null, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
