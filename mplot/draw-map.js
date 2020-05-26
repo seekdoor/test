@@ -52,7 +52,7 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
         context.scale(transform.k, transform.k);
     }
 
-    var chinaGeoJson = await get_data("https://raw.githubusercontent.com/lizhiqianduan/geojson-of-china-full/master/data/100000_geojson_full.json");
+    var chinaGeoJson = await get_data("./geojson-data/china_geojson_full.json");
 
     chinaGeoJson = JSON.parse(chinaGeoJson);
 
@@ -73,7 +73,7 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
     } else {
         path(chinaGeoJson);
     }
-    
+
     if (fill !== 'none') context.fill();
     context.stroke();
 
