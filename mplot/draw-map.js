@@ -63,15 +63,17 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
 
     context.beginPath();
 
+    if (smooth) path.context(null);
+    else path.context(context);
+    
     if (smooth) {
         var pathd = path(chinaGeoJson);
 
         smoothPath(pathd, context);
     } else {
-        path.context(context);
         path(chinaGeoJson);
-        path.context(null);
     }
+    
     if (fill !== 'none') context.fill();
     context.stroke();
 

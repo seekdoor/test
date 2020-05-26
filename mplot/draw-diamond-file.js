@@ -183,7 +183,9 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     var t = [0, 0, 0, 0];
 
-    if (!smooth) path.context(context);
+    if (smooth) path.context(null);
+    else path.context(context);
+    
     for (let geoJson of geoJsonArray) {
 
         var t1 = +new Date();
