@@ -120,9 +120,9 @@ var draw_diamond14_canvas = (lines, { context = null, transform = null, color = 
 
         path_canvas(line_points);
 
-        for (let point of line_label.points) {
-            let pos = path.projection()(point);
-            pos = position_after_transform(pos, transform);
+        const line_label_points = lonlat_line_to_label_points(line_points, path.projection(), transform);
+
+        for (let pos of line_label_points) {
 
             context.strokeText(line_label.name, pos[0], pos[1]);
         }

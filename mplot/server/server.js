@@ -31,7 +31,7 @@ let getData = async (req, res, postItems) => {
 	} else if (file_datetime.isBefore( moment().subtract(7, 'days') )) {
 		filepath += `${file_datetime.format('YYYYMM')}/`;
 	} else {
-		filepath += `X:/micaps/`;
+		filepath = `X:/micaps/`;
 	}
 
 	if (file_datetime.isBefore('2018-03-01')) {
