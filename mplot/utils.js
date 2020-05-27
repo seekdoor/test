@@ -142,6 +142,13 @@ const position_after_transform = ([x0, y0], { x = 0, y = 0, k = 1 } = {}) => {
     return [k * x0 + x, k * y0 + y];
 }
 
+const line_after_projection = (line, projection) => {
+    for (let i = 0; i < line.length; i++) {
+        line[i] = projection(line[i]);
+    }
+    return line;
+}
+
 const line_after_transform = (line, { x = 0, y = 0, k = 1 } = {}) => {
     for (let i = 0; i < line.length; i++) {
         line[i] = position_after_transform(line[i], { x, y, k });
@@ -149,15 +156,15 @@ const line_after_transform = (line, { x = 0, y = 0, k = 1 } = {}) => {
     return line;
 }
 
-const lonlat_line_to_label_points = (points, projection, transform) => {
+const position_line_to_label_points = (points) => {
     var result = [];
 
-    var prev_point = position_after_transform(projection(points[0]), transform);
+    var prev_point = points[0];
     result.push(prev_point);
 
     for (let pos of points) {
 
-        var next_point = position_after_transform(projection(pos), transform);
+        var next_point = pos;
 
         var dx = next_point[0] - prev_point[0], dy = next_point[1] - prev_point[1];
         if (Math.sqrt(dx * dx + dy * dy) > 400) {
@@ -175,7 +182,11 @@ const d3lonlat_contour_to_label_points = ({ type, value, coordinates }, projecti
 
     for (let rings of coordinates) {
         for (let points of rings) {
-            var line_label_points = lonlat_line_to_label_points(points, projection, transform);
+            points = line_after_projection(points, projection);
+
+            points = line_after_transform(points, transform);
+
+            var line_label_points = position_line_to_label_points(points);
             result = result.concat(line_label_points);
         }
     }

@@ -112,15 +112,14 @@ var draw_diamond14_canvas = (lines, { context = null, transform = null, color = 
 
     for (let line of lines) {
         let line_points = line.points, line_label = line.label;
-        for (let i = 0; i < line_points.length; i++) {
-            line_points[i] = path.projection()(line_points[i]);
-        }
+
+        line_points = line_after_projection(line_points, path.projection());
 
         line_points = line_after_transform(line_points, transform);
 
         path_canvas(line_points);
 
-        const line_label_points = lonlat_line_to_label_points(line_points, path.projection(), transform);
+        const line_label_points = position_line_to_label_points(line_points);
 
         for (let pos of line_label_points) {
 
@@ -185,7 +184,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
     if (smooth) path.context(null);
     else path.context(context);
-    
+
     for (let geoJson of geoJsonArray) {
 
         var t1 = +new Date();
