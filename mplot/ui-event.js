@@ -8,11 +8,46 @@ const compositeType = {
     composite_500_a: [
         { show: true, name: 'height', level: '500', filetype: 4, timespan: '12 hours', config: { color: 'blue', thresholds: d3.range(500, 600, 4) } },
         { show: false, name: 'temper', level: '500', filetype: 4, timespan: '12 hours', config: { color: 'red', thresholds: d3.range(-40, 40, 4) } },
-        { show: true, name: 'plot', level: '500', filetype: 2, timespan: '12 hours', config: { color: '#333' } }
+        {
+            show: true, name: 'plot', level: '500', filetype: 2, timespan: '12 hours',
+            config: {
+                elements: {
+                    T: { name: 'T', show: true, a: 25, b: 30, andor: 'and' },
+                    dT24: { name: 'dT24', show: false, a: 5, b: -5, andor: 'or' },
+
+                    Td: { name: 'Td', show: false, a: -50, b: 30, andor: 'and' },
+                    T_Td: { name: 'T_Td', show: true, a: 15, b: 6, andor: 'or' },
+
+                    wind: { name: 'wind', show: true, a: 8, b: 50, andor: 'and' },
+
+                    H: { name: 'H', show: false, a: 0, b: 10000, andor: 'and' },
+                    dH24: { name: 'dH24', show: false, a: 2, b: -2, andor: 'or' }
+                },
+
+                color: '#333'
+            }
+        }
     ],
     composite_1000_a: [
         { show: true, name: 'p0', level: 'surface', filetype: 4, timespan: '3 hours', config: { color: '#333', smooth: true } },
-        { show: true, name: 'plot', level: 'surface', filetype: 1, timespan: '3 hours', config: { color: '#333' } }
+        {
+            show: true, name: 'plot', level: 'surface', filetype: 1, timespan: '3 hours',
+            config: {
+                elements: {
+                    T: { name: 'T', show: true, a: 25, b: 30, andor: 'and' },
+                    dT24: { name: 'dT24', show: false, a: 5, b: -5, andor: 'or' },
+                    Td: { name: 'Td', show: true, a: 10, b: -5, andor: 'or' },
+                    V: { name: 'V', show: false, a: 10, b: 2, andor: 'or' },
+                    wind: { name: 'wind', show: true, a: 2, b: 50, andor: 'and' },
+                    P1000: { name: 'P1000', show: false, a: 1010, b: 990, andor: 'or' },
+                    dP3: { name: 'dP3', show: false, a: 2, b: -2, andor: 'or' },
+                    dP24: { name: 'dP24', show: false, a: 2, b: -2, andor: 'or' },
+                    rainPast6: { name: 'rainPast6', show: true, a: 1, b: 1e3, andor: 'and' }
+                },
+
+                color: '#333'
+            }
+        }
     ]
 }
 
@@ -148,9 +183,9 @@ const draw_request = async (transform) => {
         let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
-            //var content = await get_data_diamond(filetype)(`https://likev.github.io/test/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
+            var content = await get_data_diamond(filetype)(`https://likev.github.io/test/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
 
-            var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
+            //var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
 
             if (transform === transform_current && content && item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
         }
@@ -335,7 +370,7 @@ $(window).resize(function () {
     var top = $('#plot').position().top;
     var width = $(window).width(), height = $(window).height() - top;
 
-    $('#plot').width(width).height(height);
+    $('#plot').height(height);//.width(width)
     $('#plot-svg, #map-canvas, #plot-canvas').each(function () {
         $(this).attr({ 'width': width, height: height });
     })

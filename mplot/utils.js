@@ -207,6 +207,11 @@ const check_threshold_top = (v, threshold = 1e6, nullValue = 9999) => {
     return (v != nullValue && v <= threshold)
 }
 
+const check_threshold_logic = (v, { a, b, andor }) => {
+    if (andor === 'and') return check_threshold_bottom(v, a) && check_threshold_top(v, b);
+    else return check_threshold_bottom(v, a) || check_threshold_top(v, b);
+}
+
 const fixedEncodeURIComponent = (str) => {
     return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
         return '%' + c.charCodeAt(0).toString(16);

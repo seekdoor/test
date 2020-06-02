@@ -17,7 +17,7 @@
         #plot {
             padding: 0px;
             position: relative;
-            width: 1400px;
+            /*width: 1400px;*/
             height: 800px;
         }
 
@@ -64,6 +64,34 @@
         .panel-title:hover .glyphicon.invisible {
             visibility: visible;
         }
+
+        .config {
+            background-color: LightGrey;
+            padding: 20px 30px;
+
+            z-index: 104;
+        }
+
+        .element-config {
+            margin-top: 12px;
+        }
+
+        .check-span {
+            width: 80px;
+            display: inline-block;
+            padding: 5px;
+            margin-right: 20px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #cecece;
+            cursor: pointer;
+        }
+
+        .select {
+
+            background: #4287d4;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -87,7 +115,7 @@
         </div>
 
         <div class="row">
-            <div id='plot'>
+            <div class='col-md-9' id='plot'>
                 <svg id='plot-svg' width=1400 height=800>
                     <g id='zoom'>
                         <g id='map'></g>
@@ -97,7 +125,8 @@
                 <canvas id='map-canvas' width=1400 height=800></canvas>
                 <canvas id='plot-canvas' width=1400 height=800></canvas>
 
-                <div id='composite-list'><!-- 
+                <div id='composite-list'>
+                    <!-- 
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title"><span class="glyphicon glyphicon-check"
@@ -123,6 +152,38 @@
                         </div>
                     </div> -->
                 </div>
+
+
+            </div>
+
+            <div class='col-md-3 config'>
+
+                <div id='diamond1-config'>
+                    <w-element v-for="(element, key) in elements" v-bind:value="element" v-bind:key="key"
+                        v-on:change="redraw"></w-element>
+                    <!-- 
+                    <div class='element-config'>
+                        <span class="check-span" v-on:click="value.show = !value.show"
+                            v-bind:class="{ select: value.show }">{{value.name}}</span>
+                        ≥
+                        <input size=3 v-model.lazy="value.a">
+
+                        <select v-model="value.andor">
+                            <option>and</option>
+                            <option>or</option>
+                        </select>
+
+                        ≤
+                        <input size=3 v-model="value.b">
+                    </div>
+                    -->
+                </div>
+
+                <div id='diamond2-config'>
+                    <w-element v-for="(element, key) in elements" v-bind:value="element" v-bind:key="key"
+                        v-on:change="redraw"></w-element>
+                </div>
+
             </div>
         </div>
     </div>
@@ -132,6 +193,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.2.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.15.1/min/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@5.16.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
     <script src="./clip-lonlat.js"></script>
     <script src="./get-data.js"></script>
@@ -140,6 +202,7 @@
     <script src="./draw-diamond-file.js"></script>
     <!-- <script src="./draw-demo.js"></script> -->
     <script src="./ui-event.js"></script>
+    <script src="./config.js"></script>
 </body>
 
 </html>

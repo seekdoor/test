@@ -237,7 +237,7 @@ var draw_diamond4_canvas = (content, { context = null, transform = null, color =
 
 }
 
-var draw_diamond2_canvas = (content, { context = null, transform = null, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
+var draw_diamond2_canvas = (content, { context = null, transform = null, color = '#333', fill = 'none', smooth = true, thresholds, elements } = {}) => {
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
@@ -273,18 +273,26 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[9], station[8] + slope_angle);
+        var windV = station[9];
+        if (elements.wind.show && check_threshold_logic(windV, elements.wind)) drawWind(context, pos[0], pos[1], windV, station[8] + slope_angle);
 
         context.font = '14px serif';
 
         context.strokeStyle = 'red';
 
         var T = station[6];
-        if (check_threshold_bottom(T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
+        if (elements.T.show && check_threshold_logic(T, elements.T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
 
         context.strokeStyle = 'green';
         var T_Td = station[7];
-        if (check_threshold_bottom(T_Td)) context.strokeText(T_Td, pos[0] - 20, pos[1]);
+        if (elements.T_Td.show && check_threshold_logic(T_Td, elements.T_Td)) context.strokeText(T_Td, pos[0] - 20, pos[1]);
+
+        var Td = station[6] - station[7];
+        if (elements.Td.show && check_threshold_logic(Td, elements.Td)) context.strokeText(Td, pos[0] - 20, pos[1] + 20);
+
+        context.strokeStyle = 'brown';
+        var H = station[5];
+        if (elements.H.show && check_threshold_logic(H, elements.H)) context.strokeText(H, pos[0] + 20, pos[1] - 20);
 
         t[0] += +new Date() - t0;
     }
@@ -296,7 +304,7 @@ var draw_diamond2_canvas = (content, { context = null, transform = null, color =
     context.restore();
 }
 
-var draw_diamond1_canvas = (content, { context = null, transform = null, viewlevel = 16, color = '#333', fill = 'none', smooth = true, thresholds } = {}) => {
+var draw_diamond1_canvas = (content, { context = null, transform = null, viewlevel = 16, color = '#333', fill = 'none', smooth = true, thresholds, elements } = {}) => {
 
     if (!context) context = $('#plot-canvas')[0].getContext('2d');
 
@@ -337,7 +345,9 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         var t0 = +new Date();
 
         context.strokeStyle = color;
-        drawWind(context, pos[0], pos[1], station[7], station[6] + slope_angle);
+
+        var windV = station[7];
+        if (elements.wind.show && check_threshold_logic(windV, elements.wind)) drawWind(context, pos[0], pos[1], windV, station[6] + slope_angle);
         t[0] += +new Date() - t0;
 
 
@@ -346,17 +356,36 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
 
         context.strokeStyle = 'red';
         var T = station[19];
-        if (check_threshold_bottom(T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
+        if (elements.T.show && check_threshold_logic(T, elements.T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
+
+        var dT24 = station[24];
+        if (elements.dT24.show && check_threshold_logic(dT24, elements.dT24)) context.strokeText(dT24, pos[0] - 20, pos[1] - 40);
+
+        context.strokeStyle = 'brown';
+        var P1000 = station[8];
+        if (P1000 < 800) P1000 = 1000 + P1000 / 10;
+        if (elements.P1000.show && check_threshold_logic(P1000, elements.P1000)) context.strokeText(P1000, pos[0] + 20, pos[1] - 20);
+
+        context.strokeStyle = 'DarkSlateBlue';
+        var dP3 = station[9];
+        if (elements.dP3.show && check_threshold_logic(dP3, elements.dP3)) context.strokeText(dP3, pos[0] + 20, pos[1] - 40);
+
+        var dP24 = station[25];
+        if (elements.dP24.show && check_threshold_logic(dP24, elements.dP24)) context.strokeText(dP24, pos[0] + 20, pos[1] - 60);
 
         context.strokeStyle = 'green';
 
         var Td = station[16];
-        if (check_threshold_bottom(Td)) context.strokeText(Td, pos[0] - 20, pos[1]);
+        if (elements.Td.show && check_threshold_logic(Td, elements.Td)) context.strokeText(Td, pos[0] - 20, pos[1]);
+
+        context.strokeStyle = 'coral';
+        var V = station[17];
+        if (elements.V.show && check_threshold_logic(V, elements.V)) context.strokeText(V, pos[0] - 20, pos[1] + 20);
 
         context.strokeStyle = 'blue';
         var rainPast6 = station[12];
-        var rainPast6Threshold = 1;
-        if (check_threshold_bottom(rainPast6, rainPast6Threshold)) context.strokeText(rainPast6, pos[0] + 20, pos[1]);
+
+        if (elements.rainPast6.show && check_threshold_logic(rainPast6, elements.rainPast6)) context.strokeText(rainPast6, pos[0] + 20, pos[1]);
 
         t[1] += +new Date() - t1;
 

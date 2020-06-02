@@ -52,7 +52,8 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
         context.scale(transform.k, transform.k);
     }
 
-    var chinaGeoJson = await get_data("./geojson-data/china_geojson_full.json");
+    //var chinaGeoJson = await get_data("./geojson-data/china_geojson_full.json");
+    var chinaGeoJson = await get_data("https://likev.github.io/test/mplot/geojson-data/china_geojson_full.json");
 
     chinaGeoJson = JSON.parse(chinaGeoJson);
 
