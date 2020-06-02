@@ -73,13 +73,33 @@ $('#composite-list').on('click', '.panel-body .glyphicon-cog', function () {
     let composite_array_index = $(this).parents('.panel').data('index');
     let plot_index = $(this).parents('.list-group-item').data('index');
 
-    
+    $('#config .panel-body>div').hide();
 
     let ctype = composite_array[composite_array_index][2];
 
     let plot_info = ctype[plot_index];
 
-    if(plot_info.filetype === 1) diamond1Config.elements = plot_info.config.elements;
-    else if(plot_info.filetype === 2) diamond2Config.elements = plot_info.config.elements;
+    if(plot_info.filetype === 1){
+        
+        diamond1Config.elements = plot_info.config.elements;
 
+        $('#config .panel-title').text('地面填图配置');
+        $('#config, #diamond1-config').show();
+    } 
+    else if(plot_info.filetype === 2){
+        diamond2Config.elements = plot_info.config.elements;
+
+        $('#config .panel-title').text('高空填图配置');
+        $('#config, #diamond2-config').show();
+    }else{
+        $('#config .panel-title').text('...');
+    } 
+
+    $('#plot').removeClass('col-md-12').addClass('col-md-9');
+
+})
+
+$('#config .close').click(function(){
+    $('#config').hide();
+    $('#plot').removeClass('col-md-9').addClass('col-md-12');
 })
