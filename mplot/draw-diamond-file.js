@@ -354,10 +354,15 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         var t1 = +new Date();
         context.font = '14px serif';
 
+        context.strokeStyle = 'DarkSlateGray';
+        var ID = station[0];
+        if (elements.ID.show && check_threshold_logic(ID, elements.ID)) context.strokeText(ID, pos[0] + 20, pos[1] + 20);
+
         context.strokeStyle = 'red';
         var T = station[19];
         if (elements.T.show && check_threshold_logic(T, elements.T)) context.strokeText(T, pos[0] - 20, pos[1] - 20);
 
+        context.strokeStyle = 'Tomato';
         var dT24 = station[24];
         if (elements.dT24.show && check_threshold_logic(dT24, elements.dT24)) context.strokeText(dT24, pos[0] - 20, pos[1] - 40);
 
@@ -381,6 +386,18 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         context.strokeStyle = 'coral';
         var V = station[17];
         if (elements.V.show && check_threshold_logic(V, elements.V)) context.strokeText(V, pos[0] - 20, pos[1] + 20);
+
+        context.strokeStyle = 'purple';
+        var W = station[18];
+        if (elements.W.show && check_threshold_logic(W, elements.W)) context.strokeText(W, pos[0] , pos[1] + 20);
+
+        context.strokeStyle = 'RebeccaPurple';
+        var pastW1 = station[10];
+        if (elements.pastW1.show && check_threshold_logic(pastW1, elements.pastW1)) context.strokeText(pastW1, pos[0] + 20, pos[1] );
+
+        context.strokeStyle = 'RebeccaPurple';
+        var pastW2 = station[11];
+        if (elements.pastW2.show && check_threshold_logic(pastW2, elements.pastW2)) context.strokeText(pastW2, pos[0] + 40, pos[1] );
 
         context.strokeStyle = 'blue';
         var rainPast6 = station[12];

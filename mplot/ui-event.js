@@ -34,10 +34,14 @@ const compositeType = {
             show: true, name: 'plot', level: 'surface', filetype: 1, timespan: '3 hours',
             config: {
                 elements: {
+                    ID: { name: 'ID', show: false, a: 10000, b: 90000, andor: 'and' },
                     T: { name: 'T', show: true, a: 25, b: 30, andor: 'and' },
                     dT24: { name: 'dT24', show: false, a: 5, b: -5, andor: 'or' },
                     Td: { name: 'Td', show: true, a: 10, b: -5, andor: 'or' },
                     V: { name: 'V', show: false, a: 10, b: 2, andor: 'or' },
+                    W: { name: 'W', show: false, a: 1, b: 100, andor: 'and' },
+                    pastW1: { name: 'pastW1', show: false, a: 3, b: 10, andor: 'and' },
+                    pastW2: { name: 'pastW2', show: false, a: 3, b: 10, andor: 'and' },
                     wind: { name: 'wind', show: true, a: 2, b: 50, andor: 'and' },
                     P1000: { name: 'P1000', show: false, a: 1010, b: 990, andor: 'or' },
                     dP3: { name: 'dP3', show: false, a: 2, b: -2, andor: 'or' },
