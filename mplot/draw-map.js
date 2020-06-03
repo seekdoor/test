@@ -79,6 +79,9 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
     context.stroke();
 
     context.beginPath();
+    context.strokeStyle = 'DarkGrey';
+    context.lineWidth = 0.5;
+
     path.context(context);
     path(d3.geoGraticule10());
     path.context(null);

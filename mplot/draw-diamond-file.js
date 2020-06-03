@@ -342,6 +342,35 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
 
         if (stationid == 57083) console.log(pos);
 
+        var t1 = +new Date();
+        context.font = '14px serif';
+
+        /* -------- draw weather condition ---------------*/
+        context.strokeStyle = 'purple';
+        var W = station[18];
+
+        if (elements.W.show && check_threshold_logic(W, elements.W)) {
+            context.drawImage($('#weather_symbols')[0], W % 10 * 55, Math.floor(W / 10) * 55, 55, 55, pos[0] - 20, pos[1] - 10, 20, 20);
+            //context.strokeText(W, pos[0], pos[1] + 20);
+        }
+
+        context.strokeStyle = 'RebeccaPurple';
+        var pastW1 = station[10];
+        if (elements.pastW1.show && check_threshold_logic(pastW1, elements.pastW1)) {
+            context.drawImage($('#weather_symbols')[0], pastW1 % 10 * 55, 10 * 55, 55, 55, pos[0] + 10, pos[1] - 10, 20, 20);
+            //context.strokeText(pastW1, pos[0] + 20, pos[1]);
+        }
+
+        context.strokeStyle = 'RebeccaPurple';
+        var pastW2 = station[11];
+        if (elements.pastW2.show && check_threshold_logic(pastW2, elements.pastW2)) {
+            context.drawImage($('#weather_symbols')[0], pastW2 % 10 * 55, 10 * 55, 55, 55, pos[0] + 30, pos[1] - 10, 20, 20);
+            //context.strokeText(pastW2, pos[0] + 40, pos[1]);
+        }
+        /* ------  end weather condition ----------*/
+
+
+        /* -------- draw wind ---------------*/
         var t0 = +new Date();
 
         context.strokeStyle = color;
@@ -349,10 +378,8 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         var windV = station[7];
         if (elements.wind.show && check_threshold_logic(windV, elements.wind)) drawWind(context, pos[0], pos[1], windV, station[6] + slope_angle);
         t[0] += +new Date() - t0;
+        /* ------  end wind ----------*/
 
-
-        var t1 = +new Date();
-        context.font = '14px serif';
 
         context.strokeStyle = 'DarkSlateGray';
         var ID = station[0];
@@ -381,23 +408,13 @@ var draw_diamond1_canvas = (content, { context = null, transform = null, viewlev
         context.strokeStyle = 'green';
 
         var Td = station[16];
-        if (elements.Td.show && check_threshold_logic(Td, elements.Td)) context.strokeText(Td, pos[0] - 20, pos[1]);
+        if (elements.Td.show && check_threshold_logic(Td, elements.Td)) context.strokeText(Td, pos[0] - 20, pos[1] + 20);
 
         context.strokeStyle = 'coral';
         var V = station[17];
         if (elements.V.show && check_threshold_logic(V, elements.V)) context.strokeText(V, pos[0] - 20, pos[1] + 20);
 
-        context.strokeStyle = 'purple';
-        var W = station[18];
-        if (elements.W.show && check_threshold_logic(W, elements.W)) context.strokeText(W, pos[0] , pos[1] + 20);
 
-        context.strokeStyle = 'RebeccaPurple';
-        var pastW1 = station[10];
-        if (elements.pastW1.show && check_threshold_logic(pastW1, elements.pastW1)) context.strokeText(pastW1, pos[0] + 20, pos[1] );
-
-        context.strokeStyle = 'RebeccaPurple';
-        var pastW2 = station[11];
-        if (elements.pastW2.show && check_threshold_logic(pastW2, elements.pastW2)) context.strokeText(pastW2, pos[0] + 40, pos[1] );
 
         context.strokeStyle = 'blue';
         var rainPast6 = station[12];
