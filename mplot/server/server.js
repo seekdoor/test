@@ -8,10 +8,40 @@ const fs = require('fs');
 
 const moment = require('moment');
 
-let homepage = function (_req, res) {
-	res.writeHead(200, { 'Content-Type': 'text/html' });
+let homepage = function(req, res){
+	res.writeHead(200, {'Content-Type':'text/html'});
 
-	res.end('hello');
+	//console.log(__dirname);
+	let rs = fs.createReadStream( path.join( __dirname, "hail-judge.html" ) );
+
+	rs.pipe(res, {end:false});
+	rs.on('end', ()=>{
+
+		writeAlertJsonInfo(req, res);
+		//res.end();
+	});
+}
+
+let static_file = function(req, res, filename){
+    let mime = {
+		"html": "text/html",
+        "css": "text/css",
+		"js": "application/javascript",
+		"webp": "image/webp",
+		"json": "application/json",
+		"woff": "font/woff",
+		"000": "application/octet-stream",
+    };
+	let ext = path.extname(filename).slice(1);
+	
+	let mime_type = mime[ext] ? mime[ext] : "application/octet-stream";
+    
+	res.writeHead(200, {'Content-Type': mime_type});
+
+	//console.log(__dirname);
+	let rs = fs.createReadStream( path.join( __dirname, 'static-files',filename ) );
+
+	rs.pipe(res, {end:true});
 }
 
 let getData = async (req, res, postItems) => {
@@ -125,9 +155,17 @@ let startHttpServer = function () {
 
 			});
 
-		} else {
-			homepage(req, res);
-		}
+		}else if( pathname.slice(0,5) === '/file' ){
+            let filename = pathname.slice(6);
+            console.log(filename);
+            static_file(req, res, filename);
+        }else{
+            res.writeHead(404, "Not Found", {'Content-Type': 'text/plain'});
+
+            res.write("This request URL " + pathname + " was not found on this server.");
+
+            res.end();
+        }
 
 	}).listen(2020, () => {
 		console.log('listen on port 2020...');

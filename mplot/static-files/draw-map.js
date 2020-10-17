@@ -10,7 +10,7 @@ const path = d3.geoPath(projection);
 
 var draw_map = async () => {
 
-    var f = await fetch("https://raw.githubusercontent.com/lizhiqianduan/geojson-of-china-full/master/data/100000_geojson_full.json");
+    var f = await fetch("/file/geojson-data/china_geojson_full.json");
 
     var chinaGeoJson = await f.text();
 
@@ -53,7 +53,7 @@ var draw_map_canvas = async ({ context = null, transform = null, color = '#50505
     }
 
     //var chinaGeoJson = await get_data("./geojson-data/china_geojson_full.json");
-    var chinaGeoJson = await get_data("https://likev.github.io/test/mplot/geojson-data/china_geojson_full.json");
+    var chinaGeoJson = await get_data("/file/geojson-data/china_geojson_full.json");
 
     chinaGeoJson = JSON.parse(chinaGeoJson);
 
