@@ -5,6 +5,8 @@ const zlib = require('zlib');
 const url = require('url');
 const querystring = require('querystring');
 const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
 
 const moment = require('moment');
 
@@ -14,12 +16,7 @@ let homepage = function(req, res){
 	//console.log(__dirname);
 	let rs = fs.createReadStream( path.join( __dirname, "../index.html" ) );
 
-	rs.pipe(res, {end:false});
-	rs.on('end', ()=>{
-
-		writeAlertJsonInfo(req, res);
-		//res.end();
-	});
+	rs.pipe(res, {end:true});
 }
 
 let static_file = function(req, res, filename){
@@ -180,4 +177,8 @@ startHttpServer();
 
 exports.start = function () {
 	startHttpServer();
+
+	exec('start http://127.0.0.1:2020', (err, stdout, stderr) => {
+      // ...
+    });
 }
