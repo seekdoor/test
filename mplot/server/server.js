@@ -12,7 +12,7 @@ let homepage = function(req, res){
 	res.writeHead(200, {'Content-Type':'text/html'});
 
 	//console.log(__dirname);
-	let rs = fs.createReadStream( path.join( __dirname, "hail-judge.html" ) );
+	let rs = fs.createReadStream( path.join( __dirname, "../index.html" ) );
 
 	rs.pipe(res, {end:false});
 	rs.on('end', ()=>{
@@ -39,7 +39,7 @@ let static_file = function(req, res, filename){
 	res.writeHead(200, {'Content-Type': mime_type});
 
 	//console.log(__dirname);
-	let rs = fs.createReadStream( path.join( __dirname, 'static-files',filename ) );
+	let rs = fs.createReadStream( path.join( __dirname, '../static-files',filename ) );
 
 	rs.pipe(res, {end:true});
 }
