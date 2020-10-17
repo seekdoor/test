@@ -1,0 +1,211 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<base target="_blank">
+	<meta content=" 洛阳各地历史冰雹查询" name="description" />
+
+	<title>洛阳各地历史冰雹查询</title>
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="/file/css/bootstrap-3.2.0.min.css">
+    <link rel="stylesheet" href="/file/css/bootstrap-theme-3.2.0.min.css">
+
+	<style>
+		#hail-view {
+			margin-top: 20px;
+		}
+
+		#hail-view tr:hover {
+			cursor: pointer;
+			background-color: #f5f5f5;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="page-header">
+			<h1>洛阳各地历史冰雹查询</h1>
+		</div>
+
+
+	</div>
+	<div class="container" id='filter'>
+		<form class="form-inline">
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">起始年</span>
+					<input type="number" class="form-control" v-model="beginYear" min=1960 max=2016 number
+						debounce="500">
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon">结束年</span>
+					<input type="number" class="form-control" v-model="endYear" min=1960 max=2016 number debounce="500">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">起始月</span>
+					<input type="number" class="form-control" v-model="beginMonth" min=1 max=12 number debounce="500">
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon">结束月</span>
+					<input type="number" class="form-control" v-model="endMonth" min=1 max=12 number debounce="500">
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="container">
+		<table id='hail-view' class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th class="s1">站号</th>
+					<th class="s1">年</th>
+					<th class="s1">月</th>
+					<th class="s1">日</th>
+					<th class="s1">开始时间</th>
+					<th class="s1">终止时间</th>
+					<th class="s1">最大直径(mm)</th>
+					<th class="s1">落区</th>
+					<th class="s1">伴随主要天气</th>
+					<th class="s1"> 灾情</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="hidden" id='hail'> </div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="hail-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/file/js/jquery-1.12.4.min.js"></script>
+    <script src="/file/js/bootstrap-3.2.0.min.js"></script>
+    <script src="/file/js/moment-2.15.1.min.js"></script>
+    <!-- <script src="/file/js/d3-5.16.0.min.js"></script> -->
+    <script src="/file/js/vue-2.6.11.min.js"></script>
+
+	<!-- <script src="./alert.js"></script> -->
+
+	<script>
+		$(function () {
+			var haildata = [];
+
+
+			var vf = new Vue({
+				el: '#filter',
+				data: {
+					beginYear: 2000,
+					endYear: 2010,
+					beginMonth: 1,
+					endMonth: 12
+				},
+				methods: {
+					update: function () {
+						//console.log(haildata.length);
+						var that = this;
+						var hailview = '';
+						var count = 0;
+						$.each(haildata, function (i, item) {
+
+							if (item.year >= that.beginYear && item.year <= that.endYear
+								&& item.month >= that.beginMonth && item.month <= that.endMonth) {
+								//console.log(item);
+								hailview += `<tr data-detail='${JSON.stringify(item)}'><th>` + (++count) + '</th><td>' + item.station + '</td><td>' + item.year + '</td><td>' + item.month + '</td><td>'
+									+ item.day + '</td><td>' + item.begin + '</td><td>' + item.end + '</td><td>' + item.size + '</td><td>' + item.area + '</td><td>' + item.weather + '</td><td>' + item.info + '</td></tr>'
+							}
+						})
+
+						$('#hail-view tbody').html(hailview);
+					}
+				},
+				watch: { 'beginYear+endYear+beginMonth+endMonth': 'update' }
+			})
+
+			$("#hail").load("/file/haildata.html", function () {
+				//console.log( "Load was performed." );
+
+				$("tbody>tr", this).each(function (i) {
+					if (i < 2) return;
+
+					var tdlist = $('td', this);
+					var record = {
+						station: tdlist.eq(0).text(),
+						year: +(tdlist.eq(1).text()),
+						month: +(tdlist.eq(2).text()),
+						day: tdlist.eq(3).text(),
+						begin: tdlist.eq(4).text(),
+						end: tdlist.eq(5).text(),
+						size: tdlist.eq(6).text(),
+						area: tdlist.eq(7).text(),
+						weather: tdlist.eq(8).text(),
+						info: tdlist.eq(9).text()
+					}
+					haildata.push(record);
+				})
+
+				vf.update();
+
+			});
+
+			$('#hail-view').on('click', 'tr', function () {
+				const detail = $(this).data('detail');
+				const base_plot_url = 'http://localhost:2020/mplot';
+
+				const occur_date = moment([detail.year, detail.month - 1, detail.day]);
+
+				let dl_list = '<dl class="dl-horizontal">';
+				dl_list += '<dt>开始时间</dt><dd>' + detail.begin + '</dd>';
+				dl_list += '<dt>终止时间</dt><dd>' + detail.end + '</dd>';
+				dl_list += '<dt>量级</dt><dd>' + detail.size + '</dd>';
+				dl_list += '<dt>落区</dt><dd>' + detail.area + '</dd>';
+				dl_list += '<dt>伴随主要天气</dt><dd>' + detail.weather + '</dd>';
+				dl_list += '<dt>灾情</dt><dd>' + detail.info + '</dd>';
+
+				//dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/${occur_date.format('YYYY-MM-DD')}%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';
+				dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/2020-05-02%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';//for demo
+
+				dl_list += '</dl>';
+
+
+				$('#hail-detail .modal-title').text(`${occur_date.format('YYYY年MM月DD日')} ${detail.station} 冰雹`);
+				$('#hail-detail .modal-body').html(dl_list);
+				$('#hail-detail').modal('show');
+			});
+
+		})
+	</script>
+</body>
+
+</html>

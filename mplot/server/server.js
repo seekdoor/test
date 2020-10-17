@@ -10,35 +10,63 @@ const { exec } = require('child_process');
 
 const moment = require('moment');
 
-let homepage = function(req, res){
-	res.writeHead(200, {'Content-Type':'text/html'});
+let homepage = function (req, res) {
 
-	//console.log(__dirname);
-	let rs = fs.createReadStream( path.join( __dirname, "../index.html" ) );
+	homepage_hail(req, res);
 
-	rs.pipe(res, {end:true});
 }
 
-let static_file = function(req, res, filename){
-    let mime = {
+let homepage_mplot = function (req, res) {
+	res.writeHead(200, { 'Content-Type': 'text/html' });
+
+	//console.log(__dirname);
+	let rs = fs.createReadStream(path.join(__dirname, "../index.html"));
+
+	rs.pipe(res, { end: true });
+}
+
+let homepage_hail = function (req, res) {
+	res.writeHead(200, { 'Content-Type': 'text/html' });
+
+	//console.log(__dirname);
+	let rs = fs.createReadStream(path.join(__dirname, "../hail.html"));
+
+	rs.pipe(res, { end: true });
+}
+
+let homepage_404 = function (req, res, pathname) {
+	res.writeHead(404, "Not Found", { 'Content-Type': 'text/plain' });
+
+	res.write("This request URL " + pathname + " was not found on this server.");
+
+	res.end();
+}
+
+let static_file = function (req, res, filename) {
+
+	let filepath = path.join(__dirname, '../static-files', filename);
+
+	if (!fs.existsSync(filepath)) return homepage_404(req, res, filepath);
+
+	let mime = {
 		"html": "text/html",
-        "css": "text/css",
+		"css": "text/css",
 		"js": "application/javascript",
 		"webp": "image/webp",
 		"json": "application/json",
 		"woff": "font/woff",
 		"000": "application/octet-stream",
-    };
+	};
 	let ext = path.extname(filename).slice(1);
-	
+
 	let mime_type = mime[ext] ? mime[ext] : "application/octet-stream";
-    
-	res.writeHead(200, {'Content-Type': mime_type});
+
+	res.writeHead(200, { 'Content-Type': mime_type });
 
 	//console.log(__dirname);
-	let rs = fs.createReadStream( path.join( __dirname, '../static-files',filename ) );
+	let rs = fs.createReadStream(filepath);
 
-	rs.pipe(res, {end:true});
+	rs.pipe(res, { end: true });
 }
 
 let getData = async (req, res, postItems) => {
@@ -55,7 +83,7 @@ let getData = async (req, res, postItems) => {
 	} else if (file_datetime.isBefore('2017-01-01')) {
 		if (file_datetime.month() < 4) filepath += `${file_datetime.format('YYYY/')}1-4月/`;
 		else filepath += `${file_datetime.format('YYYY/M')}月/`;
-	} else if (file_datetime.isBefore( moment().subtract(7, 'days') )) {
+	} else if (file_datetime.isBefore(moment().subtract(7, 'days'))) {
 		filepath += `${file_datetime.format('YYYYMM')}/`;
 	} else {
 		filepath = `X:/micaps/`;
@@ -71,8 +99,8 @@ let getData = async (req, res, postItems) => {
 		if (level === 'surface') {
 			name = name.replace(/plot|p0/g, function (c) {
 				let result = '';
-				if(c === 'plot') result = 'PLOT_GLOBAL_1H';
-				else if(c === 'p0') result = 'ANALYSIS/PRES';//SURFACE\ANALYSIS\PRES  diamond 14 not support now!!!
+				if (c === 'plot') result = 'PLOT_GLOBAL_1H';
+				else if (c === 'p0') result = 'ANALYSIS/PRES';//SURFACE\ANALYSIS\PRES  diamond 14 not support now!!!
 				return result;
 			});
 
@@ -80,9 +108,9 @@ let getData = async (req, res, postItems) => {
 		} else if (['height', 'temper', 'plot'].indexOf(name) !== -1) {
 			name = name.replace(/plot|height|temper/g, function (c) {
 				let result = '';
-				if(c === 'plot') result = 'PLOT';
-				else if(c === 'height') result = 'ANALYSIS/HGT';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
-				else if(c === 'temper') result = 'ANALYSIS/TMP';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
+				if (c === 'plot') result = 'PLOT';
+				else if (c === 'height') result = 'ANALYSIS/HGT';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
+				else if (c === 'temper') result = 'ANALYSIS/TMP';//UPPER_AIR\ANALYSIS\HGT diamond 14 not support now!!!
 				return result;
 			});
 
@@ -103,11 +131,7 @@ let getData = async (req, res, postItems) => {
 		raw.pipe(zlib.createGzip()).pipe(res);
 
 	} else {
-		res.writeHead(404, "Not Found", { 'Content-Type': 'text/plain' });
-
-		res.write("This request URL " + filepath + " was not found on this server.");
-
-		res.end();
+		homepage_404(req, res, filepath);
 
 	}
 
@@ -137,6 +161,8 @@ let startHttpServer = function () {
 
 		if (pathname === '/') {
 			homepage(req, res);
+		} else if (pathname.slice(0, 6) === '/mplot') {
+			homepage_mplot(req, res);
 		} else if (pathname.slice(0, 5) === '/data') {
 
 			req.querypath = pathname.slice(6);
@@ -152,17 +178,13 @@ let startHttpServer = function () {
 
 			});
 
-		}else if( pathname.slice(0,5) === '/file' ){
-            let filename = pathname.slice(6);
-            console.log(filename);
-            static_file(req, res, filename);
-        }else{
-            res.writeHead(404, "Not Found", {'Content-Type': 'text/plain'});
-
-            res.write("This request URL " + pathname + " was not found on this server.");
-
-            res.end();
-        }
+		} else if (pathname.slice(0, 5) === '/file') {
+			let filename = pathname.slice(6);
+			console.log(filename);
+			static_file(req, res, filename);
+		} else {
+			homepage_404(req, res, pathname);
+		}
 
 	}).listen(2020, () => {
 		console.log('listen on port 2020...');
@@ -179,6 +201,6 @@ exports.start = function () {
 	startHttpServer();
 
 	exec('start http://127.0.0.1:2020', (err, stdout, stderr) => {
-      // ...
-    });
+		// ...
+	});
 }
