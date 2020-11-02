@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<base target="_blank">
-	<meta content=" 洛阳各地历史冰雹查询" name="description" />
+	<meta content="洛阳灾害天气数据库" name="description" />
 
-	<title>洛阳各地历史冰雹查询</title>
+	<title>洛阳灾害天气数据库</title>
 
 	<!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="/file/css/bootstrap-3.2.0.min.css">
@@ -210,6 +210,8 @@
 
 			$('#disaster-type').change(function () {
 				let type = $(this).val();
+
+				$('.page-header>h1').text(`洛阳灾害天气数据库——${disasterTypeConfig[type].name}查询`);
 
 				$("#hail").load(disasterTypeConfig[type].data, function () {
 					//console.log( "Load was performed." );
