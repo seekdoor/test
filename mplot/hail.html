@@ -38,19 +38,33 @@
 	</div>
 	<div class="container" id='filter'>
 		<form class="form-inline">
-			<div class="form-group">
+			<div class="form-group col-md-4 col-xs-12">
+				<div class="input-group">
+					<span class="input-group-addon">灾害类型</span>
+					<select id="disaster-type" class="form-control">
+						<option value="hailstones">冰雹</option>
+						<option value="rainstorm">暴雨</option>
+						<option value="StrongWind">大风</option>
+						<option value="ThickFog">大雾</option>
+						<option value="ColdTide">寒潮</option>
+						<option value="IceAccumulation">航路积冰</option>
+						<option value="thunderstorm">雷暴大风</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group col-md-4 col-xs-12">
 				<div class="input-group">
 					<span class="input-group-addon">起始年</span>
-					<input type="number" class="form-control" v-model.number="beginYear" min=1960 max=2016>
+					<input type="number" class="form-control" v-model.number="beginYear" min=1960 max=2030>
 				</div>
 
 				<div class="input-group">
 					<span class="input-group-addon">结束年</span>
-					<input type="number" class="form-control" v-model.number="endYear" min=1960 max=2016>
+					<input type="number" class="form-control" v-model.number="endYear" min=1960 max=2030>
 				</div>
 			</div>
 
-			<div class="form-group">
+			<div class="form-group col-md-4 col-xs-12">
 				<div class="input-group">
 					<span class="input-group-addon">起始月</span>
 					<input type="number" class="form-control" v-model.number="beginMonth" min=1 max=12>
@@ -76,7 +90,7 @@
 					<th class="s1">日</th>
 					<th class="s1">开始时间</th>
 					<th class="s1">终止时间</th>
-					<th class="s1">最大直径(mm)</th>
+					<th class="s1" id='magnitude'>最大直径(mm)</th>
 					<th class="s1">落区</th>
 					<th class="s1">伴随主要天气</th>
 					<th class="s1"> 灾情</th>
@@ -126,7 +140,7 @@
 				el: '#filter',
 				data: {
 					beginYear: 2000,
-					endYear: 2010,
+					endYear: 2020,
 					beginMonth: 1,
 					endMonth: 12
 				},
@@ -153,59 +167,108 @@
 
 			vf.$watch(
 				function () { return this.beginYear + this.endYear + this.beginMonth + this.endMonth },
-				function(){ this.update() }
+				function () { this.update() }
 			)
 
-		$("#hail").load("/file/haildata.html", function () {
-			//console.log( "Load was performed." );
-
-			$("tbody>tr", this).each(function (i) {
-				if (i < 2) return;
-
-				var tdlist = $('td', this);
-				var record = {
-					station: tdlist.eq(0).text(),
-					year: +(tdlist.eq(1).text()),
-					month: +(tdlist.eq(2).text()),
-					day: tdlist.eq(3).text(),
-					begin: tdlist.eq(4).text(),
-					end: tdlist.eq(5).text(),
-					size: tdlist.eq(6).text(),
-					area: tdlist.eq(7).text(),
-					weather: tdlist.eq(8).text(),
-					info: tdlist.eq(9).text()
+			let disasterTypeConfig = {
+				hailstones: {
+					name: '冰雹',
+					data: '/file/disaster-data/冰雹个例.html',
+					magnitude: '最大直径(mm)'
+				},
+				rainstorm: {
+					name: '暴雨',
+					data: '/file/disaster-data/暴雨个例.html',
+					magnitude: '量级(mm)'
+				},
+				StrongWind: {
+					name: '大风',
+					data: '/file/disaster-data/大风个例.html',
+					magnitude: '极大风速(m/s)'
+				},
+				ThickFog: {
+					name: '大雾',
+					data: '/file/disaster-data/大雾个例.html',
+					magnitude: '最小能见度(m)'
+				},
+				ColdTide: {
+					name: '寒潮',
+					data: '/file/disaster-data/寒潮个例.html',
+					magnitude: '量级'
+				},
+				IceAccumulation: {
+					name: '航路积冰',
+					data: '/file/disaster-data/航路积冰个例.html',
+					magnitude: '量级'
+				},
+				thunderstorm: {
+					name: '雷暴大风',
+					data: '/file/disaster-data/雷暴大风个例.html',
+					magnitude: '量级'
 				}
-				haildata.push(record);
+			}
+
+			$('#disaster-type').change(function () {
+				let type = $(this).val();
+
+				$("#hail").load(disasterTypeConfig[type].data, function () {
+					//console.log( "Load was performed." );
+
+					haildata = [];
+
+					$('#magnitude').text(disasterTypeConfig[type].magnitude)
+
+					$("tbody>tr", this).each(function (i) {
+						if (i < 2) return;
+
+						var tdlist = $('td', this);
+						var record = {
+							station: tdlist.eq(0).text(),
+							year: +(tdlist.eq(1).text()),
+							month: +(tdlist.eq(2).text()),
+							day: tdlist.eq(3).text(),
+							begin: tdlist.eq(4).text(),
+							end: tdlist.eq(5).text(),
+							size: tdlist.eq(6).text(),
+							area: tdlist.eq(7).text(),
+							weather: tdlist.eq(8).text(),
+							info: tdlist.eq(9).text()
+						}
+						haildata.push(record);
+					})
+
+					vf.update();
+
+				});
 			})
 
-			vf.update();
-
-		});
-
-		$('#hail-view').on('click', 'tr', function () {
-			const detail = $(this).data('detail');
-			const base_plot_url = 'http://localhost:2020/mplot';
-
-			const occur_date = moment([detail.year, detail.month - 1, detail.day]);
-
-			let dl_list = '<dl class="dl-horizontal">';
-			dl_list += '<dt>开始时间</dt><dd>' + detail.begin + '</dd>';
-			dl_list += '<dt>终止时间</dt><dd>' + detail.end + '</dd>';
-			dl_list += '<dt>量级</dt><dd>' + detail.size + '</dd>';
-			dl_list += '<dt>落区</dt><dd>' + detail.area + '</dd>';
-			dl_list += '<dt>伴随主要天气</dt><dd>' + detail.weather + '</dd>';
-			dl_list += '<dt>灾情</dt><dd>' + detail.info + '</dd>';
-
-			//dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/${occur_date.format('YYYY-MM-DD')}%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';
-			dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/2020-05-02%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';//for demo
-
-			dl_list += '</dl>';
+			$('#disaster-type').change();
 
 
-			$('#hail-detail .modal-title').text(`${occur_date.format('YYYY年MM月DD日')} ${detail.station} 冰雹`);
-			$('#hail-detail .modal-body').html(dl_list);
-			$('#hail-detail').modal('show');
-		});
+			$('#hail-view').on('click', 'tr', function () {
+				const detail = $(this).data('detail');
+				const base_plot_url = 'http://localhost:2020/mplot';
+
+				const occur_date = moment([detail.year, detail.month - 1, detail.day]);
+
+				let dl_list = '<dl class="dl-horizontal">';
+				dl_list += '<dt>开始时间</dt><dd>' + detail.begin + '</dd>';
+				dl_list += '<dt>终止时间</dt><dd>' + detail.end + '</dd>';
+				dl_list += '<dt>量级</dt><dd>' + detail.size + '</dd>';
+				dl_list += '<dt>落区</dt><dd>' + detail.area + '</dd>';
+				dl_list += '<dt>伴随主要天气</dt><dd>' + detail.weather + '</dd>';
+				dl_list += '<dt>灾情</dt><dd>' + detail.info + '</dd>';
+
+				//dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/${occur_date.format('YYYY-MM-DD')}%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';
+				dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/2020-05-02%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';//for demo
+
+				dl_list += '</dl>';
+
+
+				$('#hail-detail .modal-title').text(`${occur_date.format('YYYY年MM月DD日')} ${detail.station} 冰雹`);
+				$('#hail-detail .modal-body').html(dl_list);
+				$('#hail-detail').modal('show');
+			});
 
 		})
 	</script>
