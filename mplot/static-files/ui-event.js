@@ -187,9 +187,9 @@ const draw_request = async (transform) => {
         let file_datetime = moment(c[0]), ctype = c[2];
         for (let item of ctype) {
             let filetype = item.filetype;
-            var content = await get_data_diamond(filetype)(`/file/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);
+            //var content = await get_data_diamond(filetype)(`/file/high-surface-data/${item.name}-${item.level}-${file_datetime.format('YYMMDDHH')}.000`);//for demo
 
-            //var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
+            var content = await get_data_diamond(filetype)(`${data_api}/${file_datetime.format('YYYY-MM-DD HH:mm')}/${item.name}/${item.level}`);
 
             if (transform === transform_current && content && item.show) draw_diamond_canvas(filetype)(content, { transform, ...item.config });
         }

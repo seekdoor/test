@@ -250,6 +250,7 @@
 			$('#hail-view').on('click', 'tr', function () {
 				const detail = $(this).data('detail');
 				const base_plot_url = 'http://localhost:2020/mplot';
+				const base_attachments_url = 'http://127.0.0.1:2021/files';
 
 				const occur_date = moment([detail.year, detail.month - 1, detail.day]);
 
@@ -261,8 +262,9 @@
 				dl_list += '<dt>伴随主要天气</dt><dd>' + detail.weather + '</dd>';
 				dl_list += '<dt>灾情</dt><dd>' + detail.info + '</dd>';
 
-				//dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/${occur_date.format('YYYY-MM-DD')}%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';
-				dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/2020-05-02%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';//for demo
+				dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/${occur_date.format('YYYY-MM-DD')}%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';
+				//dl_list += '<dt>天气图</dt><dd>' + `<a href='${base_plot_url}/#/2020-05-02%2020:00/composite_500_a/' >点击查看</a>` + '</dd>';//for demo
+				dl_list += '<dt>附件</dt><dd>' + `<a href='${base_attachments_url}/${occur_date.format('YYYY-MM-DD')}/' >打开附件资料</a>` + '</dd>';
 
 				dl_list += '</dl>';
 
