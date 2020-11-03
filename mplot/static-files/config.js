@@ -95,11 +95,11 @@ $('#composite-list').on('click', '.panel-body .glyphicon-cog', function () {
         $('#config .panel-title').text('...');
     } 
 
-    $('#plot').removeClass('col-md-12').addClass('col-md-9');
+    $('#plot').removeClass('col-md-12').addClass('col-md-8 col-lg-9');
 
 })
 
 $('#config .close').click(function(){
     $('#config').hide();
-    $('#plot').removeClass('col-md-9').addClass('col-md-12');
+    $('#plot').removeClass('col-md-8 col-lg-9').addClass('col-md-12');
 })
