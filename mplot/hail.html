@@ -49,6 +49,8 @@
 						<option value="ColdTide">寒潮</option>
 						<option value="IceAccumulation">航路积冰</option>
 						<option value="thunderstorm">雷暴大风</option>
+						<option value="BumpyWeather">颠簸天气</option>
+						<option value="Sandstorm">沙尘暴</option>
 					</select>
 				</div>
 			</div>
@@ -199,12 +201,22 @@
 				IceAccumulation: {
 					name: '航路积冰',
 					data: '/file/disaster-data/航路积冰个例.html',
-					magnitude: '量级'
+					magnitude: '积冰高度（m）'
 				},
 				thunderstorm: {
 					name: '雷暴大风',
 					data: '/file/disaster-data/雷暴大风个例.html',
-					magnitude: '量级'
+					magnitude: '极大风速(m/s)'
+				},
+				BumpyWeather: {
+					name: '颠簸天气',
+					data: '/file/disaster-data/颠簸天气个例.html',
+					magnitude: '颠簸高度（米）'
+				},
+				Sandstorm: {
+					name: '沙尘暴',
+					data: '/file/disaster-data/沙尘暴个例.html',
+					magnitude: '极大风速(m/s)'
 				}
 			}
 
