@@ -220,10 +220,14 @@
 				}
 			}
 
+			let disaster_type_name = '冰雹';
+
 			$('#disaster-type').change(function () {
 				let type = $(this).val();
 
-				$('.page-header>h1').text(`洛阳灾害天气数据库——${disasterTypeConfig[type].name}查询`);
+				disaster_type_name = disasterTypeConfig[type].name;
+
+				$('.page-header>h1').text(`洛阳灾害天气数据库——${disaster_type_name}查询`);
 
 				$("#hail").load(disasterTypeConfig[type].data, function () {
 					//console.log( "Load was performed." );
@@ -281,7 +285,7 @@
 				dl_list += '</dl>';
 
 
-				$('#hail-detail .modal-title').text(`${occur_date.format('YYYY年MM月DD日')} ${detail.station} 冰雹`);
+				$('#hail-detail .modal-title').text(`${occur_date.format('YYYY年MM月DD日')} ${detail.station} ${disaster_type_name}`);
 				$('#hail-detail .modal-body').html(dl_list);
 				$('#hail-detail').modal('show');
 			});
